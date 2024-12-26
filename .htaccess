@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(.*)$ public/$1 [L]
+  RewriteCond %{HTTP_HOST} !^(www\.)?fintou\.com$ [NC]
+  RewriteRule ^robots\.txt$ robots-disallow.txt [L]
+</IfModule>
+
+# Security Headers
+
+<IfModule mod_headers.c>
+	Header set X-XSS-Protection "1; mode=block"
+	#Header set X-Frame-Options "SAMEORIGIN"
+	#Header set X-Content-Type-Options "nosniff"
+
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    Header always set Content-Security-Policy: upgrade-insecure-requests
+    Header set Referrer-Policy "same-origin"
+    Header set Feature-Policy "geolocation 'self'; vibrate 'none'"
+
+    Header always set Feature-Policy "camera 'none'; microphone 'none'; geolocation 'none'"
+
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+

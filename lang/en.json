@@ -1,0 +1,8 @@
+{
+    "Le champ :attribute est requis.": "The :attribute field is required.",
+    "Le champ :attribute ne correspond pas.":"The :attribute field confirmation does not match.",
+    "Le minimum de caractère autorisé est de :min":"The :attribute field must have at least :min items.",
+    "Le maximum de caractère autorisé est de :min":"The :attribute field must not have more than :max items.",
+    "Cette :attribute a déja été pris.":"The :attribute has already been taken."
+
+}
