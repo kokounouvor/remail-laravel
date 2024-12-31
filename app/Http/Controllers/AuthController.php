@@ -59,15 +59,15 @@ class AuthController extends Controller
         $request->validate([
             "nom" => "required",
             "email" => "required|email:rfc|unique:users",
-            "password" => "required|confirmed|min:6|max:12"
+            "password" => "required|confirmed|min:6"
         ]);
 
         $acc = substr(str_shuffle("0123456789abcdhtdiomplkjg"), 0, 5);
 
         // Insertion de l'utilisateur dans la base de donnée
-        $ins = DB::table("users")->insert([
-            "name" => htmlspecialchars($request->nom),
-            "email" => htmlspecialchars($request->email),
+        $ins = Users::insert([
+            "name" => $request->nom,
+            "email" => $request->email,
             "password" => Hash::make($request->password),
             "created_at" => NOW(),
             "token" => $acc
@@ -110,11 +110,11 @@ class AuthController extends Controller
                 return redirect("/dashboard")->with('success', "Authentification réussie");
             } else {
                 // le mot de passe est incorrect
-                return redirect(Route('login'))->with('danger', "le mot de passe est incorrect");
+                return redirect()->back()->with('danger', "le mot de passe est incorrect");
             }
         } else {
             // Notification que le compte n'existe pas
-            return redirect(Route('login'))->with('danger', "le compte n'existe pas");
+            return redirect()->back()->with('danger', "le compte n'existe pas");
         }
     }
 

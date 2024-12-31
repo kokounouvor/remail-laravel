@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
+use App\Mail\SendmailCampaign;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class Payment extends Model
@@ -53,12 +56,13 @@ class Payment extends Model
             return;
         }
 
+
         // Modifier temporairement les configurations SMTP
         config([
             'mail.mailers.smtp.host' => $mail_server->mail_host,
             'mail.mailers.smtp.port' => $mail_server->mail_port,
             'mail.mailers.smtp.username' => $mail_server->mail_username,
-            'mail.mailers.smtp.password' => $mail_server->mail_password,
+            'mail.mailers.smtp.password' => Crypt::decryptString($mail_server->mail_password),
             'mail.mailers.smtp.encryption' => $mail_server->smtp_encryption,
             'mail.from.address' => $mail_server->mail_email,
             'mail.from.name' => $camp_data->from_name,
@@ -96,10 +100,12 @@ class Payment extends Model
             }
 
             try {
-                //code... Entete de l'email
-                $info = ["subject" => $camp_data->subject, "content" => $camp_data->contents];
+                $unikid = uniqid();
 
-                //Mail::to($k->recipient_email)->send(new SendmailCampaign($info));
+                //code... Entete de l'email
+                $info = ["subject" => $camp_data->subject, "content" => $camp_data->contents, "id" => $unikid];
+
+                Mail::to($k->email)->send(new SendmailCampaign($info));
 
                 // Enregistrer l'envoi dans le log
                 Email_send_log::insert([
@@ -110,7 +116,7 @@ class Payment extends Model
                 ]);
 
                 Message::insert([
-                    "token" => uniqid(),
+                    "token" => $unikid,
                     "campaign_id" => $camp_data->id,
                     "recipient_email" => $k->email,
                     "subject" => $camp_data->subject,
@@ -119,6 +125,8 @@ class Payment extends Model
                     "updated_at" => null
                 ]);
             } catch (\Throwable $th) {
+
+                dd($th);
                 // Enregistrer l'échec dans le log
                 Email_send_log::insert([
                     'email_service_id' => $mail_server->id,

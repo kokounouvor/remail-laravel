@@ -7,13 +7,18 @@
             <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">Inscription</h1>
             <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
                 Vous avez déja un compte ?
-                <a href="{{Route('auth.login')}}" class="text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-600" href="../examples/html/signup.html">
+                <a href="{{Route('auth.login')}}" class="text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-600">
                     Se connecter
                 </a>
             </p>
         </div>
         <div class="py-1">
             @include('layouts.alert')
+
+            @error('password')
+            <span class="text-red-500">{{ $message }}</span>
+            @enderror
+
         </div>
         <div class="mt-8">
             <!-- Form -->
@@ -64,8 +69,8 @@
                     </div>
                     <!-- End Form Group -->
 
-                     <!-- Form Group -->
-                     <div>
+                    <!-- Form Group -->
+                    <div>
                         <div class="flex justify-between items-center">
                             <label for="password_confirmation" class="block text-sm mb-2 dark:text-white">Confirmer le Mot de passe</label>
                         </div>
@@ -79,18 +84,6 @@
                         </div>
                     </div>
                     <!-- End Form Group -->
-
-
-                    <!-- Checkbox -->
-                    <div class="flex items-center">
-                        <div class="flex">
-                            <input id="remember-me" name="remember-me" type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-600 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-600 dark:checked:border-blue-600 dark:focus:ring-offset-gray-800">
-                        </div>
-                        <div class="ms-3">
-                            <label for="remember-me" class="text-sm dark:text-white text-gray-500">J'accepte les <a href="" class="text-blue-600 underline">CGU</a> du service REMAIL</label>
-                        </div>
-                    </div>
-                    <!-- End Checkbox -->
 
                     <button type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">S'inscrire</button>
                 </div>

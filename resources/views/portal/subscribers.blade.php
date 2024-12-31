@@ -21,7 +21,7 @@
     <div class="mt-3">
         <div id="horizontal-alignment-1" role="tabpanel" aria-labelledby="horizontal-alignment-item-1">
             <div class="p-4 bg-white shadow-sm rounded-xl">
-                <div class="flex justify-between items-center border-b pb-3 mb-3">
+                <div class="md:flex justify-between items-center border-b pb-3 mb-3">
                     <div class="inline-flex items-center gap-x-2">
                         <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-lg text-xs font-bold bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500"> {{$all_contacts}} </span>
                         Contacts

@@ -1,13 +1,5 @@
 @extends('layouts.app')
 
-@section('sidebar')
-@include('portal.inc.sidebar')
-@endsection
-
-@section('navbar')
-@include('portal.inc.navbar')
-@endsection
-
 @section('content')
 <style>
     .code-editor {
@@ -91,7 +83,7 @@
                     Entete
                 </span>
             </span>
-            <div class="w-full h-px flex-1 bg-gray-400 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600 dark:bg-neutral-700 dark:hs-stepper-success:bg-blue-600 dark:hs-stepper-completed:bg-teal-600"></div>
+            <div class="w-full h-px flex-1 bg-gray-300 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600 dark:bg-neutral-700 dark:hs-stepper-success:bg-blue-600 dark:hs-stepper-completed:bg-teal-600"></div>
         </li>
 
         <li class="flex items-center gap-x-2 shrink basis-0 flex-1 group" data-hs-stepper-nav-item='{"index": 2}'>
@@ -106,7 +98,7 @@
                     Contenu
                 </span>
             </span>
-            <div class="w-full h-px flex-1 bg-gray-400 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600 dark:bg-neutral-700 dark:hs-stepper-success:bg-blue-600 dark:hs-stepper-completed:bg-teal-600"></div>
+            <div class="w-full h-px flex-1 bg-gray-300 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600 dark:bg-neutral-700 dark:hs-stepper-success:bg-blue-600 dark:hs-stepper-completed:bg-teal-600"></div>
         </li>
 
         <li class="flex items-center gap-x-2 shrink basis-0 flex-1 group" data-hs-stepper-nav-item='{"index": 3}'>
@@ -121,7 +113,7 @@
                     Finaliser
                 </span>
             </span>
-            <div class="w-full h-px flex-1 bg-gray-400 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600 dark:bg-neutral-700 dark:hs-stepper-success:bg-blue-600 dark:hs-stepper-completed:bg-teal-600"></div>
+            <div class="w-full h-px flex-1 bg-gray-300 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600 dark:bg-neutral-700 dark:hs-stepper-success:bg-blue-600 dark:hs-stepper-completed:bg-teal-600"></div>
         </li>
         <!-- End Item -->
     </ul>
@@ -240,13 +232,13 @@
                                         <div class="grid md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-4 mb-4 mt-5">
                                             @foreach($templ as $dat)
                                             <input type="hidden" name="" id="pd-{{$dat->id}}" value="{{$dat->content}}">
-                                            <label for="af-account-gender-checkbox" onclick="gfx('{{$dat->id}}');" class="p-2 w-full border border-gray-200 bg-white shadow-sm -mt-px -ms-px rounded-2xl text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
+                                            <label for="" onclick="gfx('{{$dat->id}}');" class="p-2 w-full border border-gray-200 bg-white shadow-sm -mt-px -ms-px rounded-2xl text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
                                                 <div class="flex ">
-                                                    <input type="radio" name="af-account-gender-checkbox" class="shrink-0 mt-0.5 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="af-account-gender-checkbox" checked>
+                                                    <input type="radio" name="af-account-gender-checkbox" class="shrink-0 mt-0.5 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="af-account-gender-checkbox">
                                                     <span class="text-sm text-gray-500 ms-3 dark:text-neutral-400">{!!$dat->name!!}</span>
                                                 </div>
                                                 <div class="relative p-1 rounded-xl">
-                                                    <iframe srcdoc="{{$dat->content}}" class="rounded-xl" frameborder="0" width="100%" height="180px" scrolling="yes"></iframe>
+                                                    <iframe data-srcdoc="{{$dat->content}}" class="template-iframe rounded-xl" frameborder="0" width="100%" height="180px" scrolling="yes" loading="lazy"></iframe>
                                                 </div>
                                             </label>
                                             @endforeach
@@ -481,6 +473,40 @@
             }
         );
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Fonction pour charger l'iframe lorsque celle-ci devient visible dans la fenêtre de visualisation
+        function loadIframeLazy() {
+            const iframes = document.querySelectorAll('.template-iframe');
+            const options = {
+                root: null, // Observer l'ensemble du viewport
+                rootMargin: '0px',
+                threshold: 0.25 // Charge l'iframe lorsque 25% est visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        const srcdoc = iframe.getAttribute('data-srcdoc'); // On récupère le contenu HTML à afficher
+
+                        if (srcdoc) {
+                            iframe.srcdoc = srcdoc;  // On charge le contenu HTML dans l'iframe
+                            iframe.removeAttribute('data-srcdoc'); // Retirer l'attribut data-srcdoc après avoir chargé le contenu
+                        }
+                        observer.unobserve(iframe); // Cesse d'observer cette iframe une fois chargée
+                    }
+                });
+            }, options);
+
+            iframes.forEach(iframe => {
+                observer.observe(iframe);
+            });
+        }
+
+        // Appeler la fonction de lazy loading
+        loadIframeLazy();
+    });
 </script>
 
 @endsection

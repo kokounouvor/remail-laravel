@@ -77,7 +77,7 @@
                     <li class="inline-flex items-center gap-x-2 py-3 px-4 font-semibold bg-blue-50 border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-200">
                         <div class=" w-full">
                             <span>Objet : </span>
-                            <span> {{$camp->subject}}</span>
+                            <span> {!!$camp->subject!!}</span>
                         </div>
                     </li>
                 </ul>

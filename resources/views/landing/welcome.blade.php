@@ -12,7 +12,7 @@
     <meta name="twitter:site" content="@preline">
     <meta name="twitter:creator" content="@preline">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS">
+    <meta name="twitter:title" content="REMAIL - Optimisez votre marketing par Email">
     <meta name="twitter:description" content="Crafted for agencies and studios specializing in web design and development.">
     <meta name="twitter:image" content="https://preline.co/assets/img/og-image.png">
 
@@ -20,18 +20,15 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Preline">
-    <meta property="og:title" content="Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS">
+    <meta property="og:title" content="REMAIL - Optimisez votre marketing par Email">
     <meta property="og:description" content="Crafted for agencies and studios specializing in web design and development.">
     <meta property="og:image" content="https://preline.co/assets/img/og-image.png">
 
     <!-- Title -->
-    <title>Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS</title>
+    <title>REMAIL - Optimisez votre marketing par Email</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../../favicon-3.ico">
-
-    <!-- Font -->
-    <link href="../../css2-4?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/img/logo/icon.png">
 
     <!-- Theme Check and Update -->
     <script>
@@ -51,17 +48,17 @@
 
 <body class="bg-gray-100">
     <!-- ========== HEADER ========== -->
-    <header class="sticky top-4 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full before:absolute before:inset-0 before:max-w-[66rem] before:mx-2 before:lg:mx-auto before:rounded-[26px] before:bg-neutral-800/30 before:backdrop-blur-md">
-        <nav class="relative max-w-[66rem] w-full py-2.5 ps-5 pe-2 md:flex md:items-center md:justify-between md:py-0 mx-2 lg:mx-auto bg-white rounded-2xl">
+    <header class="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full before:absolute before:inset-0 before:lg:mx-auto before:rounded-[26px] before:bg-neutral-800/30 before:backdrop-blur-md">
+        <nav class="relative max-w-[85rem] w-full py-3.5 ps-5 pe-2 md:flex md:items-center md:justify-between md:py-2 lg:mx-auto bg-gray-100" style="background-image: url(/assets/svg/component/hero-gradient.svg);">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <a class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="index.html" aria-label="Preline">
-                    <img src="/assets/img/logo/blue.png" class="h-7 w-full" alt="">
+                <a class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="/" aria-label="Preline">
+                    <img src="/assets/img/logo/blue.png" class="h-8 w-full" alt="">
                 </a>
                 <!-- End Logo -->
 
                 <div class="md:hidden">
-                    <button type="button" class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full bg-neutral-800 text-white disabled:opacity-50 disabled:pointer-events-none" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
+                    <button type="button" class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full bg-white shadow-sm disabled:opacity-50 disabled:pointer-events-none" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
                         <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="3" x2="21" y1="6" y2="6"></line>
                             <line x1="3" x2="21" y1="12" y2="12"></line>
@@ -78,17 +75,16 @@
             <!-- Collapse -->
             <div id="hs-navbar-floating-dark" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-floating-dark-collapse">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
-                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="index.html" aria-current="page">Home</a>
-                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">Stories</a>
-                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">Reviews</a>
-                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#">Approach</a>
+                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#features">Fonctionnalités</a>
+                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#pricing">Tarifs</a>
+                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#contact">Contact</a>
 
-
-                    <div>
-                        <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-blue-600 font-medium text-sm text-white rounded-full focus:outline-none" href="index.html#contact">
-                            Se connecter
+                    <div class="md:ms-5">
+                        <a class="p-3 ps-px sm:px-3 md:py-4 text-sm font-bold text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#contact">Docs</a>
+                        <a class="group inline-flex items-center gap-x-2 py-2 px-3 text-blue-600 hover:text-blue-700 border border-2 border-blue-600 font-medium text-sm rounded-full focus:outline-none" href="{{Route('auth.login')}}">
+                            Voir la démo
                         </a>
-                        <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-blue-600 font-medium text-sm text-white rounded-full focus:outline-none" href="index.html#contact">
+                        <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-blue-600 hover:bg-blue-700 font-medium text-sm text-white rounded-full focus:outline-none" href="">
                             Télécharger
                         </a>
                     </div>
@@ -99,14 +95,13 @@
     </header>
     <!-- ========== END HEADER ========== -->
 
-
     <!-- Hero -->
-    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8" style="background-image: url(/assets/svg/component/hero-gradient.svg);">
         <!-- Grid -->
-        <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
-            <div>
-                <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white">
-                    Optimisez votre marketing par email avec REMAIL
+        <div class="grid md:grid-cols-12 gap-4 md:gap-8 xl:gap-20 items-center py-10 md:py-24">
+            <div class="md:col-span-4">
+                <h1 class="block text-4xl font-bold text-gray-800 sm:text-4xl lg:text-5xl lg:leading-tight dark:text-white">
+                    Optimisez votre marketing par Email avec REMAIL
                 </h1>
                 <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">
                     Une solution puissante et intuitive pour gérer vos campagnes d'emails et analyser vos performances en temps réel.
@@ -114,48 +109,57 @@
 
                 <!-- Buttons -->
                 <div class="mt-7 grid gap-3 w-full sm:inline-flex">
-                    <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
-                        Découvrir les fonctionnalités
+                    <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#features">
+                        Les fonctionnalités
                         <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="m9 18 6-6-6-6" />
                         </svg>
                     </a>
-                    <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                    <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#contact">
                         Contactez-nous
                     </a>
                 </div>
                 <!-- End Buttons -->
 
+                <!-- Review -->
+                <div class="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">
+                    <!-- Review -->
+                    <div class="py-5">
+                        <p class="mt-3 text-sm text-gray-800 dark:text-neutral-200">
+                            Avec <span class="font-bold">Laravel 11.0</span>
+                        </p>
+
+                        <div class="mt-2">
+                            <!-- Star -->
+                            <svg class="h-auto w-16 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" width="256" height="264" viewBox="0 0 256 264">
+                                <path fill="#ff2d20" d="M255.856 59.62c.095.351.144.713.144 1.077v56.568c0 1.478-.79 2.843-2.073 3.578L206.45 148.18v54.18a4.14 4.14 0 0 1-2.062 3.579l-99.108 57.053c-.227.128-.474.21-.722.299c-.093.03-.18.087-.278.113a4.15 4.15 0 0 1-2.114 0c-.114-.03-.217-.093-.325-.134c-.227-.083-.464-.155-.68-.278L2.073 205.938A4.13 4.13 0 0 1 0 202.36V32.656c0-.372.052-.733.144-1.083c.031-.119.103-.227.145-.346c.077-.216.15-.438.263-.639c.077-.134.19-.242.283-.366c.119-.165.227-.335.366-.48c.119-.118.274-.206.408-.309c.15-.124.283-.258.453-.356h.005L51.613.551a4.14 4.14 0 0 1 4.125 0l49.546 28.526h.01c.165.104.305.232.454.351c.134.103.284.196.402.31c.145.149.248.32.371.484c.088.124.207.232.279.366c.118.206.185.423.268.64c.041.118.113.226.144.35c.095.351.144.714.145 1.078V138.65l41.286-23.773V60.692c0-.36.052-.727.145-1.072c.036-.124.103-.232.144-.35c.083-.217.155-.44.268-.64c.077-.134.19-.242.279-.366c.123-.165.226-.335.37-.48c.12-.118.269-.206.403-.309c.155-.124.289-.258.454-.356h.005l49.551-28.526a4.13 4.13 0 0 1 4.125 0l49.546 28.526c.175.103.309.232.464.35c.128.104.278.197.397.31c.144.15.247.32.37.485c.094.124.207.232.28.366c.118.2.185.423.267.64c.047.118.114.226.145.35m-8.115 55.258v-47.04l-17.339 9.981l-23.953 13.792v47.04l41.297-23.773zm-49.546 85.095V152.9l-23.562 13.457l-67.281 38.4v47.514zM8.259 39.796v160.177l90.833 52.294v-47.505L51.64 177.906l-.015-.01l-.02-.01c-.16-.093-.295-.227-.444-.34c-.13-.104-.279-.186-.392-.3l-.01-.015c-.134-.129-.227-.289-.34-.433c-.104-.14-.227-.258-.31-.402l-.005-.016c-.093-.154-.15-.34-.217-.515c-.067-.155-.154-.3-.196-.464v-.005c-.051-.196-.061-.403-.082-.604c-.02-.154-.062-.309-.062-.464V63.57L25.598 49.772l-17.339-9.97zM53.681 8.893L12.399 32.656l41.272 23.762L94.947 32.65L53.671 8.893zm21.468 148.298l23.948-13.786V39.796L81.76 49.778L57.805 63.569v103.608zM202.324 36.935l-41.276 23.762l41.276 23.763l41.271-23.768zm-4.13 54.676l-23.953-13.792l-17.338-9.981v47.04l23.948 13.787l17.344 9.986zm-94.977 106.006l60.543-34.564l30.264-17.272l-41.246-23.747l-47.489 27.34l-43.282 24.918z" />
+                            </svg>
+                            <!-- End Star -->
+                        </div>
+                    </div>
+                    <!-- End Review -->
+                    <!-- Review -->
+                    <div class="py-5">
+                        <p class="mt-3 text-sm text-gray-800 dark:text-neutral-200">
+                            Avec <span class="font-bold">PHP 8.2</span>
+                        </p>
+
+                        <div class="mt-2">
+                            <!-- Star -->
+                            <svg class="h-auto w-16 text-indigo-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="m10.15 5.55l-1.717 8.834h2l.858-4.417h1.5c.553 0 .915.44.81.982l-.668 3.435h2l.668-3.435c.316-1.627-.771-2.945-2.428-2.945h-1.5l.477-2.454zM2.173 8.004h3.75c1.795 0 2.972 1.428 2.63 3.19s-2.075 3.19-3.87 3.19h-1.75l-.477 2.455h-2zm1.141 4.417h1.75c.69 0 1.357-.55 1.489-1.227c.131-.678-.321-1.227-1.012-1.227h-1.75zm13.859-4.417h3.75c1.795 0 2.972 1.428 2.63 3.19s-2.076 3.19-3.87 3.19h-1.75l-.477 2.455h-2zm1.141 4.417h1.75c.69 0 1.357-.55 1.489-1.227c.131-.678-.321-1.227-1.012-1.227h-1.75z" />
+                            </svg>
+                            <!-- End Star -->
+                        </div>
+                    </div>
+                    <!-- End Review -->
+                </div>
+
             </div>
             <!-- End Col -->
 
-            <div class="relative ms-4">
-                <img class="w-full rounded-md" src="https://images.unsplash.com/photo-1665686377065-08ba896d16fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&h=800&q=80" alt="Hero Image">
-                <div class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-neutral-800 dark:via-neutral-900/0 dark:to-neutral-900/0"></div>
-
-                <!-- SVG-->
-                <div class="absolute bottom-0 start-0">
-                    <svg class="w-2/3 ms-auto h-auto text-white dark:text-neutral-900" width="630" height="451" viewBox="0 0 630 451" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="531" y="352" width="99" height="99" fill="currentColor" />
-                        <rect x="140" y="352" width="106" height="99" fill="currentColor" />
-                        <rect x="482" y="402" width="64" height="49" fill="currentColor" />
-                        <rect x="433" y="402" width="63" height="49" fill="currentColor" />
-                        <rect x="384" y="352" width="49" height="50" fill="currentColor" />
-                        <rect x="531" y="328" width="50" height="50" fill="currentColor" />
-                        <rect x="99" y="303" width="49" height="58" fill="currentColor" />
-                        <rect x="99" y="352" width="49" height="50" fill="currentColor" />
-                        <rect x="99" y="392" width="49" height="59" fill="currentColor" />
-                        <rect x="44" y="402" width="66" height="49" fill="currentColor" />
-                        <rect x="234" y="402" width="62" height="49" fill="currentColor" />
-                        <rect x="334" y="303" width="50" height="49" fill="currentColor" />
-                        <rect x="581" width="49" height="49" fill="currentColor" />
-                        <rect x="581" width="49" height="64" fill="currentColor" />
-                        <rect x="482" y="123" width="49" height="49" fill="currentColor" />
-                        <rect x="507" y="124" width="49" height="24" fill="currentColor" />
-                        <rect x="531" y="49" width="99" height="99" fill="currentColor" />
-                    </svg>
-                </div>
-                <!-- End SVG-->
+            <div class="relative md:col-span-8">
+                <img class="w-full rounded-2xl h-full" src="/assets/img/mockups/MacBook-Pro-1735635658277.jpeg" alt="Hero Image">
             </div>
             <!-- End Col -->
         </div>
@@ -163,1058 +167,610 @@
     </div>
     <!-- End Hero -->
 
-
-    <!-- Section Hero -->
-    <section class="bg-indigo-700 text-white h-screen flex flex-col justify-center items-center text-center">
-        <h1 class="text-5xl font-extrabold mb-4">Optimisez votre marketing par email avec REMAIL</h1>
-        <p class="text-lg mb-6">Une solution puissante et intuitive pour gérer vos campagnes d'emails et analyser vos performances en temps réel.</p>
-        <a href="#features" class="bg-white text-indigo-700 py-2 px-6 rounded-full text-lg font-semibold hover:bg-gray-200">Découvrir les fonctionnalités</a>
-    </section>
-
-    <!-- Section Fonctionnalités -->
-    <section id="features" class="py-16 bg-gray-50">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-indigo-700 mb-12">Fonctionnalités de REMAIL</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Fonctionnalité 1 -->
-                <div class="bg-white p-8 shadow-lg rounded-lg hover:shadow-xl transition-shadow">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Gestion avancée des contacts</h3>
-                    <p class="text-gray-600">Segmentez facilement vos contacts en fonction de critères spécifiques pour une communication plus ciblée.</p>
-                </div>
-                <!-- Fonctionnalité 2 -->
-                <div class="bg-white p-8 shadow-lg rounded-lg hover:shadow-xl transition-shadow">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Campagnes d'emails personnalisées</h3>
-                    <p class="text-gray-600">Créez des campagnes d'emails personnalisées qui captent l'attention de vos contacts grâce à des outils intuitifs.</p>
-                </div>
-                <!-- Fonctionnalité 3 -->
-                <div class="bg-white p-8 shadow-lg rounded-lg hover:shadow-xl transition-shadow">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Suivi des performances en temps réel</h3>
-                    <p class="text-gray-600">Suivez les taux d'ouverture, de clics et des bounces pour optimiser vos campagnes en temps réel.</p>
-                </div>
-                <!-- Fonctionnalité 4 -->
-                <div class="bg-white p-8 shadow-lg rounded-lg hover:shadow-xl transition-shadow">
-                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Automatisation des envois</h3>
-                    <p class="text-gray-600">Automatisez l'envoi de vos emails et relances pour maximiser l'efficacité de vos campagnes.</p>
-                </div>
+    <div class="bg-white">
+        <!-- Icon Blocks -->
+        <div id="features" class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+            <div class="text-left mb-10">
+                <h2 class="text-2xl md:text-4xl font-semibold">
+                    Fonctionnalités de REMAIL
+                </h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Section Tarifs -->
-    <section id="pricing" class="py-16 bg-indigo-600 text-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Choisissez le plan adapté à vos besoins</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <!-- Plan 1 -->
-                <div class="bg-white text-indigo-700 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold mb-4">Plan Unique</h3>
-                    <p class="text-lg mb-4">Téléchargez et installez la solution sur votre propre serveur, avec une installation facile et rapide. Aucune obligation d'abonnement mensuel, payez une seule fois !</p>
-                    <p class="text-3xl font-bold mb-4">$45</p>
-                    <ul class="text-left mb-6">
-                        <li>Installation facile sur votre serveur</li>
-                        <li>Aucune redevance mensuelle ou abonnement</li>
-                        <li>Accès complet à toutes les fonctionnalités</li>
-                    </ul>
-                    <a href="#" class="bg-indigo-700 text-white py-2 px-6 rounded-full hover:bg-indigo-800">Téléchargez maintenant</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="py-16 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-indigo-700 mb-6">Contactez-nous</h2>
-            <p class="text-lg text-gray-600 mb-6">Vous avez des questions ou souhaitez en savoir plus sur REMAIL ? Contactez notre équipe dès maintenant !</p>
-            <a href="mailto:contact@remail.com" class="bg-indigo-700 text-white py-2 px-6 rounded-full hover:bg-indigo-800">Envoyer un email</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-indigo-700 text-white py-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 REMAIL - Tous droits réservés.</p>
-        </div>
-    </footer>
-
-
-    <!-- ========== MAIN CONTENT ========== -->
-    <main id="content">
-
-
-
-
-        <!-- Hero -->
-        <div class="bg-gray-100">
-            <div class="max-w-5xl mx-auto px-4 xl:px-0 pt-24 lg:pt-32 pb-24">
-                <h1 class="font-semibold text-gray-800 text-4xl md:text-5xl">
-                    <span class="text-blue-600 ">Solution de Marketing par Email:</span> Robuste, flexible et facile à prendre en main.
-                </h1>
-                <div class="max-w-4xl">
-                    <p class="mt-5 text-neutral-500 text-lg">
-                        Simplifiez votre marketing par email avec Remail. Créez, personnalisez et envoyez des campagnes ciblées en toute simplicité.
-                        Remail est la plateforme qui révolutionne votre communication par email. Grâce à son interface intuitive et à ses fonctionnalités puissantes, vous pouvez :
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- End Hero -->
-
-        <!-- Clients -->
-        <div class="relative overflow-hidden pt-4 bg-gray-100">
-            <svg class="absolute -bottom-20 start-1/2 w-[1900px] transform -translate-x-1/2" width="2745" height="488" viewbox="0 0 2745 488" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.5 330.864C232.505 403.801 853.749 527.683 1482.69 439.719C2111.63 351.756 2585.54 434.588 2743.87 487" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 308.873C232.505 381.81 853.749 505.692 1482.69 417.728C2111.63 329.765 2585.54 412.597 2743.87 465.009" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 286.882C232.505 359.819 853.749 483.701 1482.69 395.738C2111.63 307.774 2585.54 390.606 2743.87 443.018" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 264.891C232.505 337.828 853.749 461.71 1482.69 373.747C2111.63 285.783 2585.54 368.615 2743.87 421.027" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 242.9C232.505 315.837 853.749 439.719 1482.69 351.756C2111.63 263.792 2585.54 346.624 2743.87 399.036" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 220.909C232.505 293.846 853.749 417.728 1482.69 329.765C2111.63 241.801 2585.54 324.633 2743.87 377.045" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 198.918C232.505 271.855 853.749 395.737 1482.69 307.774C2111.63 219.81 2585.54 302.642 2743.87 355.054" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 176.927C232.505 249.864 853.749 373.746 1482.69 285.783C2111.63 197.819 2585.54 280.651 2743.87 333.063" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 154.937C232.505 227.873 853.749 351.756 1482.69 263.792C2111.63 175.828 2585.54 258.661 2743.87 311.072" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 132.946C232.505 205.882 853.749 329.765 1482.69 241.801C2111.63 153.837 2585.54 236.67 2743.87 289.082" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 110.955C232.505 183.891 853.749 307.774 1482.69 219.81C2111.63 131.846 2585.54 214.679 2743.87 267.091" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 88.9639C232.505 161.901 853.749 285.783 1482.69 197.819C2111.63 109.855 2585.54 192.688 2743.87 245.1" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 66.9729C232.505 139.91 853.749 263.792 1482.69 175.828C2111.63 87.8643 2585.54 170.697 2743.87 223.109" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 44.9819C232.505 117.919 853.749 241.801 1482.69 153.837C2111.63 65.8733 2585.54 148.706 2743.87 201.118" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 22.991C232.505 95.9276 853.749 219.81 1482.69 131.846C2111.63 43.8824 2585.54 126.715 2743.87 179.127" class="stroke-neutral-700/50" stroke="currentColor"></path>
-                <path d="M0.5 1C232.505 73.9367 853.749 197.819 1482.69 109.855C2111.63 21.8914 2585.54 104.724 2743.87 157.136" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            </svg>
-
-            <div class="relative z-10">
-                <div class="max-w-5xl px-4 xl:px-0 mx-auto">
-                    <div class="mb-4">
-                        <h2 class="text-neutral-400">Trusted by Open Source, enterprise, and more than 99,000 of you</h2>
-                    </div>
-
-                    <div class="flex justify-between gap-6">
-                        <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-neutral-400" enable-background="new 0 0 2499 614" viewbox="0 0 2499 614" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m431.7 0h-235.5v317.8h317.8v-235.5c0-45.6-36.7-82.3-82.3-82.3zm-308.9 0h-40.5c-45.6 0-82.3 36.7-82.3 82.3v40.5h122.8zm-122.8 196.2h122.8v122.8h-122.8zm392.5 317.8h40.5c45.6 0 82.3-36.7 82.3-82.3v-39.2h-122.8zm-196.3-121.5h122.8v122.8h-122.8zm-196.2 0v40.5c0 45.6 36.7 82.3 82.3 82.3h40.5v-122.8zm828-359.6h-48.1v449.4h254.5v-43h-206.4zm360.8 119c-93.7 0-159.5 69.6-159.5 169.6v11.5c1.3 43 20.3 83.6 51.9 113.9 30.4 27.9 69.6 44.3 111.4 44.3h6.3c44.3 0 86.1-16.5 119-44.3l1.3-1.3-21.5-35.4-2.5 1.3c-26.6 24.1-59.5 38-94.9 38-58.2 0-117.7-38-121.5-122.8h243.1v-2.5s1.3-15.2 1.3-22.8c-.3-91.2-53.4-149.5-134.4-149.5zm-108.9 134.2c10.1-57 51.9-93.7 106.3-93.7 40.5 0 84.8 24.1 88.6 93.7zm521.6-96.2v16.5c-20.3-34.2-58.2-55.7-97.5-55.7h-3.8c-86.1 0-145.6 68.4-145.6 168.4 0 101.3 57 169.6 141.8 169.6 67.1 0 97.5-40.5 107.6-58.2v49.4h45.6v-447h-46.8v157zm-98.8 257c-59.5 0-98.7-50.6-98.7-126.6 0-73.4 41.8-125.3 100-125.3 49.4 0 98.7 39.2 98.7 125.3 0 93.7-51.9 126.6-100 126.6zm424.1-250.7v2.5c-8.9-15.2-36.7-48.1-103.8-48.1-84.8 0-140.5 64.6-140.5 163.3s58.2 165.8 144.3 165.8c46.8 0 78.5-16.5 100-50.6v44.3c0 62-39.2 97.5-108.9 97.5-29.1 0-59.5-7.6-86.1-21.5l-2.5-1.3-17.7 39.2 2.5 1.3c32.9 16.5 69.6 25.3 105.1 25.3 74.7 0 154.4-38 154.4-143.1v-311.3h-46.8zm-93.7 241.8c-62 0-102.5-48.1-102.5-122.8 0-76 35.4-119 96.2-119 67.1 0 98.7 39.2 98.7 119 1.3 78.5-31.6 122.8-92.4 122.8zm331.7-286.1c-93.7 0-158.2 69.6-158.2 168.4v11.4c1.3 43 20.3 83.6 51.9 113.9 30.4 27.9 69.6 44.3 111.4 44.3h6.3c44.3 0 86.1-16.5 119-44.3l1.3-1.3-22.8-35.4-2.5 1.3c-26.6 24.1-59.5 38-94.9 38-58.2 0-117.7-38-121.5-122.8h244.2v-2.5s1.3-15.2 1.3-22.8c0-89.9-53.2-148.2-135.5-148.2zm-107.6 134.2c10.1-57 51.9-93.7 106.3-93.7 40.5 0 84.8 24.1 88.6 93.7zm440.6-127.9c-6.3-1.3-11.4-1.3-17.7-2.5-44.3 0-81 27.9-100 74.7v-72.2h-46.8l1.3 320.3v2.5h48.1v-135.4c0-20.3 2.5-41.8 8.9-60.8 15.2-49.4 49.4-81 89.9-81 5.1 0 10.1 0 15.2 1.3h2.5v-46.8z" fill="currentColor"></path>
-                        </svg>
-
-                        <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-neutral-400" xmlns="http://www.w3.org/2000/svg" viewbox="-4.126838974812941 0.900767442746961 939.436838974813 230.18142889845947" width="2500" height="607">
-                            <path d="M667.21 90.58c-13.76 0-23.58 4.7-28.4 13.6l-2.59 4.82V92.9h-22.39v97.86h23.55v-58.22c0-13.91 7.56-21.89 20.73-21.89 12.56 0 19.76 7.77 19.76 21.31v58.8h23.56v-63c0-23.3-12.79-37.18-34.22-37.18zm-114.21 0c-27.79 0-45 17.34-45 45.25v13.74c0 26.84 17.41 43.51 45.44 43.51 18.75 0 31.89-6.87 40.16-21l-14.6-8.4c-6.11 8.15-15.87 13.2-25.55 13.2-14.19 0-22.66-8.76-22.66-23.44v-3.89h65.73v-16.23c0-26-17.07-42.74-43.5-42.74zm22.09 43.15h-44.38v-2.35c0-16.11 7.91-25 22.27-25 13.83 0 22.09 8.76 22.09 23.44zm360.22-56.94V58.07h-81.46v18.72h28.56V172h-28.56v18.72h81.46V172h-28.57V76.79zM317.65 55.37c-36.38 0-59 22.67-59 59.18v19.74c0 36.5 22.61 59.18 59 59.18s59-22.68 59-59.18v-19.74c-.01-36.55-22.65-59.18-59-59.18zm34.66 80.27c0 24.24-12.63 38.14-34.66 38.14S283 159.88 283 135.64v-22.45c0-24.24 12.64-38.14 34.66-38.14s34.66 13.9 34.66 38.14zm98.31-45.06c-12.36 0-23.06 5.12-28.64 13.69l-2.53 3.9V92.9h-22.4v131.53h23.56v-47.64l2.52 3.74c5.3 7.86 15.65 12.55 27.69 12.55 20.31 0 40.8-13.27 40.8-42.93v-16.64c0-21.37-12.63-42.93-41-42.93zM468.06 149c0 15.77-9.2 25.57-24 25.57-13.8 0-23.43-10.36-23.43-25.18v-14.72c0-15 9.71-25.56 23.63-25.56 14.69 0 23.82 9.79 23.82 25.56zm298.47-90.92L719 190.76h23.93l9.1-28.44h54.64l.09.28 9 28.16h23.92L792.07 58.07zm-8.66 85.53l21.44-67.08 21.22 67.08zM212.59 95.12a57.27 57.27 0 0 0-4.92-47.05 58 58 0 0 0-62.4-27.79A57.29 57.29 0 0 0 102.06 1a57.94 57.94 0 0 0-55.27 40.14A57.31 57.31 0 0 0 8.5 68.93a58 58 0 0 0 7.13 67.94 57.31 57.31 0 0 0 4.92 47A58 58 0 0 0 83 211.72 57.31 57.31 0 0 0 126.16 231a57.94 57.94 0 0 0 55.27-40.14 57.3 57.3 0 0 0 38.28-27.79 57.92 57.92 0 0 0-7.12-67.95zM126.16 216a42.93 42.93 0 0 1-27.58-10c.34-.19 1-.52 1.38-.77l45.8-26.44a7.43 7.43 0 0 0 3.76-6.51V107.7l19.35 11.17a.67.67 0 0 1 .38.54v53.45A43.14 43.14 0 0 1 126.16 216zm-92.59-39.54a43 43 0 0 1-5.15-28.88c.34.21.94.57 1.36.81l45.81 26.45a7.44 7.44 0 0 0 7.52 0L139 142.52v22.34a.67.67 0 0 1-.27.6l-46.3 26.72a43.14 43.14 0 0 1-58.86-15.77zm-12-100A42.92 42.92 0 0 1 44 57.56V112a7.45 7.45 0 0 0 3.76 6.51l55.9 32.28L84.24 162a.68.68 0 0 1-.65.06L37.3 135.33a43.13 43.13 0 0 1-15.77-58.87zm159 37l-55.9-32.28L144 70a.69.69 0 0 1 .65-.06l46.29 26.73a43.1 43.1 0 0 1-6.66 77.76V120a7.44 7.44 0 0 0-3.74-6.54zm19.27-29c-.34-.21-.94-.57-1.36-.81L152.67 57.2a7.44 7.44 0 0 0-7.52 0l-55.9 32.27V67.14a.73.73 0 0 1 .28-.6l46.29-26.72a43.1 43.1 0 0 1 64 44.65zM78.7 124.3l-19.36-11.17a.73.73 0 0 1-.37-.54V59.14A43.09 43.09 0 0 1 129.64 26c-.34.19-.95.52-1.38.77l-45.8 26.44a7.45 7.45 0 0 0-3.76 6.51zm10.51-22.67l24.9-14.38L139 101.63v28.74l-24.9 14.38-24.9-14.38z" fill="currentColor"></path>
-                        </svg>
-
-                        <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-neutral-400" fill="none" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 2428 1002">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M311.5 389.8h191.8l67 117.5 77.8-117.5h178.3L682.7 590.7l154 220.7H648.1l-77.8-135.8-91.7 135.8h-175l153.2-220.7-145.3-200.9Z" fill="currentColor"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1279.3 640.7H955.4c2.9 26 10 45.2 21 58a76.5 76.5 0 0 0 61.1 27.3c16 0 31.5-4 45.3-12 8.8-5 18.2-13.7 28.2-26.5l159.2 14.7c-24.4 42.4-53.7 72.7-88 91.2-34.5 18.2-83.8 27.5-148.2 27.5-55.8 0-99.7-7.9-131.8-23.6a193.2 193.2 0 0 1-79.6-75c-21-34.4-31.6-74.6-31.6-121 0-65.8 21.2-119.2 63.3-159.8 42.3-40.8 100.6-61.3 175-61.3 60.3 0 108 9.2 142.8 27.5a184 184 0 0 1 79.8 79.3c18.3 34.7 27.4 79.8 27.4 135.3v18.4ZM1115 563.3c-3.2-31.3-11.6-53.7-25.2-67.1a73.1 73.1 0 0 0-53.8-20.3 73.6 73.6 0 0 0-61.6 30.6c-9.7 12.7-16 31.6-18.5 56.8H1115Zm137-173.5h168.3l81.9 267.1 84.5-267H1750l-179.1 421.5h-143.3L1252 389.8Zm463.2 212c0-64.3 21.7-117.4 65-159 43.5-41.7 102-62.6 176-62.6 84.4 0 148.2 24.5 191.3 73.5 34.6 39.4 52 88 52 145.8 0 64.7-21.5 117.8-64.5 159.3-43 41.3-102.4 62-178.5 62-67.7 0-122.5-17.1-164.3-51.5-51.4-42.6-77-98.4-77-167.6Zm162-.5c0 37.7 7.5 65.5 22.8 83.4a72 72 0 0 0 57.3 27.1c23.4 0 42.5-9 57.4-26.7 15-17.8 22.5-46 22.5-85.4 0-36.4-7.6-63.7-22.7-81.5a70.5 70.5 0 0 0-56-26.7c-23.5 0-43 9-58.3 27-15.4 18.2-23 45.9-23 82.8ZM2363.1.1a64 64 0 0 1 0 127.9 64 64 0 0 1 0-128Z" fill="currentColor"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1912.1 671.5c220.3-135 326.4-327 334-419.2 8.7-106.7-71-235.9-358.9-238-345 3.6-790 158.3-1163.6 360.4h138c315.8-152.6 672-266.2 1000.8-275.2 287.7-7.8 304.4 149.2 302 199-3.6 71-74.7 234.5-252.3 373Zm-1315.7-222-36 22.7 10 17.5 26-40.1ZM419.8 567.5C212 717 57 873.2.8 1001.9 77.8 897.1 217 771 394.9 647l40.4-58.1-15.5-21.4Z" fill="currentColor"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2036.3 580a819.8 819.8 0 0 0 114.2-122.8l-3-3.5c-8-9.2-17-17.5-26.5-25-21 39.8-50 83.7-88.2 128.3 1.6 7 2.8 14.7 3.5 23Z" fill="currentColor"></path>
-                        </svg>
-
-                        <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-neutral-400" fill="none" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 127 33">
-                            <path d="M9.3 16.5C9.3 9 14.3 2.7 21.2.7a16.5 16.5 0 1 0 0 31.6c-6.9-2-11.9-8.3-11.9-15.8Z" fill="currentColor"></path>
-                            <path d="M21.7 10c4 0 7.4 2.8 8.5 6.4a8.9 8.9 0 1 0-17 0c1-3.6 4.4-6.3 8.5-6.3Z" fill="currentColor"></path>
-                            <path d="M24.8 19.4c0 3-2 5.5-4.8 6.3A6.6 6.6 0 1 0 20 13c2.8.8 4.8 3.4 4.8 6.4Z" fill="currentColor"></path>
-                            <path d="M39.6 13.5A4.4 4.4 0 0 1 44 9.1h1.3v2.7l-1 .2-1 .6-.2.4-.1.5h2.3v3H43v9.2h-3.4v-9.3h-1.3v-2.9h1.3ZM55.7 13.5h3.4v6.1a6.9 6.9 0 0 1-1.7 4.6 6 6 0 0 1-4.5 1.8c-1 0-1.8-.1-2.5-.5a6 6 0 0 1-3.2-3.4c-.3-.8-.4-1.6-.4-2.5v-6H50v6c0 .5 0 1 .2 1.3l.5 1c.2.4.5.6.9.8.3.2.8.3 1.2.3a2.6 2.6 0 0 0 2.1-1c.3-.3.4-.7.5-1l.2-1.4v-6ZM61.2 25.7V9.5h3.4v16.2h-3.4ZM66.9 25.7V9.5h3.3v16.2H67ZM78.5 21.2l3.3-7.7h3.7l-5.7 12.2h-2.7l-5.6-12.2H75l3.4 7.7ZM87 13.5h3.3v12.2H87V13.5Zm1.6-5 .8.1.6.4.4.7.2.7a1.9 1.9 0 0 1-.6 1.4l-.6.4a2 2 0 0 1-.8.1c-.5 0-1-.2-1.3-.5a2 2 0 0 1-.4-2.1c0-.3.2-.5.4-.7l.6-.4.7-.1ZM98.8 13.2a6.7 6.7 0 0 1 4.8 1.9 6.3 6.3 0 0 1 1.9 5.7h-9.8a3.3 3.3 0 0 0 3.2 2.2c.5 0 1-.1 1.4-.4.5-.2.9-.5 1.2-1h3.7c-.2.7-.5 1.3-1 1.8a6.1 6.1 0 0 1-3.3 2.3 7 7 0 0 1-6.9-1.6 6.1 6.1 0 0 1-2-4.5 6.1 6.1 0 0 1 2-4.5c.7-.6 1.4-1 2.2-1.4.8-.3 1.7-.5 2.6-.5Zm3.2 5.2c-.3-.6-.7-1.1-1.2-1.5-.6-.4-1.3-.7-2-.7s-1.4.3-2 .7c-.5.4-.9.9-1.1 1.5h6.3ZM123 13.5h3.6l-5 12.2H119l-2.5-6.5-2.5 6.5h-2.7l-5-12.2h3.6l2.7 7 2.8-7h2.2l2.8 7 2.7-7Z" fill="currentColor"></path>
-                        </svg>
-
-                        <svg class="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 text-neutral-400" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 88 22" xml:space="preserve" enable-background="new 0 0 88 22">
-                            <path d="M36.3 14.6a7.3 7.3 0 0 1-5.6 2.8c-3.8 0-6.8-2.7-6.8-6.2a6 6 0 0 1 2-4.5A6 6 0 0 1 30.5 5c2.2 0 4.3 1 5.6 2.8l-2.5 1.8a3.7 3.7 0 0 0-3.1-1.8 3.5 3.5 0 0 0-3.5 3.5c.1 2 1.7 3.5 3.6 3.5 1.3 0 2.5-.6 3.2-1.7l2.5 1.5z" fill="currentColor"></path>
-                            <path d="M37.7 0H40.8V17.1H37.7z" fill="currentColor"></path>
-                            <path d="M49.1 14.7c2 0 3.7-1.6 3.8-3.6-.1-2-1.8-3.6-3.8-3.6s-3.7 1.6-3.8 3.6c.1 2 1.7 3.6 3.8 3.6m0-9.8c1.7-.1 3.4.5 4.7 1.7 1.3 1.2 2 2.8 2.1 4.5a6.4 6.4 0 0 1-2.1 4.5 6.4 6.4 0 0 1-4.7 1.7c-3.8 0-6.8-2.7-6.8-6.2s3-6.2 6.8-6.2" fill="currentColor"></path>
-                            <path d="M55.3 5.1 59 5.1 62 11.5 65.2 5.1 68.6 5.1 62 17.8z" fill="currentColor"></path>
-                            <path d="M77.5 9.4a3 3 0 0 0-2.9-1.9c-1.3 0-2.5.7-3.1 1.9h6zm2 6.3a7 7 0 0 1-4.6 1.6c-3.8 0-6.8-2.7-6.8-6.2 0-1.7.7-3.3 1.9-4.5a6 6 0 0 1 4.6-1.7c1.7-.1 3.3.6 4.5 1.8s1.8 2.8 1.7 4.5v.8h-9.6a3.9 3.9 0 0 0 6.5 1.5l1.8 2.2zm2.8-5.3c0-2.9 2.2-5.2 5.7-5.2V8c-.7 0-1.5.3-2 .8s-.7 1.3-.6 2v6.3h-3.1v-6.7z" fill="currentColor"></path>
-                            <path d="M9.7 5.6a5 5 0 0 0-8.3-3.5C0 3.5-.4 5.6.3 7.4s2.5 3 4.5 3h4.9V5.6zm1.4 0a5 5 0 0 1 8.3-3.5c1.4 1.4 1.8 3.5 1.1 5.3s-2.5 3-4.5 3h-4.9V5.6zm0 11a5 5 0 0 0 8.3 3.5c1.4-1.4 1.8-3.5 1.1-5.3s-2.5-3-4.5-3h-4.9v4.8zm-6.3 3.5c1.9 0 3.5-1.5 3.5-3.5v-3.5H4.8c-1.9 0-3.5 1.5-3.5 3.5s1.6 3.5 3.5 3.5zm4.9-3.5a5 5 0 0 1-8.3 3.5C0 18.7-.4 16.6.3 14.8s2.5-3 4.5-3h4.9v4.8z" fill="currentColor"></path>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-4">
+                <!-- Icon Block -->
+                <a class="group flex flex-col justify-center border border-gray-200 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-2xl p-4 md:p-7 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                    <div class="flex justify-center items-center size-12 bg-blue-100 rounded-xl">
+                        <svg class="shrink-0 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="currentColor">
+                                <path d="M14.733 1.25H9.267c-.812 0-1.469 0-2 .045c-.55.047-1.033.145-1.48.381a3.8 3.8 0 0 0-1.633 1.692c-.223.454-.316.944-.36 1.507c-.044.549-.044 1.227-.044 2.072v10.106c0 .845 0 1.523.043 2.072c.045.563.138 1.053.36 1.507a3.8 3.8 0 0 0 1.635 1.692c.446.236.93.334 1.478.38c.415.036.904.044 1.484.046V15.5a2.75 2.75 0 0 1 2.75-2.75h1a2.75 2.75 0 0 1 2.75 2.75v7.25a19 19 0 0 0 1.484-.045c.549-.047 1.032-.145 1.478-.381a3.8 3.8 0 0 0 1.634-1.692c.223-.454.316-.944.36-1.508c.044-.548.044-1.226.044-2.07V6.947c0-.845 0-1.523-.043-2.072c-.044-.563-.138-1.053-.36-1.507a3.8 3.8 0 0 0-1.635-1.692c-.446-.236-.93-.334-1.478-.38c-.532-.046-1.189-.046-2-.046M7.25 6A.75.75 0 0 1 8 5.25h2a.75.75 0 0 1 0 1.5H8A.75.75 0 0 1 7.25 6M8 9.25h2a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1 0-1.5M13.25 6a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1-.75-.75M14 9.25h2a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5" />
+                                <path d="M13.75 22.75V15.5c0-.69-.56-1.25-1.25-1.25h-1c-.69 0-1.25.56-1.25 1.25v7.25z" />
+                            </g>
                         </svg>
                     </div>
-                </div>
+                    <div class="mt-5">
+                        <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400">Workspaces</h3>
+                        <p class="mt-1 text-gray-600 dark:text-neutral-400">
+                            Organisez vos projets et collaborez avec votre équipe.
+                        </p>
+                    </div>
+                </a>
+                <!-- End Icon Block -->
+
+                <!-- Icon Block -->
+                <a class="group flex flex-col justify-center border border-gray-200 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-2xl p-4 md:p-7 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                    <div class="flex justify-center items-center size-12 bg-blue-100 rounded-xl">
+                        <svg class="shrink-0 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M21 2H6a2 2 0 0 0-2 2v3H2v2h2v2H2v2h2v2H2v2h2v3a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1m-8 2.999c1.648 0 3 1.351 3 3A3.01 3.01 0 0 1 13 11c-1.647 0-3-1.353-3-3.001c0-1.649 1.353-3 3-3M19 18H7v-.75c0-2.219 2.705-4.5 6-4.5s6 2.281 6 4.5z" />
+                        </svg>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400">Contacts</h3>
+                        <p class="mt-1 text-gray-600 dark:text-neutral-400">
+                            Importez et segmentez votre base de contacts.
+                        </p>
+                    </div>
+                </a>
+                <!-- End Icon Block -->
+
+                <!-- Icon Block -->
+                <a class="group flex flex-col justify-center border border-gray-200 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-2xl p-4 md:p-7 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                    <div class="flex justify-center items-center size-12 bg-blue-100 rounded-xl">
+                        <svg class="shrink-0 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="m20.713 8.128l-.246.566a.506.506 0 0 1-.934 0l-.246-.566a4.36 4.36 0 0 0-2.22-2.25l-.759-.339a.53.53 0 0 1 0-.963l.717-.319a4.37 4.37 0 0 0 2.251-2.326l.253-.611a.506.506 0 0 1 .942 0l.253.61a4.37 4.37 0 0 0 2.25 2.327l.718.32a.53.53 0 0 1 0 .962l-.76.338a4.36 4.36 0 0 0-2.219 2.251M20 11c.701 0 1.374-.12 2-.341V20a1 1 0 0 1-1 1H2V4a1 1 0 0 1 1-1h11.341A6 6 0 0 0 14 5a5.97 5.97 0 0 0 1.36 3.803L12 11.683L5.65 6.24l-1.3 1.518L12 14.317l4.886-4.188A5.96 5.96 0 0 0 20 11" />
+                        </svg>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400">Templates</h3>
+                        <p class="mt-1 text-gray-600 dark:text-neutral-400">
+                            Importez des templates d'emails responsive et personnalisés.
+                        </p>
+                    </div>
+                </a>
+                <!-- End Icon Block -->
+
+                <!-- Icon Block -->
+                <a class="group flex flex-col justify-center border border-gray-200 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-2xl p-4 md:p-7 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                    <div class="flex justify-center items-center size-12 bg-blue-100 rounded-xl">
+                        <svg class="shrink-0 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke-width="1.5">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17 14h6m0 0l-3-3m3 3l-3 3" />
+                                <path fill="currentColor" fill-rule="evenodd" d="M.25 7A2.75 2.75 0 0 1 3 4.25h13A2.75 2.75 0 0 1 18.75 7v2.129q-.181.12-.341.28a2.25 2.25 0 0 0-.53 2.341H17a2.25 2.25 0 0 0 0 4.5h.878a2.25 2.25 0 0 0 .435 2.239A2.75 2.75 0 0 1 16 19.75H3A2.75 2.75 0 0 1 .25 17zM17 13.25h1.75v1.5H17a.75.75 0 0 1 0-1.5M5.416 8.376a.75.75 0 0 0-.832 1.248l4.5 3a.75.75 0 0 0 .832 0l4.5-3a.75.75 0 0 0-.832-1.248L9.5 11.099z" clip-rule="evenodd" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400">Envoi d'emails </h3>
+                        <p class="mt-1 text-gray-600 dark:text-neutral-400">
+                            Envoyez des campagnes ciblées et automatisées.
+                        </p>
+                    </div>
+                </a>
+                <!-- End Icon Block -->
+
+                <!-- Icon Block -->
+                <a class="group flex flex-col justify-center border border-gray-200 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-2xl p-4 md:p-7 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                    <div class="flex justify-center items-center size-12 bg-blue-100 rounded-xl">
+                        <svg class="shrink-0 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M20 13.75a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75v6.75H14V4.25c0-.728-.002-1.2-.048-1.546c-.044-.325-.115-.427-.172-.484s-.159-.128-.484-.172C12.949 2.002 12.478 2 11.75 2s-1.2.002-1.546.048c-.325.044-.427.115-.484.172s-.128.159-.172.484c-.046.347-.048.818-.048 1.546V20.5H8V8.75A.75.75 0 0 0 7.25 8h-3a.75.75 0 0 0-.75.75V20.5H1.75a.75.75 0 0 0 0 1.5h20a.75.75 0 0 0 0-1.5H20z" />
+                        </svg>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400">Statistiques</h3>
+                        <p class="mt-1 text-gray-600 dark:text-neutral-400">
+                            Suivez les performances de vos campagnes en temps réel.
+                        </p>
+                    </div>
+                </a>
+                <!-- End Icon Block -->
+
+                <!-- Icon Block -->
+                <a class="group flex flex-col justify-center border border-gray-200 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-2xl p-4 md:p-7 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                    <div class="flex justify-center items-center size-12 bg-blue-100 rounded-xl">
+                        <svg class="shrink-0 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="currentColor">
+                                <path d="M4.08 5.227A3 3 0 0 1 6.979 3H17.02a3 3 0 0 1 2.9 2.227l2.113 7.926A5.23 5.23 0 0 0 18.75 12H5.25a5.23 5.23 0 0 0-3.284 1.153z" />
+                                <path fill-rule="evenodd" d="M5.25 13.5a3.75 3.75 0 1 0 0 7.5h13.5a3.75 3.75 0 1 0 0-7.5zm10.5 4.5a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m3.75-.75a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0" clip-rule="evenodd" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400">SMTP serveur</h3>
+                        <p class="mt-1 text-gray-600 dark:text-neutral-400">
+                            Ajouter et gérér plusieurs serveurs SMTP pour vos envois
+                        </p>
+                    </div>
+                </a>
+                <!-- End Icon Block -->
+
+                <!-- Icon Block -->
+                <a class="group flex flex-col justify-center border border-gray-200 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-2xl p-4 md:p-7 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                    <div class="flex justify-center items-center size-12 bg-blue-100 rounded-xl">
+                        <svg class="shrink-0 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd" d="M4.172 3.172C3 4.343 3 6.229 3 10v4c0 3.771 0 5.657 1.172 6.828S7.229 22 11 22h2c3.771 0 5.657 0 6.828-1.172S21 17.771 21 14v-4c0-3.771 0-5.657-1.172-6.828S16.771 2 13 2h-2C7.229 2 5.343 2 4.172 3.172M8 9.25a.75.75 0 0 0 0 1.5h8a.75.75 0 0 0 0-1.5zm0 4a.75.75 0 0 0 0 1.5h5a.75.75 0 0 0 0-1.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400">Documentation</h3>
+                        <p class="mt-1 text-gray-600 dark:text-neutral-400">
+                            Chaque fonctionnalité est bien documenté
+                        </p>
+                    </div>
+                </a>
+                <!-- End Icon Block -->
+
+                <!-- Icon Block -->
+                <a class="group flex flex-col justify-center border border-gray-200 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 rounded-2xl p-4 md:p-7 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                    <div class="flex justify-center items-center size-12 bg-blue-100 rounded-xl">
+                        <svg class="shrink-0 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+                            <path fill="currentColor" d="m213.66 82.34l-56-56A8 8 0 0 0 152 24H56a16 16 0 0 0-16 16v76a4 4 0 0 0 4 4h168a4 4 0 0 0 4-4V88a8 8 0 0 0-2.34-5.66M152 88V44l44 44ZM48 180c0 11 7.18 20 16 20a14.18 14.18 0 0 0 10.06-4.5a8.21 8.21 0 0 1 10.9-.91a8 8 0 0 1 .82 11.81A30.06 30.06 0 0 1 64 216c-17.64 0-32-16.15-32-36s14.36-36 32-36a30 30 0 0 1 21.39 9.19a8.26 8.26 0 0 1 .73 11.09a8 8 0 0 1-11.9.38A14.17 14.17 0 0 0 64 160c-8.82 0-16 9-16 20m103.81 16.31a20.82 20.82 0 0 1-9.19 15.23C137.43 215 131 216 125.13 216a61 61 0 0 1-15.13-2a8 8 0 1 1 4.3-15.41c4.38 1.2 14.95 2.7 19.55-.36c.88-.59 1.83-1.52 2.14-3.93c.35-2.67-.71-4.1-12.78-7.59c-9.35-2.7-25-7.23-23-23.11a20.56 20.56 0 0 1 9-14.95c11.84-8 30.71-3.31 32.83-2.76a8 8 0 0 1-4.07 15.48c-4.49-1.17-15.23-2.56-19.83.56a4.54 4.54 0 0 0-2 3.67c-.12.9-.14 1.09 1.11 1.9c2.31 1.49 6.45 2.68 10.45 3.84c9.79 2.83 26.35 7.66 24.11 24.97M215.42 155l-19.89 55.68a8 8 0 0 1-15.06 0L160.58 155a8.21 8.21 0 0 1 4.5-10.45a8 8 0 0 1 10.45 4.76l12.47 34.9l12.47-34.9a8 8 0 0 1 10.45-4.76a8.23 8.23 0 0 1 4.5 10.45" />
+                        </svg>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="group-hover:text-gray-600 text-lg font-semibold text-gray-800 dark:text-white dark:group-hover:text-gray-400">Gros fichiers</h3>
+                        <p class="mt-1 text-gray-600 dark:text-neutral-400">
+                            Gestion de gros volume de fichiers de contact
+                        </p>
+                    </div>
+                </a>
+                <!-- End Icon Block -->
             </div>
         </div>
-        <!-- End Clients -->
 
-        <!-- Case Stories -->
-        <div class="bg-gray-100 ">
-            <div class="max-w-5xl px-4 xl:px-0 py-24 mx-auto">
+        <div>
+            <!-- Slider -->
+            <div class="max-w-3xl mx-auto px-4 lg:px-6 lg:px-8 py-10">
+                <div data-hs-carousel='{"loadingClasses": "opacity-0"}' class="relative">
+                    <div class="hs-carousel relative overflow-hidden w-full h-[30rem] md:h-[calc(100vh-106px)]  bg-gray-100 rounded-2xl dark:bg-neutral-800">
+                        <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+                            <!-- Item -->
+                            <div class="hs-carousel-slide">
+                                <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                    <img src="/assets/img/mockups/MacBook-Pro-1735635658277.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                </div>
+                            </div>
+                            <!-- End Item -->
 
-                <!-- Icon Blocks -->
-                <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+                            <!-- Item -->
+                            <div class="hs-carousel-slide">
+                            <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                    <img src="/assets/img/mockups/MacBook-Pro-1735635274820.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                </div>
+                            </div>
+                            <!-- End Item -->
+
+                            <!-- Item -->
+                            <div class="hs-carousel-slide">
+                            <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                    <img src="/assets/img/mockups/MacBook-Pro-1735631511452.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                </div>
+                            </div>
+                            <!-- End Item -->
+                              <!-- Item -->
+                            <div class="hs-carousel-slide">
+                            <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                    <img src="/assets/img/mockups/MacBook-Pro-1735631613623.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                </div>
+                            </div>
+                               <!-- Item -->
+                               <div class="hs-carousel-slide">
+                            <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                    <img src="/assets/img/mockups/MacBook-Pro-1735635438607.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                </div>
+                            </div>
+                            <!-- End Item -->
+                        </div>
+                    </div>
+
+                    <!-- Arrows -->
+                    <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-s-2xl focus:outline-none focus:bg-white/20">
+                        <span class="text-2xl" aria-hidden="true">
+                            <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+                            </svg>
+                        </span>
+                        <span class="sr-only">Previous</span>
+                    </button>
+
+                    <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-e-2xl focus:outline-none focus:bg-white/20">
+                        <span class="sr-only">Next</span>
+                        <span class="text-2xl" aria-hidden="true">
+                            <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <!-- End Arrows -->
+                </div>
+            </div>
+            <!-- End Slider -->
+        </div>
+
+        <!-- Features -->
+        <div class="overflow-hidden" id="pricing">
+            <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+                <!-- Title -->
+                <div class="mx-auto max-w-2xl mb-8 lg:mb-14 text-center">
+                    <h2 class="text-3xl lg:text-4xl text-gray-800 font-bold dark:text-neutral-200">
+                        Choisissez le plan adapté à vos besoins
+                    </h2>
+                </div>
+                <!-- End Title -->
+
+                <div class="relative xl:w-10/12 xl:mx-auto">
                     <!-- Grid -->
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-                        <!-- Icon Block -->
-                        <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
-                            <!-- Icon -->
-                            <div class="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
-                                <svg class="shrink-0 size-7 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect width="18" height="10" x="3" y="11" rx="2" />
-                                    <circle cx="12" cy="5" r="2" />
-                                    <path d="M12 7v4" />
-                                    <line x1="8" x2="8" y1="16" y2="16" />
-                                    <line x1="16" x2="16" y1="16" y2="16" />
-                                </svg>
-                            </div>
-                            <!-- End Icon -->
-
-                            <div class="mt-3">
-                                <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                    Workspaces
-                                </h3>
-                                <p>
-                                    Organisez vos projets et collaborez avec votre équipe.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End Icon Block -->
-
-                        <!-- Icon Block -->
-                        <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
-                            <!-- Icon -->
-                            <div class="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
-                                <svg class="shrink-0 size-7 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="m7.5 4.27 9 5.15" />
-                                    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-                                    <path d="m3.3 7 8.7 5 8.7-5" />
-                                    <path d="M12 22V12" />
-                                </svg>
-                            </div>
-                            <!-- End Icon -->
-
-                            <div class="mt-3">
-                                <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                    Contacts
-                                </h3>
-                                <p>
-                                    Importez, segmentez et enrichissez votre base de contacts.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End Icon Block -->
-
-                        <!-- Icon Block -->
-                        <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
-                            <!-- Icon -->
-                            <div class="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
-                                <svg class="shrink-0 size-7 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                                </svg>
-                            </div>
-                            <!-- End Icon -->
-
-                            <div class="mt-3">
-                                <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                    Templates
-                                </h3>
-                                <p>
-                                    Créez des templates d'emails responsive et personnalisés.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End Icon Block -->
-
-                        <!-- Icon Block -->
-                        <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
-                            <!-- Icon -->
-                            <div class="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
-                                <svg class="shrink-0 size-7 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-                                    <path d="M4 22h16" />
-                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-                                </svg>
-                            </div>
-                            <!-- End Icon -->
-
-                            <div class="mt-3">
-                                <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                    Envoi d'emails
-                                </h3>
-                                <p>
-                                    Envoyez des campagnes ciblées et automatisées.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End Icon Block -->
-
-                        <!-- Icon Block -->
-                        <div class="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-neutral-700">
-                            <!-- Icon -->
-                            <div class="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
-                                <svg class="shrink-0 size-7 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                    <circle cx="9" cy="7" r="4" />
-                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                </svg>
-                            </div>
-                            <!-- End Icon -->
-
-                            <div class="mt-3">
-                                <h3 class="text-sm sm:text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                                    Statistiques
-                                </h3>
-                                <p>
-                                    Suivez les performances de vos campagnes en temps réel.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End Icon Block -->
-
-                    </div>
-                    <!-- End Grid -->
-                </div>
-                <!-- End Icon Blocks -->
-
-                <!-- Title -->
-                <div class="max-w-3xl mb-10 lg:mb-14">
-                    <h2 class="text-white font-semibold text-2xl md:text-4xl md:leading-tight">Success stories</h2>
-                    <p class="mt-1 text-neutral-400">Global brands see measurable success when they collaborate with us. From higher conversion and payment approval rates to faster processing speeds. Discover their stories here.</p>
-                </div>
-                <!-- End Title -->
-
-                <!-- Card Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 bg-white items-center border border-gray-300 divide-y lg:divide-y-0 lg:divide-x divide-gray-300 rounded-xl">
-                    <!-- Card -->
-                    <a class="group relative z-10 p-4 md:p-6 h-full flex flex-col bg-white focus:outline-none first:rounded-t-xl last:rounded-b-xl lg:first:rounded-l-xl lg:first:rounded-tr-none lg:last:rounded-r-xl lg:last:rounded-bl-none before:absolute before:inset-0 before:bg-gradient-to-b before:hover:from-transparent before:hover:via-transparent before:hover:to-blue-600/10 before:via-80% before:focus:from-transparent before:focus:via-transparent before:focus:to-blue-600/10 before:-z-[1] before:last:rounded-b-xl lg:before:first:rounded-s-xl lg:before:last:rounded-e-xl lg:before:last:rounded-bl-none before:opacity-0 before:hover:opacity-100 before:focus:opacity-100" href="#">
-                        <div class="mb-5">
-                            <svg class="shrink-0 w-8 h-8" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_11766_122079)">
-                                    <path d="M16 32C7.16 32 0 24.84 0 16C0 7.16 7.16 0 16 0C24.84 0 32 7.16 32 16C32 24.84 24.84 32 16 32Z" fill="#FFE01B"></path>
-                                    <path d="M11.72 19.28C11.74 19.3 11.74 19.34 11.72 19.38C11.64 19.52 11.48 19.6 11.32 19.58C11.02 19.54 10.8 19.3 10.82 19C10.82 18.8 10.86 18.62 10.92 18.42C11.02 18.18 10.92 17.92 10.72 17.78C10.6 17.7 10.44 17.68 10.3 17.7C10.16 17.72 10.04 17.82 9.96001 17.94C9.90001 18.04 9.86001 18.14 9.84001 18.24C9.84001 18.26 9.82001 18.28 9.82001 18.28C9.78001 18.4 9.70001 18.44 9.64001 18.44C9.62001 18.44 9.58001 18.42 9.56001 18.36C9.50001 18.02 9.62001 17.68 9.84001 17.42C10.04 17.2 10.32 17.1 10.62 17.14C10.92 17.18 11.2 17.38 11.32 17.66C11.46 18 11.42 18.38 11.24 18.7C11.22 18.72 11.22 18.76 11.2 18.78C11.14 18.9 11.12 19.06 11.2 19.18C11.26 19.26 11.34 19.3 11.44 19.3C11.48 19.3 11.52 19.3 11.56 19.28C11.64 19.24 11.7 19.24 11.72 19.28ZM24.94 19.6C24.92 20.22 24.78 20.82 24.56 21.4C23.44 24.1 20.76 25.6 17.56 25.5C14.58 25.42 12.04 23.84 10.94 21.26C10.24 21.24 9.56001 20.96 9.06001 20.5C8.52001 20.04 8.18001 19.4 8.10001 18.7C8.04001 18.22 8.10001 17.74 8.28001 17.28L7.66001 16.76C4.78001 14.36 13.72 4.4 16.56 6.9C16.58 6.92 17.54 7.86 17.54 7.86C17.54 7.86 18.06 7.64 18.08 7.64C20.58 6.6 22.62 7.1 22.62 8.76C22.62 9.62 22.08 10.62 21.2 11.54C21.56 11.9 21.8 12.34 21.92 12.82C22.02 13.16 22.06 13.5 22.08 13.86C22.1 14.22 22.12 15.04 22.12 15.04C22.14 15.04 22.4 15.12 22.48 15.14C23 15.26 23.46 15.48 23.86 15.82C24.08 16.02 24.2 16.3 24.26 16.58C24.32 16.96 24.22 17.34 24 17.64C24.06 17.78 24.1 17.9 24.16 18.04C24.24 18.28 24.28 18.48 24.3 18.5C24.52 18.54 24.94 18.86 24.94 19.6ZM12.34 18.12C12.14 16.86 11.3 16.42 10.72 16.38C10.58 16.38 10.44 16.38 10.28 16.42C9.26001 16.62 8.66001 17.5 8.78001 18.64C8.96001 19.7 9.82001 20.5 10.88 20.56C10.98 20.56 11.08 20.56 11.18 20.54C12.24 20.38 12.5 19.24 12.34 18.12ZM14.1 10.12C14.98 9.4 15.9 8.76 16.88 8.2C16.88 8.2 16.1 7.3 15.86 7.22C14.42 6.82 11.3 8.98 9.30001 11.84C8.50001 13 7.34001 15.04 7.90001 16.08C8.10001 16.32 8.32001 16.52 8.56001 16.72C8.92001 16.2 9.48001 15.84 10.12 15.72C10.9 13.54 12.28 11.6 14.1 10.12ZM17.22 20.1C17.3 20.44 17.56 20.72 17.9 20.8C18.08 20.86 18.24 20.92 18.44 20.94C20.72 21.34 22.86 20.02 23.34 19.7C23.38 19.68 23.4 19.7 23.38 19.74C23.36 19.76 23.34 19.78 23.34 19.8C22.76 20.56 21.18 21.44 19.12 21.44C18.22 21.44 17.32 21.12 17 20.64C16.48 19.88 16.98 18.78 17.82 18.9C17.82 18.9 18.12 18.94 18.2 18.94C19.52 19.06 20.86 18.86 22.08 18.32C23.24 17.78 23.68 17.18 23.62 16.7C23.6 16.56 23.52 16.42 23.42 16.3C23.1 16.04 22.72 15.86 22.32 15.78C22.14 15.72 22.02 15.7 21.88 15.66C21.64 15.58 21.52 15.52 21.5 15.06C21.48 14.86 21.46 14.18 21.44 13.88C21.42 13.38 21.36 12.7 20.94 12.42C20.84 12.34 20.7 12.3 20.58 12.3C20.5 12.3 20.44 12.3 20.36 12.32C20.14 12.36 19.96 12.48 19.8 12.64C19.4 13 18.88 13.18 18.34 13.14C18.04 13.12 17.74 13.08 17.38 13.06C17.32 13.06 17.24 13.06 17.18 13.04C16.22 13.06 15.44 13.78 15.32 14.74C15.12 16.16 16.14 16.88 16.44 17.32C16.48 17.38 16.52 17.44 16.52 17.52C16.52 17.6 16.48 17.68 16.42 17.72C15.6 18.64 15.3 19.92 15.62 21.12C15.66 21.26 15.7 21.4 15.76 21.54C16.5 23.28 18.82 24.1 21.08 23.36C21.38 23.26 21.66 23.14 21.94 23C22.44 22.76 22.88 22.42 23.26 22.02C23.84 21.44 24.22 20.68 24.36 19.86C24.42 19.4 24.32 19.24 24.2 19.16C24.1 19.1 24 19.08 23.88 19.1C23.82 18.74 23.72 18.4 23.58 18.08C22.94 18.56 22.2 18.94 21.42 19.16C20.48 19.42 19.52 19.52 18.54 19.48C17.92 19.42 17.5 19.24 17.34 19.76C18.28 20.08 19.28 20.18 20.28 20.06C20.3 20.06 20.34 20.08 20.34 20.1C20.34 20.12 20.32 20.14 20.3 20.16C20.22 20.14 19.06 20.68 17.22 20.1ZM13.84 11.88C14.6 11.34 15.48 10.96 16.38 10.76C17.42 10.52 18.48 10.52 19.52 10.76C19.56 10.76 19.58 10.7 19.54 10.68C19 10.4 18.42 10.24 17.8 10.22C17.78 10.22 17.76 10.2 17.76 10.18V10.16C17.86 10.04 17.96 9.92 18.08 9.84C18.1 9.82 18.1 9.8 18.08 9.8L18.06 9.78C17.32 9.86 16.62 10.1 15.98 10.52C15.96 10.52 15.94 10.52 15.94 10.52V10.5C15.98 10.32 16.06 10.14 16.16 9.96C16.16 9.94 16.16 9.92 16.14 9.92H16.12C15.22 10.42 14.42 11.08 13.76 11.86C13.74 11.88 13.74 11.9 13.76 11.9C13.8 11.9 13.82 11.9 13.84 11.88ZM19.84 16.7C19.96 16.78 20.14 16.76 20.24 16.64C20.3 16.52 20.22 16.38 20.06 16.3C19.94 16.22 19.76 16.24 19.66 16.36C19.6 16.46 19.68 16.62 19.84 16.7ZM20.34 14.88C20.38 15.08 20.46 15.28 20.58 15.44C20.7 15.42 20.84 15.42 20.96 15.44C21.04 15.22 21.04 14.98 20.98 14.76C20.88 14.34 20.76 14.1 20.52 14.14C20.26 14.18 20.24 14.48 20.34 14.88ZM20.88 15.84C20.72 15.8 20.54 15.88 20.48 16.06C20.44 16.22 20.52 16.4 20.7 16.46C20.88 16.52 21.04 16.42 21.1 16.24C21.1 16.22 21.12 16.18 21.12 16.16C21.12 16 21.02 15.86 20.88 15.84Z" fill="black"></path>
-                                    <path d="M16.66 15.8C16.62 15.8 16.6 15.78 16.6 15.76C16.58 15.68 16.7 15.58 16.8 15.48C17.14 15.22 17.6 15.18 17.98 15.34C18.16 15.42 18.32 15.54 18.42 15.7C18.46 15.76 18.46 15.82 18.44 15.84C18.4 15.88 18.3 15.84 18.12 15.76C17.92 15.66 17.68 15.6 17.46 15.62C17.2 15.66 16.92 15.72 16.66 15.8ZM18.38 16.16C18.22 16 18 15.92 17.8 15.96C17.64 15.98 17.5 16.04 17.38 16.14C17.32 16.18 17.28 16.24 17.28 16.32C17.28 16.34 17.28 16.36 17.3 16.36C17.32 16.36 17.32 16.38 17.34 16.38C17.4 16.38 17.46 16.36 17.5 16.34C17.74 16.26 17.98 16.22 18.22 16.26C18.34 16.28 18.38 16.28 18.42 16.24C18.4 16.2 18.4 16.18 18.38 16.16Z" fill="black"></path>
-                                </g>
-                                <defs>
-                                    <clippath id="clip0_11766_122079">
-                                        <rect width="32" height="32" fill="white"></rect>
-                                    </clippath>
-                                </defs>
-                            </svg>
-
-                            <div class="mt-5">
-                                <p class="font-semibold text-5xl text-white">43%</p>
-                                <h3 class="mt-5 font-medium text-lg text-white">Enhancement in Customer Engagement</h3>
-                                <p class="mt-1 text-neutral-400">With the aim of optimizing customer interactions and boosting brand loyalty, the team at Preline leveraged Mailchimp's powerful tools and expertise to deliver exceptional results.</p>
-                            </div>
-                        </div>
-                        <p class="mt-auto">
-                            <span class="font-medium text-sm text-blue-600 pb-1 border-b-2 border-neutral-700 group-hover:border-blue-600 group-focus:border-blue-600 transition focus:outline-none">
-                                Case study
-                            </span>
-                        </p>
-                    </a>
-                    <!-- End Card -->
-
-                    <!-- Card -->
-                    <a class="group relative z-10 p-4 md:p-6 h-full flex flex-col bg-white focus:outline-none first:rounded-t-xl last:rounded-b-xl lg:first:rounded-l-xl lg:first:rounded-tr-none lg:last:rounded-r-xl lg:last:rounded-bl-none before:absolute before:inset-0 before:bg-gradient-to-b before:hover:from-transparent before:hover:via-transparent before:hover:to-blue-600/10 before:via-80% before:focus:from-transparent before:focus:via-transparent before:focus:to-blue-600/10 before:-z-[1] before:last:rounded-b-xl lg:before:first:rounded-s-xl lg:before:last:rounded-e-xl lg:before:last:rounded-bl-none before:opacity-0 before:hover:opacity-100 before:focus:opacity-100" href="#">
-                        <div class="mb-5">
-                            <svg class="shrink-0 w-8 h-8" width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M27.462 6.28384C27.44 6.12384 27.2998 6.03529 27.184 6.02554C27.0684 6.01589 24.6215 5.83452 24.6215 5.83452C24.6215 5.83452 22.9221 4.1474 22.7355 3.96066C22.5489 3.77403 22.1844 3.8308 22.0429 3.87244C22.0221 3.87858 21.6716 3.98674 21.0919 4.16614C20.5243 2.53261 19.5224 1.03145 17.7599 1.03145C17.7112 1.03145 17.6611 1.03343 17.611 1.03628C17.1098 0.373373 16.4889 0.0853729 15.9525 0.0853729C11.8468 0.0853729 9.88524 5.21798 9.27023 7.82619C7.67483 8.32055 6.54146 8.672 6.39669 8.71748C5.50617 8.99682 5.47801 9.02488 5.36108 9.864C5.27308 10.4993 2.94299 28.5189 2.94299 28.5189L21.0995 31.9208L30.9373 29.7925C30.9373 29.7925 27.4837 6.44384 27.462 6.28384ZM20.0884 4.4765L18.5521 4.952C18.5526 4.84373 18.5532 4.73721 18.5532 4.62072C18.5532 3.60548 18.4123 2.78806 18.1862 2.14006C19.0943 2.25403 19.6992 3.28735 20.0884 4.4765ZM17.0596 2.34137C17.3121 2.97403 17.4763 3.88198 17.4763 5.10718C17.4763 5.16987 17.4757 5.22718 17.4752 5.28515C16.476 5.59463 15.3903 5.93063 14.3022 6.26773C14.9132 3.90981 16.0584 2.77096 17.0596 2.34137ZM15.8398 1.18663C16.017 1.18663 16.1955 1.2468 16.3663 1.36439C15.0505 1.98356 13.6401 3.54302 13.0445 6.65721L10.5364 7.43398C11.2341 5.05863 12.8907 1.18663 15.8398 1.18663Z" fill="#95BF46"></path>
-                                <path d="M27.184 6.02553C27.0684 6.01589 24.6215 5.83452 24.6215 5.83452C24.6215 5.83452 22.9221 4.1474 22.7356 3.96066C22.6658 3.89118 22.5716 3.85556 22.4732 3.84022L21.1004 31.9205L30.9373 29.7925C30.9373 29.7925 27.4837 6.44383 27.462 6.28383C27.44 6.12383 27.2999 6.03529 27.184 6.02553Z" fill="#5E8E3E"></path>
-                                <path d="M17.7599 11.4614L16.5469 15.0697C16.5469 15.0697 15.4841 14.5025 14.1813 14.5025C12.2714 14.5025 12.1753 15.701 12.1753 16.0031C12.1753 17.6511 16.4711 18.2825 16.4711 22.1427C16.4711 25.1797 14.5449 27.1353 11.9476 27.1353C8.83092 27.1353 7.23706 25.1956 7.23706 25.1956L8.07158 22.4384C8.07158 22.4384 9.70994 23.8449 11.0924 23.8449C11.9957 23.8449 12.3632 23.1337 12.3632 22.614C12.3632 20.4643 8.83881 20.3684 8.83881 16.8361C8.83881 13.863 10.9727 10.986 15.2802 10.986C16.94 10.986 17.7599 11.4614 17.7599 11.4614Z" fill="white"></path>
-                            </svg>
-
-                            <div class="mt-5">
-                                <p class="font-semibold text-5xl text-white">20%</p>
-                                <h3 class="mt-5 font-medium text-lg text-white">Rise in E-commerce</h3>
-                                <p class="mt-1 text-neutral-400">In collaboration with Shopify, Preline embarked on a mission to revolutionize the e-commerce experience for a fictitious fashion brand, "StyleAura.".</p>
-                            </div>
-                        </div>
-                        <p class="mt-auto">
-                            <span class="font-medium text-sm text-blue-600 pb-1 border-b-2 border-neutral-700 group-hover:border-blue-600 group-focus:border-blue-600 transition focus:outline-none">
-                                Case study
-                            </span>
-                        </p>
-                    </a>
-                    <!-- End Card -->
-
-                    <!-- Card -->
-                    <a class="group relative z-10 p-4 md:p-6 h-full flex flex-col bg-white focus:outline-none first:rounded-t-xl last:rounded-b-xl lg:first:rounded-l-xl lg:first:rounded-tr-none lg:last:rounded-r-xl lg:last:rounded-bl-none before:absolute before:inset-0 before:bg-gradient-to-b before:hover:from-transparent before:hover:via-transparent before:hover:to-blue-600/10 before:via-80% before:focus:from-transparent before:focus:via-transparent before:focus:to-blue-600/10 before:-z-[1] before:last:rounded-b-xl lg:before:first:rounded-s-xl lg:before:last:rounded-e-xl lg:before:last:rounded-bl-none before:opacity-0 before:hover:opacity-100 before:focus:opacity-100" href="#">
-                        <div class="mb-5">
-                            <svg class="shrink-0 w-8 h-8" width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M32.8875 15.3054C32.9242 16.2093 32.8209 17.1099 32.5811 17.9792C32.3447 18.8486 31.9716 19.6695 31.4787 20.4141C30.989 21.1593 30.3861 21.8167 29.6935 22.3607L29.6769 22.3745L23.019 27.563L19.7451 30.1433L17.7501 31.7089C17.6335 31.8024 17.5036 31.8716 17.3671 31.9201C17.2305 31.9686 17.084 31.9929 16.9374 31.9929C16.7942 31.9929 16.6477 31.9686 16.5111 31.9201C16.3745 31.8716 16.2447 31.8024 16.1281 31.7089L14.1331 30.1433L10.8591 27.563L4.24125 22.4057L4.20129 22.378L4.18796 22.3641C3.49187 21.8203 2.88904 21.1623 2.39611 20.4176C1.90319 19.6729 1.53016 18.8486 1.29036 17.9792C1.05056 17.1099 0.947313 16.2059 0.98395 15.3019C1.02392 14.3979 1.20044 13.5078 1.51018 12.6626L1.55348 12.5414L5.90654 0.747936C5.92875 0.69021 5.95539 0.634792 5.98648 0.581684C6.01534 0.528576 6.04976 0.478931 6.08972 0.43275C6.12747 0.38426 6.16855 0.339234 6.21295 0.297671C6.25736 0.258417 6.30399 0.221472 6.35284 0.186836C6.45609 0.121028 6.56267 0.0725381 6.67924 0.0448295C6.79248 0.0136573 6.91238 -0.000196993 7.02895 0.00673016C7.14885 0.0136573 7.26542 0.0379024 7.37533 0.0829289C7.48524 0.124492 7.59181 0.186836 7.68507 0.263035C7.72948 0.302289 7.77278 0.343852 7.81496 0.387724C7.85493 0.433905 7.89046 0.483549 7.92154 0.536658C7.95485 0.587457 7.98371 0.641719 8.00814 0.699446C8.03256 0.754863 8.05254 0.812589 8.06809 0.872625L11.0023 10.2139H22.8792L25.8134 0.872625C25.8289 0.812589 25.85 0.754863 25.8767 0.699446C25.9011 0.644029 25.93 0.589766 25.9633 0.536658C25.9944 0.485858 26.0299 0.437368 26.0699 0.391187C26.1098 0.345006 26.1531 0.302289 26.1997 0.263035C26.293 0.186836 26.3962 0.127955 26.5062 0.0829289C26.6194 0.0413659 26.736 0.0171209 26.8525 0.0101937C26.9724 0.00326659 27.089 0.0136573 27.2056 0.0448295C27.3188 0.0760017 27.4287 0.124492 27.5286 0.1903C27.5797 0.222627 27.6275 0.259571 27.6719 0.301134C27.7163 0.340388 27.7573 0.38426 27.7951 0.43275C27.8328 0.48124 27.8673 0.532039 27.8983 0.585148C27.9272 0.638256 27.9527 0.693673 27.9749 0.751399L32.3213 12.5483L32.3646 12.6696C32.6744 13.5112 32.8509 14.4014 32.8875 15.3054Z" fill="#E24329"></path>
-                                <path d="M32.8909 15.309C32.9275 16.2095 32.8243 17.1135 32.5845 17.9829C32.3447 18.8523 31.9717 19.6766 31.4787 20.4213C30.9858 21.1659 30.383 21.824 29.6902 22.3678L29.6736 22.3816L23.0157 27.5701C23.0157 27.5701 20.1881 25.3499 16.9374 22.7903L26.4795 15.2813C26.9092 14.9453 27.3588 14.6371 27.8218 14.3531C28.2847 14.0656 28.7643 13.8093 29.2539 13.5807C29.7468 13.3521 30.2498 13.1477 30.7593 12.978C31.2722 12.8049 31.7918 12.6628 32.3214 12.5485L32.3647 12.6698C32.6744 13.5149 32.8509 14.405 32.8909 15.309Z" fill="#FC6D26"></path>
-                                <path d="M16.9374 22.7903C20.1881 25.343 23.0191 27.5701 23.0191 27.5701L19.7451 30.1504L17.7501 31.716C17.6335 31.8095 17.5036 31.8788 17.3671 31.9273C17.2305 31.9758 17.084 32 16.9374 32C16.7942 32 16.6477 31.9758 16.5111 31.9273C16.3746 31.8788 16.2447 31.8095 16.1281 31.716L14.1331 30.1504L10.8591 27.5701C10.8591 27.5701 13.6868 25.343 16.9374 22.7903Z" fill="#FCA326"></path>
-                                <path d="M16.9374 22.7834C13.6834 25.343 10.8591 27.5632 10.8591 27.5632L4.24125 22.4059L4.20129 22.3782L4.18796 22.3643C3.49187 21.8205 2.88904 21.1625 2.39611 20.4178C1.90319 19.6731 1.53016 18.8488 1.29036 17.9794C1.05056 17.1101 0.947313 16.2061 0.98395 15.3021C1.02392 14.3981 1.20044 13.508 1.51018 12.6628L1.55348 12.5416C2.08304 12.6559 2.60261 12.7979 3.11552 12.9711C3.6251 13.1443 4.12801 13.3452 4.62094 13.5772C5.11053 13.8058 5.59014 14.0656 6.05309 14.3496C6.51604 14.6336 6.96233 14.9453 7.39531 15.2813L16.9374 22.7834Z" fill="#FC6D26"></path>
-                            </svg>
-
-                            <div class="mt-5">
-                                <p class="font-semibold text-5xl text-white">12%</p>
-                                <h3 class="mt-5 font-medium text-lg text-white">Streamlining Development</h3>
-                                <p class="mt-1 text-neutral-400"> With the goal of accelerating project delivery and enhancing collaboration among development teams, Preline leveraged GitLab's comprehensive suite of tools and Preline's expertise in digital product development.</p>
-                            </div>
-                        </div>
-                        <p class="mt-auto">
-                            <span class="font-medium text-sm text-blue-600 pb-1 border-b-2 border-neutral-700 group-hover:border-blue-600 group-focus:border-blue-600 transition focus:outline-none">
-                                Case study
-                            </span>
-                        </p>
-                    </a>
-                    <!-- End Card -->
-                </div>
-                <!-- End Card Grid -->
-
-            </div>
-        </div>
-        <!-- End Case Stories -->
-
-        <!-- Testimonials -->
-        <div class="bg-gray-100">
-            <div class="max-w-5xl px-4 xl:px-0 py-10 lg:py-20 mx-auto">
-                <!-- Title -->
-                <div class="max-w-3xl mb-10 lg:mb-14">
-                    <h2 class="text-white font-semibold text-2xl md:text-4xl md:leading-tight">Preline reviews</h2>
-                    <p class="mt-1 text-neutral-400">With over 30 awards, and achievements, we proudly demonstrate our unwavering dedication to excellence and client success.</p>
-                </div>
-                <!-- End Title -->
-
-                <!-- Grid -->
-                <div class="md:grid md:grid-cols-2 md:gap-10 lg:gap-16 md:items-center">
-                    <div>
-                        <!-- Blockquote -->
-                        <blockquote>
-                            <p class="font-medium text-xl text-white md:text-2xl md:leading-normal xl:text-3xl xl:leading-normal">
-                                To say that switching to Preline has been life-changing is an understatement. My business has tripled since then.
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+                        <div class="space-y-5">
+                            <h2 class="text-xl md:text-2xl font-semibold">Plan Unique</h2>
+                            <p class="md:text-lg text-gray-600">
+                                Téléchargez et installez la solution sur votre propre serveur, avec une installation facile et rapide. Aucune obligation d'abonnement mensuel, payez une seule fois !
                             </p>
+                        </div>
 
-                            <footer class="mt-6">
-                                <div class="flex items-center">
-                                    <div class="md:hidden shrink-0">
-                                        <img class="size-12 rounded-full" src="../../photo-1671725501928-b7d85698ccd8?q=80&w=320&h=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar">
-                                    </div>
-                                    <div class="ms-4 md:ms-0">
-                                        <div class="text-base font-semibold text-white">Nicole Grazioso</div>
-                                        <div class="text-xs text-neutral-400">Director Payments & Risk | Airbnb</div>
+                        <div>
+                            <!-- Card -->
+                            <div class="shadow-xl shadow-gray-200 p-5 relative z-10 bg-white border rounded-xl md:p-10 dark:bg-neutral-900 dark:border-neutral-800 dark:shadow-gray-900/20">
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-neutral-200">Licence</h3>
+                                <div class="text-sm text-gray-500 dark:text-neutral-500">Accès à vie.</div>
+                                <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-white dark:text-neutral-800">Most popular</span>
+
+                                <div class="mt-5">
+                                    <span class="text-6xl font-bold text-gray-800 dark:text-neutral-200">$45</span>
+                                    <span class="text-lg font-bold text-gray-800 dark:text-neutral-200">.00</span>
+                                    <span class="ms-3 text-gray-500 dark:text-neutral-500">USD </span>
+                                </div>
+
+                                <div class="mt-5 gap-y-2 py-4 first:pt-0 last:pb-0 sm:gap-x-6 sm:gap-y-0">
+                                    <!-- List -->
+                                    <ul class="space-y-2 text-sm sm:text-base">
+                                        <li class="flex gap-x-3">
+                                            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                                                <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <polyline points="20 6 9 17 4 12" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-gray-800 dark:text-neutral-200">
+                                                Installation facile sur votre serveur
+                                            </span>
+                                        </li>
+
+                                        <li class="flex gap-x-3">
+                                            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                                                <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <polyline points="20 6 9 17 4 12" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-gray-800 dark:text-neutral-200">
+                                                Aucune redevance mensuelle ou abonnement
+                                            </span>
+                                        </li>
+
+                                        <li class="flex gap-x-3">
+                                            <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                                                <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <polyline points="20 6 9 17 4 12" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-gray-800 dark:text-neutral-200">
+                                                Accès complet à toutes les fonctionnalités
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <!-- End List -->
+
+                                </div>
+
+                                <div class="mt-5 grid grid-cols-2 gap-x-4 py-4 first:pt-0 last:pb-0">
+
+                                    <div class="flex justify-end">
+                                        <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-2xl border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                                            Passer au Téléchargement
+                                        </button>
                                     </div>
                                 </div>
-                            </footer>
-                        </blockquote>
-                        <!-- End Blockquote -->
+                            </div>
+                            <!-- End Card -->
+                        </div>
                     </div>
-                    <!-- End Col -->
+                    <!-- End Grid -->
 
-                    <div class="hidden md:block mb-24 md:mb-0">
-                        <img class="rounded-xl" src="../../photo-1671725501928-b7d85698ccd8-1?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar">
+                    <!-- SVG Element -->
+                    <div class="hidden md:block absolute top-0 end-0 translate-y-16 translate-x-16">
+                        <svg class="w-16 h-auto text-blue-600" width="121" height="135" viewBox="0 0 121 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 16.4754C11.7688 27.4499 21.2452 57.3224 5 89.0164" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
+                            <path d="M33.6761 112.104C44.6984 98.1239 74.2618 57.6776 83.4821 5" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
+                            <path d="M50.5525 130C68.2064 127.495 110.731 117.541 116 78.0874" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
+                        </svg>
                     </div>
-                    <!-- End Col -->
+                    <!-- End SVG Element -->
+
+                    <!-- SVG Element -->
+                    <div class="hidden md:block absolute bottom-0 start-0 translate-y-16 -translate-x-16">
+                        <svg class="w-56 h-auto text-blue-200" width="347" height="188" viewBox="0 0 347 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 82.4591C54.7956 92.8751 30.9771 162.782 68.2065 181.385C112.642 203.59 127.943 78.57 122.161 25.5053C120.504 2.2376 93.4028 -8.11128 89.7468 25.5053C85.8633 61.2125 130.186 199.678 180.982 146.248L214.898 107.02C224.322 95.4118 242.9 79.2851 258.6 107.02C274.299 134.754 299.315 125.589 309.861 117.539L343 93.4426" stroke="currentColor" stroke-width="7" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <!-- End SVG Element -->
                 </div>
-                <!-- End Grid -->
             </div>
+        </div>
+        <!-- End Features -->
+
+        <!-- Testimonials -->
+        <div class="relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+            <!-- Blockquote -->
+            <blockquote class="text-center lg:mx-auto lg:w-3/5">
+                <h4>Témoignage</h4>
+
+                <div class="mt-6 lg:mt-10">
+                    <p class="relative text-xl sm:text-2xl md:text-3xl md:leading-normal font-medium text-gray-800">
+                        <svg class="absolute top-0 start-0 transform -translate-x-8 -translate-y-8 size-16 text-gray-200 sm:h-24 sm:w-24 dark:text-neutral-700" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M7.18079 9.25611C7.18079 10.0101 6.93759 10.6211 6.45119 11.0891C5.96479 11.5311 5.35039 11.7521 4.60799 11.7521C3.71199 11.7521 2.96958 11.4531 2.38078 10.8551C1.81758 10.2571 1.53598 9.39911 1.53598 8.28111C1.53598 7.08511 1.86878 5.91511 2.53438 4.77111C3.22559 3.60111 4.18559 2.67811 5.41439 2.00211L6.29759 3.36711C5.63199 3.83511 5.09439 4.35511 4.68479 4.92711C4.30079 5.49911 4.04479 6.16211 3.91679 6.91611C4.14719 6.81211 4.41599 6.76011 4.72319 6.76011C5.43999 6.76011 6.02879 6.99411 6.48959 7.46211C6.95039 7.93011 7.18079 8.52811 7.18079 9.25611ZM14.2464 9.25611C14.2464 10.0101 14.0032 10.6211 13.5168 11.0891C13.0304 11.5311 12.416 11.7521 11.6736 11.7521C10.7776 11.7521 10.0352 11.4531 9.44639 10.8551C8.88319 10.2571 8.60159 9.39911 8.60159 8.28111C8.60159 7.08511 8.93439 5.91511 9.59999 4.77111C10.2912 3.60111 11.2512 2.67811 12.48 2.00211L13.3632 3.36711C12.6976 3.83511 12.16 4.35511 11.7504 4.92711C11.3664 5.49911 11.1104 6.16211 10.9824 6.91611C11.2128 6.81211 11.4816 6.76011 11.7888 6.76011C12.5056 6.76011 13.0944 6.99411 13.5552 7.46211C14.016 7.93011 14.2464 8.52811 14.2464 9.25611Z" fill="currentColor" />
+                        </svg>
+                        <span class="relative z-10 italic text-gray-800 dark:text-neutral-200">
+                            <strong>REMAIL</strong> a simplifié nos campagnes email avec une interface intuitive, des envois automatisés et des statistiques en temps réel. L’option de gérer plusieurs serveurs SMTP est un vrai plus. Une solution efficace et sans abonnement mensuel !
+                        </span>
+                    </p>
+                </div>
+
+                <footer class="mt-6">
+                    <div class="font-semibold text-gray-800 dark:text-neutral-200">Marie Lefevre</div>
+                    <div class="text-sm text-gray-500 dark:text-neutral-500">Responsable Marketing Digital | DSMART</div>
+                </footer>
+            </blockquote>
+            <!-- End Blockquote -->
         </div>
         <!-- End Testimonials -->
 
-        <!-- Stats -->
-        <div class="bg-gray-100">
-            <div class="max-w-5xl px-4 xl:px-0 py-10 mx-auto">
-                <div class="border border-neutral-800 rounded-xl">
-                    <div class="p-4 lg:p-8 bg-gradient-to-bl from-neutral-800 via-neutral-900 to-neutral-950 rounded-xl">
-                        <div class="grid grid-cols-1 sm:grid-cols-3 items-center gap-y-20 gap-x-12">
-                            <!-- Stats -->
-                            <div class="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-neutral-800 before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
-                                <svg class="shrink-0 size-6 sm:size-8 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="m11 17 2 2a1 1 0 1 0 3-3"></path>
-                                    <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path>
-                                    <path d="m21 3 1 11h-2"></path>
-                                    <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path>
-                                    <path d="M3 4h8"></path>
-                                </svg>
-                                <div class="mt-3 sm:mt-5">
-                                    <h3 class="text-lg sm:text-3xl font-semibold text-white">2,000+</h3>
-                                    <p class="mt-1 text-sm sm:text-base text-neutral-400">Preline partners</p>
-                                </div>
-                            </div>
-                            <!-- End Stats -->
-
-                            <!-- Stats -->
-                            <div class="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-neutral-800 before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
-                                <div class="flex justify-center items-center -space-x-5">
-                                    <img class="relative z-[2] shrink-0 size-8 rounded-full border-[3px] border-neutral-800" src="../../photo-1601935111741-ae98b2b230b0-7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
-                                    <img class="relative z-[1] shrink-0 size-8 rounded-full border-[3px] border-neutral-800 -mt-7" src="../../photo-1570654639102-bdd95efeca7a-5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
-                                    <img class="relative shrink-0 size-8 rounded-full border-[3px] border-neutral-800" src="../../photo-1679412330254-90cb240038c5-3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80" alt="Avatar">
-                                </div>
-                                <div class="mt-3 sm:mt-5">
-                                    <h3 class="text-lg sm:text-3xl font-semibold text-white">85%</h3>
-                                    <p class="mt-1 text-sm sm:text-base text-neutral-400">Happy customers</p>
-                                </div>
-                            </div>
-                            <!-- End Stats -->
-
-                            <!-- Stats -->
-                            <div class="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-neutral-800 before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
-                                <svg class="shrink-0 size-6 sm:size-8 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"></path>
-                                    <path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path>
-                                    <path d="m2 16 6 6"></path>
-                                    <circle cx="16" cy="9" r="2.9"></circle>
-                                    <circle cx="6" cy="5" r="3"></circle>
-                                </svg>
-                                <div class="mt-3 sm:mt-5">
-                                    <h3 class="text-lg sm:text-3xl font-semibold text-white">$55M+</h3>
-                                    <p class="mt-1 text-sm sm:text-base text-neutral-400">Ads managed yearly</p>
-                                </div>
-                            </div>
-                            <!-- End Stats -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Stats -->
-
-        <!-- Approach -->
-        <div class="bg-gray-100">
-            <!-- Approach -->
-            <div class="max-w-5xl px-4 xl:px-0 py-10 lg:pt-20  mx-auto">
-                <!-- Title -->
-                <div class="max-w-3xl mb-10 lg:mb-14">
-                    <h2 class="text-white font-semibold text-2xl md:text-4xl md:leading-tight">Our approach</h2>
-                    <p class="mt-1 text-neutral-400">This profound insight guides our comprehensive strategy — from meticulous research and strategic planning to the seamless execution of brand development and website or product deployment.</p>
-                </div>
-                <!-- End Title -->
-
-                <!-- Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:items-center">
-                    <div class="aspect-w-16 aspect-h-9 lg:aspect-none">
-                        <img class="w-full object-cover rounded-xl" src="../../photo-1587614203976-365c74645e83?q=80&w=480&h=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Features Image">
-                    </div>
-                    <!-- End Col -->
-
-                    <!-- Timeline -->
-                    <div>
-                        <!-- Heading -->
-                        <div class="mb-4">
-                            <h3 class="text-blue-600 text-xs font-medium uppercase">
-                                Steps
-                            </h3>
-                        </div>
-                        <!-- End Heading -->
-
-                        <!-- Item -->
-                        <div class="flex gap-x-5 ms-1">
-                            <!-- Icon -->
-                            <div class="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                                <div class="relative z-10 size-8 flex justify-center items-center">
-                                    <span class="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-blue-600 font-semibold text-xs uppercase rounded-full">
-                                        1
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- End Icon -->
-
-                            <!-- Right Content -->
-                            <div class="grow pt-0.5 pb-8 sm:pb-12">
-                                <p class="text-sm lg:text-base text-neutral-400">
-                                    <span class="text-white">Market Research and Analysis:</span>
-                                    Identify your target audience and understand their needs, preferences, and behaviors.
-                                </p>
-                            </div>
-                            <!-- End Right Content -->
-                        </div>
-                        <!-- End Item -->
-
-                        <!-- Item -->
-                        <div class="flex gap-x-5 ms-1">
-                            <!-- Icon -->
-                            <div class="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                                <div class="relative z-10 size-8 flex justify-center items-center">
-                                    <span class="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-blue-600 font-semibold text-xs uppercase rounded-full">
-                                        2
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- End Icon -->
-
-                            <!-- Right Content -->
-                            <div class="grow pt-0.5 pb-8 sm:pb-12">
-                                <p class="text-sm lg:text-base text-neutral-400">
-                                    <span class="text-white">Product Development and Testing:</span>
-                                    Develop digital products or services that address the needs and preferences of your target audience.
-                                </p>
-                            </div>
-                            <!-- End Right Content -->
-                        </div>
-                        <!-- End Item -->
-
-                        <!-- Item -->
-                        <div class="flex gap-x-5 ms-1">
-                            <!-- Icon -->
-                            <div class="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                                <div class="relative z-10 size-8 flex justify-center items-center">
-                                    <span class="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-blue-600 font-semibold text-xs uppercase rounded-full">
-                                        3
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- End Icon -->
-
-                            <!-- Right Content -->
-                            <div class="grow pt-0.5 pb-8 sm:pb-12">
-                                <p class="text-sm md:text-base text-neutral-400">
-                                    <span class="text-white">Marketing and Promotion:</span>
-                                    Develop a comprehensive marketing strategy to promote your digital products or services.
-                                </p>
-                            </div>
-                            <!-- End Right Content -->
-                        </div>
-                        <!-- End Item -->
-
-                        <!-- Item -->
-                        <div class="flex gap-x-5 ms-1">
-                            <!-- Icon -->
-                            <div class="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                                <div class="relative z-10 size-8 flex justify-center items-center">
-                                    <span class="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-blue-600 font-semibold text-xs uppercase rounded-full">
-                                        4
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- End Icon -->
-
-                            <!-- Right Content -->
-                            <div class="grow pt-0.5 pb-8 sm:pb-12">
-                                <p class="text-sm md:text-base text-neutral-400">
-                                    <span class="text-white">Launch and Optimization:</span>
-                                    Launch your digital products or services to the market, closely monitoring their performance and user feedback.
-                                </p>
-                            </div>
-                            <!-- End Right Content -->
-                        </div>
-                        <!-- End Item -->
-
-                        <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-blue-600 font-medium text-sm text-neutral-800 rounded-full focus:outline-none" href="#">
-                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                <path class="opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-hover:delay-100 transition" d="M14.05 2a9 9 0 0 1 8 7.94"></path>
-                                <path class="opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition" d="M14.05 6A5 5 0 0 1 18 10"></path>
+        <div class="max-w-5xl px-4 xl:px-0 py-10 mx-auto">
+            <div class="border border-neutral-800 rounded-xl">
+                <div class="p-4 lg:p-8 bg-gradient-to-bl from-neutral-800 via-neutral-900 to-neutral-950 rounded-xl">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 items-center gap-y-20 gap-x-12">
+                        <!-- Stats -->
+                        <div class="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-neutral-800 before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
+                            <svg class="shrink-0 size-6 sm:size-8 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <rect width="16" height="13" x="6" y="4" rx="2" />
+                                    <path d="m22 7l-7.1 3.78c-.57.3-1.23.3-1.8 0L6 7M2 8v11c0 1.1.9 2 2 2h14" />
+                                </g>
                             </svg>
-                            Schedule a call
-                        </a>
+                            <div class="mt-3 sm:mt-5">
+                                <h3 class="text-lg sm:text-3xl font-semibold text-white">2,000+</h3>
+                                <p class="mt-1 text-sm sm:text-base text-neutral-400">Campagnes mensuels</p>
+                            </div>
+                        </div>
+                        <!-- End Stats -->
+
+                        <!-- Stats -->
+                        <div class="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-neutral-800 before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
+                            <div class="flex justify-center items-center -space-x-5">
+                                <svg class="shrink-0 size-6 sm:size-8 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fill="none">
+                                        <path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                                        <path fill="currentColor" d="m8.076 7.26l.095.083l8.486 8.485a1 1 0 0 1-.246 1.595l-.116.05L5.91 21.3c-1.952.72-3.853-1.115-3.26-3.064l.05-.146L6.526 7.705a1 1 0 0 1 1.447-.516zm9.031 4.344c.911.048 2.16.24 3.246.892a1 1 0 0 1-.925 1.77l-.104-.055c-.682-.41-1.554-.57-2.322-.61a8 8 0 0 0-.95.004l-.316.031a1 1 0 0 1-.281-1.98a8.6 8.6 0 0 1 1.652-.053m2.025-2.786a1 1 0 0 1 .116 1.993l-.116.007h-.708a1 1 0 0 1-.116-1.993l.116-.007zM15.95 8.05a1 1 0 0 1 .083 1.32l-.083.094l-1.061 1.061a1 1 0 0 1-1.497-1.32l.083-.094l1.06-1.06a1 1 0 0 1 1.415 0m-2.587-5.266c.448 1.346.208 2.82-.072 3.85a10 10 0 0 1-.69 1.863a1 1 0 0 1-1.79-.893a8 8 0 0 0 .55-1.496c.227-.832.341-1.735.166-2.475l-.061-.216a1 1 0 1 1 1.897-.633m5.415 2.438a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="mt-3 sm:mt-5">
+                                <h3 class="text-lg sm:text-3xl font-semibold text-white">91%</h3>
+                                <p class="mt-1 text-sm sm:text-base text-neutral-400">Taux de satisfaction</p>
+                            </div>
+                        </div>
+                        <!-- End Stats -->
+
+                        <!-- Stats -->
+                        <div class="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-neutral-800 before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
+                            <svg class="shrink-0 size-6 sm:size-8 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                    <path fill="currentColor" d="M16.612 3.956c-2.747-1.221-6.05.278-6.38 3.473A45 45 0 0 0 10 12c0 1.73.097 3.269.231 4.57c.33 3.196 3.634 4.695 6.381 3.474l.225-.1a8.694 8.694 0 0 0 0-15.889l-.225-.1Zm-4.391 3.679c.17-1.642 1.883-2.605 3.579-1.852l.225.1a6.694 6.694 0 0 1 0 12.234l-.225.1c-1.696.753-3.41-.21-3.58-1.852A43 43 0 0 1 12 12c0-1.656.093-3.126.22-4.365ZM3 6a1 1 0 1 0 0 2h5a1 1 0 0 0 0-2zm0 5a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2zm-1 6a1 1 0 0 1 1-1h5a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1" />
+                                </g>
+                            </svg>
+                            <div class="mt-3 sm:mt-5">
+                                <h3 class="text-lg sm:text-3xl font-semibold text-white">$540K</h3>
+                                <p class="mt-1 text-sm sm:text-base text-neutral-400">Volume annuel</p>
+                            </div>
+                        </div>
+                        <!-- End Stats -->
                     </div>
-                    <!-- End Timeline -->
                 </div>
-                <!-- End Grid -->
             </div>
         </div>
-        <!-- End Approach -->
 
-        <!-- Contact -->
-        <div class="bg-gray-100">
-            <div class="max-w-5xl px-4 xl:px-0 py-10 lg:py-20 mx-auto">
-                <!-- Title -->
-                <div class="max-w-3xl mb-10 lg:mb-14">
-                    <h2 class="text-white font-semibold text-2xl md:text-4xl md:leading-tight">Contact us</h2>
-                    <p class="mt-1 text-neutral-400">Whatever your goal - we will get you there.</p>
+        <!-- Hire Us -->
+        <div id="contact" class="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+            <!-- Grid -->
+            <div class="grid md:grid-cols-2 items-center gap-12">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800 sm:text-4xl lg:text-5xl lg:leading-tight dark:text-white">
+                        Contactez-nous
+                    </h1>
+                    <p class="mt-1 md:text-lg text-gray-800 dark:text-neutral-200">
+                        Vous avez des questions ou souhaitez en savoir plus sur REMAIL ? Contactez notre équipe dès maintenant !
+                    </p>
+
+                    <div class="mt-8">
+                        <h2 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
+                            À quoi dois-je m'attendre ?
+                        </h2>
+
+                        <ul class="mt-2 space-y-2">
+                            <li class="flex gap-x-3">
+                                <svg class="shrink-0 mt-0.5 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span class="text-gray-600 dark:text-neutral-400">
+                                    Accompagnement de bout en bout
+                                </span>
+                            </li>
+
+                            <li class="flex gap-x-3">
+                                <svg class="shrink-0 mt-0.5 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span class="text-gray-600 dark:text-neutral-400">
+                                    Documentation très détaillé
+                                </span>
+                            </li>
+
+                            <li class="flex gap-x-3">
+                                <svg class="shrink-0 mt-0.5 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <span class="text-gray-600 dark:text-neutral-400">
+                                    Simple et abordable
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
-                <!-- End Title -->
+                <!-- End Col -->
 
-                <!-- Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16">
-                    <div class="md:order-2 border-b border-neutral-800 pb-10 mb-10 md:border-b-0 md:pb-0 md:mb-0">
+                <div class="relative">
+                    <!-- Card -->
+                    <div class="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-10 dark:border-neutral-700">
                         <form>
-                            <div class="space-y-4">
-                                <!-- Input -->
-                                <div class="relative">
-                                    <input type="text" id="hs-tac-input-name" class="peer p-4 block w-full bg-neutral-800 border-transparent rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
-                  focus:pt-6
-                  focus:pb-2
-                  [&:not(:placeholder-shown)]:pt-6
-                  [&:not(:placeholder-shown)]:pb-2
-                  autofill:pt-6
-                  autofill:pb-2" placeholder="Name">
-                                    <label for="hs-tac-input-name" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                    peer-focus:text-xs
-                    peer-focus:-translate-y-1.5
-                    peer-focus:text-neutral-400
-                    peer-[:not(:placeholder-shown)]:text-xs
-                    peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                    peer-[:not(:placeholder-shown)]:text-neutral-400">Name</label>
+                            <div class="mt-6 grid gap-4 lg:gap-6">
+                                <!-- Grid -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+                                    <div>
+                                        <label for="hs-firstname-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Nom</label>
+                                        <input type="text" name="hs-firstname-hire-us-1" id="hs-firstname-hire-us-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
+                                    </div>
+
+                                    <div>
+                                        <label for="hs-lastname-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Prénom</label>
+                                        <input type="text" name="hs-lastname-hire-us-1" id="hs-lastname-hire-us-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
+                                    </div>
                                 </div>
-                                <!-- End Input -->
+                                <!-- End Grid -->
 
-                                <!-- Input -->
-                                <div class="relative">
-                                    <input type="email" id="hs-tac-input-email" class="peer p-4 block w-full bg-neutral-800 border-transparent rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
-                  focus:pt-6
-                  focus:pb-2
-                  [&:not(:placeholder-shown)]:pt-6
-                  [&:not(:placeholder-shown)]:pb-2
-                  autofill:pt-6
-                  autofill:pb-2" placeholder="Email">
-                                    <label for="hs-tac-input-email" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                    peer-focus:text-xs
-                    peer-focus:-translate-y-1.5
-                    peer-focus:text-neutral-400
-                    peer-[:not(:placeholder-shown)]:text-xs
-                    peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                    peer-[:not(:placeholder-shown)]:text-neutral-400">Email</label>
+                                <div>
+                                    <label for="hs-work-email-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Adresse Email</label>
+                                    <input type="email" name="hs-work-email-hire-us-1" id="hs-work-email-hire-us-1" autocomplete="email" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
                                 </div>
-                                <!-- End Input -->
 
-                                <!-- Input -->
-                                <div class="relative">
-                                    <input type="text" id="hs-tac-input-company" class="peer p-4 block w-full bg-neutral-800 border-transparent rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
-                  focus:pt-6
-                  focus:pb-2
-                  [&:not(:placeholder-shown)]:pt-6
-                  [&:not(:placeholder-shown)]:pb-2
-                  autofill:pt-6
-                  autofill:pb-2" placeholder="Company">
-                                    <label for="hs-tac-input-company" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                    peer-focus:text-xs
-                    peer-focus:-translate-y-1.5
-                    peer-focus:text-neutral-400
-                    peer-[:not(:placeholder-shown)]:text-xs
-                    peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                    peer-[:not(:placeholder-shown)]:text-neutral-400">Company</label>
+                                <!-- Grid -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+                                    <div>
+                                        <label for="hs-company-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Entreprise</label>
+                                        <input type="text" name="hs-company-hire-us-1" id="hs-company-hire-us-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
+                                    </div>
+
+                                    <div>
+                                        <label for="hs-company-website-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Site web de l'entreprise</label>
+                                        <input type="text" name="hs-company-website-hire-us-1" id="hs-company-website-hire-us-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
+                                    </div>
                                 </div>
-                                <!-- End Input -->
+                                <!-- End Grid -->
 
-                                <!-- Input -->
-                                <div class="relative">
-                                    <input type="text" id="hs-tac-input-phone" class="peer p-4 block w-full bg-neutral-800 border-transparent rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
-                  focus:pt-6
-                  focus:pb-2
-                  [&:not(:placeholder-shown)]:pt-6
-                  [&:not(:placeholder-shown)]:pb-2
-                  autofill:pt-6
-                  autofill:pb-2" placeholder="Phone">
-                                    <label for="hs-tac-input-phone" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                    peer-focus:text-xs
-                    peer-focus:-translate-y-1.5
-                    peer-focus:text-neutral-400
-                    peer-[:not(:placeholder-shown)]:text-xs
-                    peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                    peer-[:not(:placeholder-shown)]:text-neutral-400">Phone</label>
+                                <div>
+                                    <label for="hs-about-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Détails</label>
+                                    <textarea id="hs-about-hire-us-1" name="hs-about-hire-us-1" rows="4" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"></textarea>
                                 </div>
-                                <!-- End Input -->
-
-                                <!-- Textarea -->
-                                <div class="relative">
-                                    <textarea id="hs-tac-message" class="peer p-4 block w-full bg-neutral-800 border-transparent rounded-lg text-sm text-white placeholder:text-transparent focus:outline-none focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
-                  focus:pt-6
-                  focus:pb-2
-                  [&:not(:placeholder-shown)]:pt-6
-                  [&:not(:placeholder-shown)]:pb-2
-                  autofill:pt-6
-                  autofill:pb-2" placeholder="This is a textarea placeholder"></textarea>
-                                    <label for="hs-tac-message" class="absolute top-0 start-0 p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                    peer-focus:text-xs
-                    peer-focus:-translate-y-1.5
-                    peer-focus:text-neutral-400
-                    peer-[:not(:placeholder-shown)]:text-xs
-                    peer-[:not(:placeholder-shown)]:-translate-y-1.5
-                    peer-[:not(:placeholder-shown)]:text-neutral-400">Tell us about your project</label>
-                                </div>
-                                <!-- End Textarea -->
-                            </div>
-
-                            <div class="mt-2">
-                                <p class="text-xs text-neutral-500">
-                                    All fields are required
-                                </p>
-
-                                <p class="mt-5">
-                                    <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-blue-600 font-medium text-sm text-neutral-800 rounded-full focus:outline-none" href="#">
-                                        Submit
-                                        <svg class="shrink-0 size-4 transition group-hover:translate-x-0.5 group-hover:translate-x-0 group-focus:translate-x-0.5 group-focus:translate-x-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M5 12h14"></path>
-                                            <path d="m12 5 7 7-7 7"></path>
-                                        </svg>
-                                    </a>
-                                </p>
                             </div>
                         </form>
-                    </div>
-                    <!-- End Col -->
+                        <!-- End Grid -->
 
-                    <div class="space-y-14">
-                        <!-- Item -->
-                        <div class="flex gap-x-5">
-                            <svg class="shrink-0 size-6 text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <div class="grow">
-                                <h4 class="text-white font-semibold">Our address:</h4>
-
-                                <address class="mt-1 text-neutral-400 text-sm not-italic">
-                                    300 Bath Street, Tay House<br>
-                                    Glasgow G2 4JR, United Kingdom
-                                </address>
+                        <!-- Checkbox -->
+                        <div class="mt-3 flex">
+                            <div class="flex">
+                                <input id="remember-me" name="remember-me" type="checkbox" class="shrink-0 mt-1.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                            </div>
+                            <div class="ms-3">
+                                <label for="remember-me" class="text-sm text-gray-600 dark:text-neutral-400">
+                                    En soumettant ce formulaire, j'ai lu et reconnu la
+                                    <a class="text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="#">politique de confidentialité</a>
                             </div>
                         </div>
-                        <!-- End Item -->
+                        <!-- End Checkbox -->
 
-                        <!-- Item -->
-                        <div class="flex gap-x-5">
-                            <svg class="shrink-0 size-6 text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"></path>
-                                <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"></path>
-                            </svg>
-                            <div class="grow">
-                                <h4 class="text-white font-semibold">Email us:</h4>
-
-                                <a class="mt-1 text-neutral-400 text-sm hover:text-neutral-200 focus:outline-none focus:text-neutral-200" href="#mailto:example@site.co" target="_blank">
-                                    hello@example.so
-                                </a>
-                            </div>
+                        <div class="mt-6 grid">
+                            <button type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Envoyer la demande</button>
                         </div>
-                        <!-- End Item -->
 
-                        <!-- Item -->
-                        <div class="flex gap-x-5">
-                            <svg class="shrink-0 size-6 text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m3 11 18-5v12L3 14v-3z"></path>
-                                <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path>
-                            </svg>
-                            <div class="grow">
-                                <h4 class="text-white font-semibold">We're hiring</h4>
-                                <p class="mt-1 text-neutral-400">We're thrilled to announce that we're expanding our team and looking for talented individuals like you to join us.</p>
-                                <p class="mt-2">
-                                    <a class="group inline-flex items-center gap-x-2 font-medium text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline" href="#">
-                                        Job openings
-                                        <svg class="shrink-0 size-4 transition group-hover:translate-x-0.5 group-hover:translate-x-0 group-focus:translate-x-0.5 group-focus:translate-x-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M5 12h14"></path>
-                                            <path d="m12 5 7 7-7 7"></path>
-                                        </svg>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- End Item -->
-                    </div>
-                    <!-- End Col -->
-                </div>
-                <!-- End Grid -->
-            </div>
-        </div>
-        <!-- End Contact -->
-    </main>
-    <!-- ========== END MAIN CONTENT ========== -->
-
-    <!-- ========== FOOTER ========== -->
-    <footer class="relative overflow-hidden bg-gray-100">
-        <svg class="absolute -bottom-20 start-1/2 w-[1900px] transform -translate-x-1/2" width="2745" height="488" viewbox="0 0 2745 488" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.5 330.864C232.505 403.801 853.749 527.683 1482.69 439.719C2111.63 351.756 2585.54 434.588 2743.87 487" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 308.873C232.505 381.81 853.749 505.692 1482.69 417.728C2111.63 329.765 2585.54 412.597 2743.87 465.009" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 286.882C232.505 359.819 853.749 483.701 1482.69 395.738C2111.63 307.774 2585.54 390.606 2743.87 443.018" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 264.891C232.505 337.828 853.749 461.71 1482.69 373.747C2111.63 285.783 2585.54 368.615 2743.87 421.027" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 242.9C232.505 315.837 853.749 439.719 1482.69 351.756C2111.63 263.792 2585.54 346.624 2743.87 399.036" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 220.909C232.505 293.846 853.749 417.728 1482.69 329.765C2111.63 241.801 2585.54 324.633 2743.87 377.045" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 198.918C232.505 271.855 853.749 395.737 1482.69 307.774C2111.63 219.81 2585.54 302.642 2743.87 355.054" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 176.927C232.505 249.864 853.749 373.746 1482.69 285.783C2111.63 197.819 2585.54 280.651 2743.87 333.063" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 154.937C232.505 227.873 853.749 351.756 1482.69 263.792C2111.63 175.828 2585.54 258.661 2743.87 311.072" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 132.946C232.505 205.882 853.749 329.765 1482.69 241.801C2111.63 153.837 2585.54 236.67 2743.87 289.082" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 110.955C232.505 183.891 853.749 307.774 1482.69 219.81C2111.63 131.846 2585.54 214.679 2743.87 267.091" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 88.9639C232.505 161.901 853.749 285.783 1482.69 197.819C2111.63 109.855 2585.54 192.688 2743.87 245.1" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 66.9729C232.505 139.91 853.749 263.792 1482.69 175.828C2111.63 87.8643 2585.54 170.697 2743.87 223.109" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 44.9819C232.505 117.919 853.749 241.801 1482.69 153.837C2111.63 65.8733 2585.54 148.706 2743.87 201.118" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 22.991C232.505 95.9276 853.749 219.81 1482.69 131.846C2111.63 43.8824 2585.54 126.715 2743.87 179.127" class="stroke-neutral-700/50" stroke="currentColor"></path>
-            <path d="M0.5 1C232.505 73.9367 853.749 197.819 1482.69 109.855C2111.63 21.8914 2585.54 104.724 2743.87 157.136" class="stroke-neutral-700/50" stroke="currentColor"></path>
-        </svg>
-
-        <div class="relative z-10">
-            <div class="w-full max-w-5xl px-4 xl:px-0 py-10 lg:pt-16 mx-auto">
-                <div class="inline-flex items-center">
-                    <!-- Logo -->
-                    <svg class="w-24 h-auto" width="116" height="32" viewbox="0 0 116 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M33.5696 30.8182V11.3182H37.4474V13.7003H37.6229C37.7952 13.3187 38.0445 12.9309 38.3707 12.5369C38.7031 12.1368 39.134 11.8045 39.6634 11.5398C40.1989 11.2689 40.8636 11.1335 41.6577 11.1335C42.6918 11.1335 43.6458 11.4044 44.5199 11.946C45.3939 12.4815 46.0926 13.291 46.6158 14.3743C47.139 15.4515 47.4006 16.8026 47.4006 18.4276C47.4006 20.0095 47.1451 21.3452 46.6342 22.4347C46.1295 23.518 45.4401 24.3397 44.5661 24.8999C43.6982 25.4538 42.7256 25.7308 41.6484 25.7308C40.8852 25.7308 40.2358 25.6046 39.7003 25.3523C39.1709 25.0999 38.737 24.7829 38.3984 24.4013C38.0599 24.0135 37.8014 23.6226 37.6229 23.2287H37.5028V30.8182H33.5696ZM37.4197 18.4091C37.4197 19.2524 37.5367 19.9879 37.7706 20.6158C38.0045 21.2436 38.343 21.733 38.7862 22.0838C39.2294 22.4285 39.768 22.6009 40.402 22.6009C41.0421 22.6009 41.5838 22.4254 42.027 22.0746C42.4702 21.7176 42.8056 21.2251 43.0334 20.5973C43.2673 19.9633 43.3842 19.2339 43.3842 18.4091C43.3842 17.5904 43.2704 16.8703 43.0426 16.2486C42.8149 15.6269 42.4794 15.1406 42.0362 14.7898C41.593 14.4389 41.0483 14.2635 40.402 14.2635C39.7618 14.2635 39.2202 14.4328 38.777 14.7713C38.34 15.1098 38.0045 15.59 37.7706 16.2116C37.5367 16.8333 37.4197 17.5658 37.4197 18.4091ZM49.2427 25.5V11.3182H53.0559V13.7926H53.2037C53.4622 12.9124 53.8961 12.2476 54.5055 11.7983C55.1149 11.3428 55.8166 11.1151 56.6106 11.1151C56.8076 11.1151 57.02 11.1274 57.2477 11.152C57.4754 11.1766 57.6755 11.2105 57.8478 11.2536V14.7436C57.6632 14.6882 57.4077 14.639 57.0815 14.5959C56.7553 14.5528 56.4567 14.5312 56.1859 14.5312C55.6073 14.5312 55.0903 14.6574 54.6348 14.9098C54.1854 15.156 53.8284 15.5007 53.5638 15.9439C53.3052 16.3871 53.176 16.898 53.176 17.4766V25.5H49.2427ZM64.9043 25.777C63.4455 25.777 62.1898 25.4815 61.1373 24.8906C60.0909 24.2936 59.2845 23.4503 58.7182 22.3608C58.1519 21.2652 57.8688 19.9695 57.8688 18.4737C57.8688 17.0149 58.1519 15.7346 58.7182 14.6328C59.2845 13.531 60.0816 12.6723 61.1096 12.0568C62.1437 11.4413 63.3563 11.1335 64.7474 11.1335C65.683 11.1335 66.5539 11.2843 67.3603 11.5859C68.1728 11.8814 68.8806 12.3277 69.4839 12.9247C70.0932 13.5218 70.5672 14.2727 70.9057 15.1776C71.2443 16.0762 71.4135 17.1288 71.4135 18.3352V19.4155H59.4384V16.978H67.7111C67.7111 16.4117 67.588 15.91 67.3418 15.473C67.0956 15.036 66.754 14.6944 66.317 14.4482C65.8861 14.1958 65.3844 14.0696 64.812 14.0696C64.2149 14.0696 63.6856 14.2081 63.2239 14.4851C62.7684 14.7559 62.4114 15.1222 62.1529 15.5838C61.8944 16.0393 61.762 16.5471 61.7559 17.1072V19.4247C61.7559 20.1264 61.8851 20.7327 62.1437 21.2436C62.4083 21.7545 62.7807 22.1484 63.2608 22.4254C63.741 22.7024 64.3103 22.8409 64.9689 22.8409C65.406 22.8409 65.8061 22.7794 66.1692 22.6562C66.5324 22.5331 66.8432 22.3485 67.1018 22.1023C67.3603 21.8561 67.5572 21.5545 67.6927 21.1974L71.3304 21.4375C71.1458 22.3116 70.7672 23.0748 70.1948 23.7273C69.6285 24.3736 68.896 24.8783 67.9974 25.2415C67.1048 25.5985 66.0738 25.777 64.9043 25.777ZM77.1335 6.59091V25.5H73.2003V6.59091H77.1335ZM79.5043 25.5V11.3182H83.4375V25.5H79.5043ZM81.4801 9.49006C80.8954 9.49006 80.3937 9.29616 79.9752 8.90838C79.5628 8.51444 79.3566 8.04356 79.3566 7.49574C79.3566 6.95407 79.5628 6.48935 79.9752 6.10156C80.3937 5.70762 80.8954 5.51065 81.4801 5.51065C82.0649 5.51065 82.5635 5.70762 82.9759 6.10156C83.3944 6.48935 83.6037 6.95407 83.6037 7.49574C83.6037 8.04356 83.3944 8.51444 82.9759 8.90838C82.5635 9.29616 82.0649 9.49006 81.4801 9.49006ZM89.7415 17.3011V25.5H85.8083V11.3182H89.5569V13.8203H89.723C90.037 12.9955 90.5632 12.343 91.3019 11.8629C92.0405 11.3767 92.9361 11.1335 93.9887 11.1335C94.9735 11.1335 95.8322 11.349 96.5647 11.7798C97.2971 12.2107 97.8665 12.8262 98.2728 13.6264C98.679 14.4205 98.8821 15.3684 98.8821 16.4702V25.5H94.9489V17.1719C94.9551 16.304 94.7335 15.6269 94.2841 15.1406C93.8348 14.6482 93.2162 14.402 92.4283 14.402C91.8989 14.402 91.4311 14.5159 91.0249 14.7436C90.6248 14.9714 90.3109 15.3037 90.0831 15.7408C89.8615 16.1716 89.7477 16.6918 89.7415 17.3011ZM107.665 25.777C106.206 25.777 104.951 25.4815 103.898 24.8906C102.852 24.2936 102.045 23.4503 101.479 22.3608C100.913 21.2652 100.63 19.9695 100.63 18.4737C100.63 17.0149 100.913 15.7346 101.479 14.6328C102.045 13.531 102.842 12.6723 103.87 12.0568C104.905 11.4413 106.117 11.1335 107.508 11.1335C108.444 11.1335 109.315 11.2843 110.121 11.5859C110.934 11.8814 111.641 12.3277 112.245 12.9247C112.854 13.5218 113.328 14.2727 113.667 15.1776C114.005 16.0762 114.174 17.1288 114.174 18.3352V19.4155H102.199V16.978H110.472C110.472 16.4117 110.349 15.91 110.103 15.473C109.856 15.036 109.515 14.6944 109.078 14.4482C108.647 14.1958 108.145 14.0696 107.573 14.0696C106.976 14.0696 106.446 14.2081 105.985 14.4851C105.529 14.7559 105.172 15.1222 104.914 15.5838C104.655 16.0393 104.523 16.5471 104.517 17.1072V19.4247C104.517 20.1264 104.646 20.7327 104.905 21.2436C105.169 21.7545 105.542 22.1484 106.022 22.4254C106.502 22.7024 107.071 22.8409 107.73 22.8409C108.167 22.8409 108.567 22.7794 108.93 22.6562C109.293 22.5331 109.604 22.3485 109.863 22.1023C110.121 21.8561 110.318 21.5545 110.454 21.1974L114.091 21.4375C113.907 22.3116 113.528 23.0748 112.956 23.7273C112.389 24.3736 111.657 24.8783 110.758 25.2415C109.866 25.5985 108.835 25.777 107.665 25.777Z" class="fill-white" fill="currentColor"></path>
-                        <path d="M1 29.5V16.5C1 9.87258 6.37258 4.5 13 4.5C19.6274 4.5 25 9.87258 25 16.5C25 23.1274 19.6274 28.5 13 28.5H12" class="stroke-white" stroke="currentColor" stroke-width="2"></path>
-                        <path d="M5 29.5V16.66C5 12.1534 8.58172 8.5 13 8.5C17.4183 8.5 21 12.1534 21 16.66C21 21.1666 17.4183 24.82 13 24.82H12" class="stroke-white" stroke="currentColor" stroke-width="2"></path>
-                        <circle cx="13" cy="16.5214" r="5" class="fill-white" fill="currentColor"></circle>
-                    </svg>
-                    <!-- End Logo -->
-
-                    <div class="border-s border-neutral-700 ps-5 ms-5">
-                        <p class="text-sm text-neutral-400">
-                            © 2024 Preline Labs.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- ========== END FOOTER ========== -->
-
-    <div class="fixed bottom-2 sm:bottom-4 end-2 sm:end-4 ms-2 z-[70] bg-gray-100 border border-neutral-800 rounded-lg dark:bg-neutral-800">
-        <!-- Button Group -->
-        <div class="flex items-center gap-px">
-            <div class="hs-tooltip inline-block">
-                <p class="hs-tooltip-toggle inline-flex gap-x-2 text-xs text-white py-1 px-2 relative before:absolute before:top-1/2 before:-start-0.5 before:z-10 before:w-px before:h-4 before:bg-white/20 before:-translate-y-1/2 first:before:hidden">
-                    <svg class="shrink-0 mt-0.5 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M12 16v-4"></path>
-                        <path d="M12 8h.01"></path>
-                    </svg>
-                </p>
-                <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 inline-block absolute invisible z-20 py-1.5 px-2.5 bg-gray-100 text-xs text-white rounded-lg whitespace-nowrap dark:bg-neutral-800" role="tooltip">
-                    This is the Preline UI template preview mode.
-                </span>
-            </div>
-
-            <!-- Templates Dropdown -->
-            <div class="hs-dropdown relative inline-flex [--strategy:absolute] [--placement:bottom-right] before:absolute before:top-1/2 before:-start-px before:z-10 before:w-px before:h-4 before:bg-white/20 before:-translate-y-1/2 first:before:hidden">
-                <button id="hs-dropdown-preview" type="button" class="py-1.5 px-2 inline-flex justify-center items-center gap-x-2 text-xs rounded-e-lg border border-transparent bg-gray-100 text-white hover:bg-neutral-950 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                    Templates
-                    <svg class="hs-dropdown-open:rotate-180 shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m18 15-6-6-6 6"></path>
-                    </svg>
-                </button>
-
-                <!-- Dropdown -->
-                <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-48 transition-[opacity,margin] duration opacity-0 hidden z-10 overflow-hidden border border-neutral-800 bg-gray-100 rounded-lg shadow-[0_10px_40px_10px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_40px_10px_rgba(0,0,0,0.2)] dark:bg-neutral-800" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-preview">
-                    <div class="max-h-[30rem] overflow-y-auto relative z-20 after:sticky after:inset-x-0 after:bottom-0 after:z-10 after:block after:w-full after:rounded-b-lg after:pointer-events-none after:bg-gradient-to-t after:from-neutral-900 after:via-neutral-900/95 dark:after:from-neutral-800 dark:after:via-neutral-800/95 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-neutral-800 [&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
-                        <div class="p-1 space-y-0.5">
-                            <span class="block p-2 pb-1 text-[11px] uppercase text-neutral-400 dark:text-neutral-400">Main Pages</span>
-
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " href="../../index.html">
-                                Preline UI
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
-
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " href="../../docs/index.html">
-                                Components (620+)
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
-
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " href="../../examples.html">
-                                Examples (200+<!-- 202 -->)
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
-
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " href="../../templates.html">
-                                Templates (5)
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
-
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " href="../../plugins.html">
-                                Plugins (20+<!-- 21  -->)
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
-
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " href="../../figma.html">
-                                Figma
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
-
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " href="../../pro/index-1.html">
-                                Preline Pro
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
-
-                            <div class="border-b border-neutral-800 dark:border-neutral-700 pt-1"></div>
-                            <span class="block p-2 pb-1 text-[11px] uppercase text-neutral-400 dark:text-neutral-400">Template Previews</span>
-
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 bg-neutral-800 dark:bg-neutral-700 " href="index.html">
-                                Agency
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " href="../personal/index.html">
-                                Personal
-                                <span class="text-green-400">New</span>
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " href="../creative-agency/index.html">
-                                Creative Agency
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " href="../admin/index.html">
-                                Admin
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
-                            <a class="group flex items-center gap-x-1.5 py-1.5 px-2 rounded-md text-[13px] text-gray-200 hover:bg-neutral-800 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700  " href="../ai-prompt/ai-with-sidebar.html">
-                                AI Prompt
-                                <svg class="shrink-0 size-3.5 ms-auto opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </a>
+                        <div class="mt-3 text-center">
+                            <p class="text-sm text-gray-500 dark:text-neutral-500">
+                                Nous vous répondrons dans un délai de 1 à 2 jours ouvrables.
+                            </p>
                         </div>
                     </div>
+                    <!-- End Card -->
                 </div>
-                <!-- End Dropdown -->
+                <!-- End Col -->
             </div>
-            <!-- End Templates Dropdown -->
+            <!-- End Grid -->
         </div>
-        <!-- End Button Group -->
+        <!-- End Hire Us -->
+
     </div>
 
-    <!-- JS Implementing Plugins -->
+    <div class="bg-gray-100" style="background-image: url(/assets/svg/component/hero-gradient.svg);">
+        <!-- Subscribe -->
+        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-16 mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="max-w-md">
+                    <h2 class="text-2xl font-bold md:text-3xl md:leading-tight dark:text-white">Newsletter</h2>
+                    <p class="mt-3 text-gray-600 dark:text-neutral-400">
+                        Abonnez-vous et commencez à tirer le meilleur parti de chaque communication. </p>
+                </div>
+
+                <form>
+                    <div class="w-full sm:max-w-lg md:ms-auto">
+                        <div class="flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
+                            <div class="w-full">
+                                <input type="text" id="hero-input" name="hero-input" class="py-3 px-4 block w-full border-gray-200 rounded-2xl text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Entrer votre Email">
+                            </div>
+                            <a class="w-full sm:w-auto whitespace-nowrap py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-2xl border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                Souscrire
+                            </a>
+                        </div>
+                        <p class="mt-3 text-sm text-gray-500 dark:text-neutral-500">
+                            Pas de spam, désabonnement à tout moment
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- End Subscribe -->
+        <div class="relative overflow-hidden bg-transparent">
+            <svg class="absolute text-gray-400 -bottom-20 start-1/2 w-[1900px] transform -translate-x-1/2" width="2745" height="488" viewbox="0 0 2745 488" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.5 330.864C232.505 403.801 853.749 527.683 1482.69 439.719C2111.63 351.756 2585.54 434.588 2743.87 487" stroke="currentColor"></path>
+                <path d="M0.5 308.873C232.505 381.81 853.749 505.692 1482.69 417.728C2111.63 329.765 2585.54 412.597 2743.87 465.009" stroke="currentColor"></path>
+                <path d="M0.5 286.882C232.505 359.819 853.749 483.701 1482.69 395.738C2111.63 307.774 2585.54 390.606 2743.87 443.018" stroke="currentColor"></path>
+                <path d="M0.5 264.891C232.505 337.828 853.749 461.71 1482.69 373.747C2111.63 285.783 2585.54 368.615 2743.87 421.027" stroke="currentColor"></path>
+                <path d="M0.5 242.9C232.505 315.837 853.749 439.719 1482.69 351.756C2111.63 263.792 2585.54 346.624 2743.87 399.036" stroke="currentColor"></path>
+                <path d="M0.5 220.909C232.505 293.846 853.749 417.728 1482.69 329.765C2111.63 241.801 2585.54 324.633 2743.87 377.045" stroke="currentColor"></path>
+                <path d="M0.5 198.918C232.505 271.855 853.749 395.737 1482.69 307.774C2111.63 219.81 2585.54 302.642 2743.87 355.054" stroke="currentColor"></path>
+                <path d="M0.5 176.927C232.505 249.864 853.749 373.746 1482.69 285.783C2111.63 197.819 2585.54 280.651 2743.87 333.063" stroke="currentColor"></path>
+                <path d="M0.5 154.937C232.505 227.873 853.749 351.756 1482.69 263.792C2111.63 175.828 2585.54 258.661 2743.87 311.072" stroke="currentColor"></path>
+                <path d="M0.5 132.946C232.505 205.882 853.749 329.765 1482.69 241.801C2111.63 153.837 2585.54 236.67 2743.87 289.082" stroke="currentColor"></path>
+                <path d="M0.5 110.955C232.505 183.891 853.749 307.774 1482.69 219.81C2111.63 131.846 2585.54 214.679 2743.87 267.091" stroke="currentColor"></path>
+                <path d="M0.5 88.9639C232.505 161.901 853.749 285.783 1482.69 197.819C2111.63 109.855 2585.54 192.688 2743.87 245.1" stroke="currentColor"></path>
+                <path d="M0.5 66.9729C232.505 139.91 853.749 263.792 1482.69 175.828C2111.63 87.8643 2585.54 170.697 2743.87 223.109" stroke="currentColor"></path>
+                <path d="M0.5 44.9819C232.505 117.919 853.749 241.801 1482.69 153.837C2111.63 65.8733 2585.54 148.706 2743.87 201.118" stroke="currentColor"></path>
+                <path d="M0.5 22.991C232.505 95.9276 853.749 219.81 1482.69 131.846C2111.63 43.8824 2585.54 126.715 2743.87 179.127" stroke="currentColor"></path>
+                <path d="M0.5 1C232.505 73.9367 853.749 197.819 1482.69 109.855C2111.63 21.8914 2585.54 104.724 2743.87 157.136" stroke="currentColor"></path>
+            </svg>
+
+            <div class="relative z-10">
+                <div class="w-full max-w-5xl px-4 xl:px-0 py-10 lg:pt-16 mx-auto">
+                    <div class="inline-flex items-center">
+                        <!-- Logo -->
+                        <img src="/assets/img/logo/blue.png" class="h-8" alt="">
+
+                        <div class="border-s border-gray-400 ps-5 ms-5">
+                            <p class="text-sm text-gray-600">
+                                © 2024 Tous droits reservés
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JS PLUGINS -->
-    <!-- Required plugins -->
-    <script src="../../assets/vendor/preline/dist/index-3.js?v=2.5.0"></script>
-
-    <!-- JS INITIALIZATIONS -->
-    <script>
-        (function() {
-            function textareaAutoHeight(el, offsetTop = 0) {
-                el.style.height = 'auto';
-                el.style.height = `${el.scrollHeight + offsetTop}px`;
-            }
-
-            (function() {
-                const textareas = [
-                    '#hs-tac-message'
-                ];
-
-                textareas.forEach((el) => {
-                    const textarea = document.querySelector(el);
-                    const overlay = textarea.closest('.hs-overlay');
-
-                    if (overlay) {
-                        const {
-                            element
-                        } = HSOverlay.getInstance(overlay, true);
-
-                        element.on('open', () => textareaAutoHeight(textarea, 3));
-                    } else textareaAutoHeight(textarea, 3);
-
-                    textarea.addEventListener('input', () => {
-                        textareaAutoHeight(textarea, 3);
-                    });
-                });
-            })();
-        })()
-    </script>
-
-    <!-- JS THIRD PARTY PLUGINS -->
-    <!-- Google Analytics. Global site tag (gtag.js) -->
-    <script async="" src="../../gtag/js-3?id=G-B73TDMXKF5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'G-B73TDMXKF5');
-    </script>
+    <script src="/assets/vendor/preline/dist/index-3.js?v=2.5.0"></script>
 </body>
 
 </html>

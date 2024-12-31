@@ -1,26 +1,11 @@
 @extends('layouts.app')
 
-@section('sidebar')
-@include('portal.inc.sidebar')
-@endsection
-
-@section('navbar')
-@include('portal.inc.navbar')
-@endsection
-
 @section('content')
 <div>
     @if($templ->isEmpty())
-    <div class="max-w-2xl mx-auto min-h-60 flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+    <div class="max-w-2xl mx-auto py-10 flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
         <div class="flex flex-auto flex-col justify-center items-center p-4 md:p-5">
-            <svg class="size-20 text-gray-500 dark:text-neutral-500" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V11.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                <path opacity="0.4" d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                <g opacity="0.4">
-                    <path d="M19.2091 14.7683L15.6691 18.3083C15.5291 18.4483 15.3991 18.7083 15.3691 18.8983L15.1791 20.2483C15.1091 20.7383 15.4491 21.0783 15.9391 21.0083L17.2891 20.8183C17.4791 20.7883 17.7491 20.6583 17.8791 20.5183L21.4191 16.9783C22.0291 16.3683 22.3191 15.6583 21.4191 14.7583C20.5291 13.8683 19.8191 14.1583 19.2091 14.7683Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M18.6992 15.2773C18.9992 16.3573 19.8392 17.1973 20.9192 17.4973" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                </g>
-            </svg>
+            <img src="/assets/svg/template.svg" class="h-56" alt="">
 
             <p class="mt-2 text-sm text-gray-800 dark:text-neutral-300">
                 Aucune template Email disponible
@@ -77,7 +62,7 @@
                     </div>
                 </div>
                 <div class="p-1">
-                    <iframe srcdoc="{{$dat->content}}" class="rounded-xl" frameborder="0" width="100%" height="350px" scrolling="yes"></iframe>
+                    <iframe data-srcdoc="{{$dat->content}}" class="template-iframe rounded-xl" frameborder="0" width="100%" height="350px" scrolling="yes" loading="lazy"></iframe>
                 </div>
             </div>
 
@@ -264,7 +249,7 @@
                             </button>
                         </nav>
                     </div>
-                    <button type="button" class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600" aria-label="Close" data-hs-overlay="#hs-bg-preview">
+                    <button type="button" class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600" aria-label="Close" data-hs-overlay="#hs-modal-email-template-new">
                         <span class="sr-only">Close</span>
                         <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 6 6 18" />
@@ -314,5 +299,39 @@
         $("#smop").attr("srcdoc", content);
         $("#smo").attr("srcdoc", content);
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Fonction pour charger l'iframe lorsque celle-ci devient visible dans la fenêtre de visualisation
+        function loadIframeLazy() {
+            const iframes = document.querySelectorAll('.template-iframe');
+            const options = {
+                root: null, // Observer l'ensemble du viewport
+                rootMargin: '0px',
+                threshold: 0.25 // Charge l'iframe lorsque 25% est visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        const srcdoc = iframe.getAttribute('data-srcdoc'); // On récupère le contenu HTML à afficher
+
+                        if (srcdoc) {
+                            iframe.srcdoc = srcdoc;  // On charge le contenu HTML dans l'iframe
+                            iframe.removeAttribute('data-srcdoc'); // Retirer l'attribut data-srcdoc après avoir chargé le contenu
+                        }
+                        observer.unobserve(iframe); // Cesse d'observer cette iframe une fois chargée
+                    }
+                });
+            }, options);
+
+            iframes.forEach(iframe => {
+                observer.observe(iframe);
+            });
+        }
+
+        // Appeler la fonction de lazy loading
+        loadIframeLazy();
+    });
 </script>
 @endsection

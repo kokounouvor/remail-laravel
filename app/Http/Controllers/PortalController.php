@@ -57,20 +57,22 @@ class PortalController extends Controller
             $endDate = Carbon::now();
 
             // Récupérer les contacts
-            $totalContacts = Subscriber::where('created_at', '>=', $startDate)
-                ->where('created_at', '<=', $endDate)
+            $totalContacts = Subscriber::where([['created_at', '>=', $startDate], ["user", Session::get("user")]])
+                ->where([['created_at', '<=', $endDate], ["user", Session::get("user")]])
                 ->count();
 
             // Récupérer les messages envoyés (réussis)
-            $sentMessages = Message::where('sent', true)
-                ->where('created_at', '>=', $startDate)
-                ->where('created_at', '<=', $endDate)
+            $sentMessages = Message::join('campaigns', 'campaigns.id', '=', 'messages.campaign_id')
+                ->where([["messages.sent", true]])
+                ->where([['messages.created_at', '>=', $startDate], ['campaigns.user', Session::get("user")]])
+                ->where([['messages.created_at', '<=', $endDate], ['campaigns.user', Session::get("user")]])
                 ->count();
 
             // Récupérer les messages bouncés
-            $bouncedMessages = Message::where('sent', false)
-                ->where('created_at', '>=', $startDate)
-                ->where('created_at', '<=', $endDate)
+            $bouncedMessages = Message::join('campaigns', 'campaigns.id', '=', 'messages.campaign_id')
+                ->where([["messages.sent", false]])
+                ->where([['messages.created_at', '>=', $startDate], ['campaigns.user', Session::get("user")]])
+                ->where([['messages.created_at', '<=', $endDate], ['campaigns.user', Session::get("user")]])
                 ->count();
 
             // Ajouter les résultats à notre tableau

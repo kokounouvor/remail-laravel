@@ -15,6 +15,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Mail;
 
 class SendIndividualCampaignMailJob implements ShouldQueue
@@ -67,7 +68,7 @@ class SendIndividualCampaignMailJob implements ShouldQueue
             'mail.mailers.smtp.host' => $mail_server->mail_host,
             'mail.mailers.smtp.port' => $mail_server->mail_port,
             'mail.mailers.smtp.username' => $mail_server->mail_username,
-            'mail.mailers.smtp.password' => $mail_server->mail_password,
+            'mail.mailers.smtp.password' => Crypt::decryptString($mail_server->mail_password),
             'mail.mailers.smtp.encryption' => $mail_server->smtp_encryption,
             'mail.from.address' => $mail_server->mail_email,
             'mail.from.name' => $camp_data->from_name,
