@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en" dir="" class="relative kby5p ly3m4">
@@ -23,8 +22,8 @@
     <header class="flex py-2 shadow-sm flex-wrap m6u74 oz4tv le6w0 m9vu4 vcvf1 kq7zk dark:bg-neutral-900 dark:border-neutral-700">
         <div class="ejxie flex dry15 jv5i1 items-center qaxp8 huxlp l3ebx iwwvx oekzh rxp1p">
             <!-- Logo -->
-            <a class="bo2im ngy7c lig8s ykxda rozsb r0fp5 fhbog" href="../../pro/shop/index.html" aria-label="Preline">
-               <img src="/assets/img/logo/blue.png" class="size-10 w-full" alt="">
+            <a class="bo2im ngy7c lig8s ykxda rozsb r0fp5 fhbog" href="/" aria-label="Preline">
+                <img src="/assets/img/logo/blue.png" class="size-10 w-full" alt="">
             </a>
             <!-- End Logo -->
         </div>

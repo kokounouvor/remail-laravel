@@ -80,11 +80,11 @@
                     <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#contact">Contact</a>
 
                     <div class="md:ms-5">
-                        <a class="p-3 ps-px sm:px-3 md:py-4 text-sm font-bold text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#contact">Docs</a>
+                        <a class="p-3 ps-px sm:px-3 md:py-4 text-sm font-bold text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-500" href="{{Route('docs')}}">Docs</a>
                         <a class="group inline-flex items-center gap-x-2 py-2 px-3 text-blue-600 hover:text-blue-700 border border-2 border-blue-600 font-medium text-sm rounded-full focus:outline-none" href="{{Route('auth.login')}}">
                             Voir la démo
                         </a>
-                        <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-blue-600 hover:bg-blue-700 font-medium text-sm text-white rounded-full focus:outline-none" href="">
+                        <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-blue-600 hover:bg-blue-700 font-medium text-sm text-white rounded-full focus:outline-none" href="#">
                             Télécharger
                         </a>
                     </div>
@@ -169,7 +169,7 @@
 
     <div class="bg-white">
         <!-- Icon Blocks -->
-        <div id="features" class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div id="features" class="scroll-mt-24 max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <div class="text-left mb-10">
                 <h2 class="text-2xl md:text-4xl font-semibold">
                     Fonctionnalités de REMAIL
@@ -315,81 +315,113 @@
             </div>
         </div>
 
-        <div>
-            <!-- Slider -->
-            <div class="max-w-3xl mx-auto px-4 lg:px-6 lg:px-8 py-10">
-                <div data-hs-carousel='{"loadingClasses": "opacity-0"}' class="relative">
-                    <div class="hs-carousel relative overflow-hidden w-full h-[30rem] md:h-[calc(100vh-106px)]  bg-gray-100 rounded-2xl dark:bg-neutral-800">
-                        <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
-                            <!-- Item -->
-                            <div class="hs-carousel-slide">
-                                <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
-                                    <img src="/assets/img/mockups/MacBook-Pro-1735635658277.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+        <!-- Hero -->
+        <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8" style="background-image: url(/assets/svg/component/hero-gradient.svg);">
+            <!-- Grid -->
+            <div class="grid md:grid-cols-12 gap-4 md:gap-8 xl:gap-20 items-center py-10">
+                <div class="relative md:col-span-8">
+                    <!-- Slider -->
+                    <div data-hs-carousel='{"loadingClasses": "opacity-0"}' class="relative">
+                        <div class="hs-carousel relative overflow-hidden w-full h-[30rem] md:h-[calc(100vh-106px)]  bg-gray-100 rounded-2xl dark:bg-neutral-800">
+                            <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+                                <!-- Item -->
+                                <div class="hs-carousel-slide">
+                                    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                        <img src="/assets/img/mockups/MacBook-Pro-1735635658277.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- End Item -->
+                                <!-- End Item -->
 
-                            <!-- Item -->
-                            <div class="hs-carousel-slide">
-                            <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
-                                    <img src="/assets/img/mockups/MacBook-Pro-1735635274820.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                <!-- Item -->
+                                <div class="hs-carousel-slide">
+                                    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                        <img src="/assets/img/mockups/MacBook-Pro-1735635274820.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- End Item -->
+                                <!-- End Item -->
 
-                            <!-- Item -->
-                            <div class="hs-carousel-slide">
-                            <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
-                                    <img src="/assets/img/mockups/MacBook-Pro-1735631511452.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                <!-- Item -->
+                                <div class="hs-carousel-slide">
+                                    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                        <img src="/assets/img/mockups/MacBook-Pro-1735631511452.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- End Item -->
-                              <!-- Item -->
-                            <div class="hs-carousel-slide">
-                            <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
-                                    <img src="/assets/img/mockups/MacBook-Pro-1735631613623.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                <!-- End Item -->
+                                <!-- Item -->
+                                <div class="hs-carousel-slide">
+                                    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                        <img src="/assets/img/mockups/MacBook-Pro-1735631613623.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                    </div>
                                 </div>
-                            </div>
-                               <!-- Item -->
-                               <div class="hs-carousel-slide">
-                            <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
-                                    <img src="/assets/img/mockups/MacBook-Pro-1735635438607.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                <!-- Item -->
+                                <div class="hs-carousel-slide">
+                                    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                        <img src="/assets/img/mockups/MacBook-Pro-1735635438607.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                    </div>
                                 </div>
+                                <!-- End Item -->
                             </div>
-                            <!-- End Item -->
                         </div>
+
+                        <!-- Arrows -->
+                        <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-s-2xl focus:outline-none focus:bg-white/20">
+                            <span class="text-2xl" aria-hidden="true">
+                                <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+                                </svg>
+                            </span>
+                            <span class="sr-only">Previous</span>
+                        </button>
+
+                        <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-e-2xl focus:outline-none focus:bg-white/20">
+                            <span class="sr-only">Next</span>
+                            <span class="text-2xl" aria-hidden="true">
+                                <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <!-- End Arrows -->
                     </div>
-
-                    <!-- Arrows -->
-                    <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-s-2xl focus:outline-none focus:bg-white/20">
-                        <span class="text-2xl" aria-hidden="true">
-                            <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
-                            </svg>
-                        </span>
-                        <span class="sr-only">Previous</span>
-                    </button>
-
-                    <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-e-2xl focus:outline-none focus:bg-white/20">
-                        <span class="sr-only">Next</span>
-                        <span class="text-2xl" aria-hidden="true">
-                            <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
-                            </svg>
-                        </span>
-                    </button>
-                    <!-- End Arrows -->
+                    <!-- End Slider -->
                 </div>
+                <!-- End Col -->
+
+                <div class="md:col-span-4">
+                    <h1 class="block text-4xl font-bold text-gray-800 sm:text-4xl lg:text-5xl lg:leading-tight dark:text-white">
+                        Interface intuitive
+                    </h1>
+                    <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">
+                        Que ce soit sur mobile, tablette ou bureau, REMAIL s'adapte à 100% à votre écran.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="mt-7 grid gap-3 w-full sm:inline-flex">
+                        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#features">
+                            Télécharger maintenant
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </a>
+                        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#contact">
+                            Contactez-nous
+                        </a>
+                    </div>
+                    <!-- End Buttons -->
+                </div>
+                <!-- End Col -->
+
             </div>
-            <!-- End Slider -->
+            <!-- End Grid -->
         </div>
+        <!-- End Hero -->
 
         <!-- Features -->
-        <div class="overflow-hidden" id="pricing">
+        <div class="bg-blue-600 overflow-hidden scroll-mt-24" id="pricing">
             <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
                 <!-- Title -->
-                <div class="mx-auto max-w-2xl mb-8 lg:mb-14 text-center">
-                    <h2 class="text-3xl lg:text-4xl text-gray-800 font-bold dark:text-neutral-200">
+                <div class="mx-auto max-w-4xl mb-8 lg:mb-14 text-center">
+                    <h2 class="text-3xl lg:text-4xl text-white font-bold dark:text-neutral-200">
                         Choisissez le plan adapté à vos besoins
                     </h2>
                 </div>
@@ -398,9 +430,9 @@
                 <div class="relative xl:w-10/12 xl:mx-auto">
                     <!-- Grid -->
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
-                        <div class="space-y-5">
+                        <div class="space-y-5 text-white">
                             <h2 class="text-xl md:text-2xl font-semibold">Plan Unique</h2>
-                            <p class="md:text-lg text-gray-600">
+                            <p class="md:text-lg">
                                 Téléchargez et installez la solution sur votre propre serveur, avec une installation facile et rapide. Aucune obligation d'abonnement mensuel, payez une seule fois !
                             </p>
                         </div>
@@ -410,7 +442,7 @@
                             <div class="shadow-xl shadow-gray-200 p-5 relative z-10 bg-white border rounded-xl md:p-10 dark:bg-neutral-900 dark:border-neutral-800 dark:shadow-gray-900/20">
                                 <h3 class="text-xl font-bold text-gray-800 dark:text-neutral-200">Licence</h3>
                                 <div class="text-sm text-gray-500 dark:text-neutral-500">Accès à vie.</div>
-                                <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-white dark:text-neutral-800">Most popular</span>
+                                <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-white dark:text-neutral-800">+500 Achats</span>
 
                                 <div class="mt-5">
                                     <span class="text-6xl font-bold text-gray-800 dark:text-neutral-200">$45</span>
@@ -474,7 +506,7 @@
 
                     <!-- SVG Element -->
                     <div class="hidden md:block absolute top-0 end-0 translate-y-16 translate-x-16">
-                        <svg class="w-16 h-auto text-blue-600" width="121" height="135" viewBox="0 0 121 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-16 h-auto text-yellow-400" width="121" height="135" viewBox="0 0 121 135" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 16.4754C11.7688 27.4499 21.2452 57.3224 5 89.0164" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
                             <path d="M33.6761 112.104C44.6984 98.1239 74.2618 57.6776 83.4821 5" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
                             <path d="M50.5525 130C68.2064 127.495 110.731 117.541 116 78.0874" stroke="currentColor" stroke-width="10" stroke-linecap="round" />
@@ -484,7 +516,7 @@
 
                     <!-- SVG Element -->
                     <div class="hidden md:block absolute bottom-0 start-0 translate-y-16 -translate-x-16">
-                        <svg class="w-56 h-auto text-blue-200" width="347" height="188" viewBox="0 0 347 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-56 h-auto text-yellow-400" width="347" height="188" viewBox="0 0 347 188" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 82.4591C54.7956 92.8751 30.9771 162.782 68.2065 181.385C112.642 203.59 127.943 78.57 122.161 25.5053C120.504 2.2376 93.4028 -8.11128 89.7468 25.5053C85.8633 61.2125 130.186 199.678 180.982 146.248L214.898 107.02C224.322 95.4118 242.9 79.2851 258.6 107.02C274.299 134.754 299.315 125.589 309.861 117.539L343 93.4426" stroke="currentColor" stroke-width="7" stroke-linecap="round" />
                         </svg>
                     </div>
@@ -576,127 +608,60 @@
         </div>
 
         <!-- Hire Us -->
-        <div id="contact" class="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div id="contact" class="scroll-mt-24 max-w-xl text-center px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <!-- Grid -->
-            <div class="grid md:grid-cols-2 items-center gap-12">
-                <div>
-                    <h1 class="text-3xl font-bold text-gray-800 sm:text-4xl lg:text-5xl lg:leading-tight dark:text-white">
-                        Contactez-nous
-                    </h1>
-                    <p class="mt-1 md:text-lg text-gray-800 dark:text-neutral-200">
-                        Vous avez des questions ou souhaitez en savoir plus sur REMAIL ? Contactez notre équipe dès maintenant !
-                    </p>
+            <div>
+                <h1 class="text-3xl font-bold text-gray-800 sm:text-4xl lg:text-5xl lg:leading-tight dark:text-white">
+                    Contactez-nous
+                </h1>
+                <p class="mt-1 md:text-lg text-gray-800 dark:text-neutral-200">
+                    Vous avez des questions ou souhaitez en savoir plus sur REMAIL ? Contactez notre équipe dès maintenant !
+                </p>
 
-                    <div class="mt-8">
-                        <h2 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
-                            À quoi dois-je m'attendre ?
-                        </h2>
+                <div class="mt-8">
+                    <h2 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
+                        À quoi dois-je m'attendre ?
+                    </h2>
 
-                        <ul class="mt-2 space-y-2">
-                            <li class="flex gap-x-3">
-                                <svg class="shrink-0 mt-0.5 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                <span class="text-gray-600 dark:text-neutral-400">
-                                    Accompagnement de bout en bout
-                                </span>
-                            </li>
+                    <ul class="mt-2 space-y-2">
+                        <li class="flex gap-x-3 justify-center">
+                            <svg class="shrink-0 mt-0.5 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span class="text-gray-600 dark:text-neutral-400">
+                                Accompagnement de bout en bout
+                            </span>
+                        </li>
 
-                            <li class="flex gap-x-3">
-                                <svg class="shrink-0 mt-0.5 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                <span class="text-gray-600 dark:text-neutral-400">
-                                    Documentation très détaillé
-                                </span>
-                            </li>
+                        <li class="flex gap-x-3 justify-center">
+                            <svg class="shrink-0 mt-0.5 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span class="text-gray-600 dark:text-neutral-400">
+                                Documentation très détaillé
+                            </span>
+                        </li>
 
-                            <li class="flex gap-x-3">
-                                <svg class="shrink-0 mt-0.5 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                <span class="text-gray-600 dark:text-neutral-400">
-                                    Simple et abordable
-                                </span>
-                            </li>
-                        </ul>
+                        <li class="flex gap-x-3 justify-center">
+                            <svg class="shrink-0 mt-0.5 size-5 text-gray-600 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span class="text-gray-600 dark:text-neutral-400">
+                                Simple et abordable
+                            </span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-7">
+                        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="mailto:gurviolabs@gmail.com">
+                            Envoyer un email
+                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+                        </a>
                     </div>
-
                 </div>
-                <!-- End Col -->
 
-                <div class="relative">
-                    <!-- Card -->
-                    <div class="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-10 dark:border-neutral-700">
-                        <form>
-                            <div class="mt-6 grid gap-4 lg:gap-6">
-                                <!-- Grid -->
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-                                    <div>
-                                        <label for="hs-firstname-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Nom</label>
-                                        <input type="text" name="hs-firstname-hire-us-1" id="hs-firstname-hire-us-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
-                                    </div>
-
-                                    <div>
-                                        <label for="hs-lastname-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Prénom</label>
-                                        <input type="text" name="hs-lastname-hire-us-1" id="hs-lastname-hire-us-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
-                                    </div>
-                                </div>
-                                <!-- End Grid -->
-
-                                <div>
-                                    <label for="hs-work-email-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Adresse Email</label>
-                                    <input type="email" name="hs-work-email-hire-us-1" id="hs-work-email-hire-us-1" autocomplete="email" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
-                                </div>
-
-                                <!-- Grid -->
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-                                    <div>
-                                        <label for="hs-company-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Entreprise</label>
-                                        <input type="text" name="hs-company-hire-us-1" id="hs-company-hire-us-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
-                                    </div>
-
-                                    <div>
-                                        <label for="hs-company-website-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Site web de l'entreprise</label>
-                                        <input type="text" name="hs-company-website-hire-us-1" id="hs-company-website-hire-us-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
-                                    </div>
-                                </div>
-                                <!-- End Grid -->
-
-                                <div>
-                                    <label for="hs-about-hire-us-1" class="block mb-2 text-sm text-gray-700 font-medium dark:text-white">Détails</label>
-                                    <textarea id="hs-about-hire-us-1" name="hs-about-hire-us-1" rows="4" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"></textarea>
-                                </div>
-                            </div>
-                        </form>
-                        <!-- End Grid -->
-
-                        <!-- Checkbox -->
-                        <div class="mt-3 flex">
-                            <div class="flex">
-                                <input id="remember-me" name="remember-me" type="checkbox" class="shrink-0 mt-1.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
-                            </div>
-                            <div class="ms-3">
-                                <label for="remember-me" class="text-sm text-gray-600 dark:text-neutral-400">
-                                    En soumettant ce formulaire, j'ai lu et reconnu la
-                                    <a class="text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500" href="#">politique de confidentialité</a>
-                            </div>
-                        </div>
-                        <!-- End Checkbox -->
-
-                        <div class="mt-6 grid">
-                            <button type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Envoyer la demande</button>
-                        </div>
-
-                        <div class="mt-3 text-center">
-                            <p class="text-sm text-gray-500 dark:text-neutral-500">
-                                Nous vous répondrons dans un délai de 1 à 2 jours ouvrables.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- End Card -->
-                </div>
-                <!-- End Col -->
             </div>
             <!-- End Grid -->
         </div>
@@ -704,25 +669,28 @@
 
     </div>
 
-    <div class="bg-gray-100" style="background-image: url(/assets/svg/component/hero-gradient.svg);">
+    <div class="bg-white border-t" style="background-image: url(/assets/svg/component/hero-gradient.svg);">
         <!-- Subscribe -->
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-16 mx-auto">
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="max-w-md">
                     <h2 class="text-2xl font-bold md:text-3xl md:leading-tight dark:text-white">Newsletter</h2>
                     <p class="mt-3 text-gray-600 dark:text-neutral-400">
-                        Abonnez-vous et commencez à tirer le meilleur parti de chaque communication. </p>
+                        Abonnez-vous et commencez à tirer le meilleur parti de chaque communication.
+                    </p>
                 </div>
 
-                <form>
+                <form method="POST" action="{{Route('newsletter-add')}}" id="newsletter">
+                    @csrf
                     <div class="w-full sm:max-w-lg md:ms-auto">
+                        @include('layouts.alert')
                         <div class="flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
                             <div class="w-full">
-                                <input type="text" id="hero-input" name="hero-input" class="py-3 px-4 block w-full border-gray-200 rounded-2xl text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Entrer votre Email">
+                                <input type="email" id="email" name="email" class="py-3 px-4 block w-full border-gray-200 rounded-2xl text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Entrer votre Email">
                             </div>
-                            <a class="w-full sm:w-auto whitespace-nowrap py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-2xl border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                            <button type="submit" class="w-full sm:w-auto whitespace-nowrap py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-2xl border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
                                 Souscrire
-                            </a>
+                            </button>
                         </div>
                         <p class="mt-3 text-sm text-gray-500 dark:text-neutral-500">
                             Pas de spam, désabonnement à tout moment

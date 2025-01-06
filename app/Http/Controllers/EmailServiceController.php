@@ -31,7 +31,7 @@ class EmailServiceController extends Controller
         $notifications_unread = Notification::where([['user', Session::get("user")], ["status", null]])->count();
 
         $meta = [
-            "title" => "SendGuru - Portail",
+            "title" => "REMAIL - Portal",
             "description" => "Solution d'envoi de mail de masse",
             'thumb' => ""
         ];

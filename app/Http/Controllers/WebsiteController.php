@@ -7,6 +7,7 @@ use App\Models\Campaign_link_click;
 use App\Models\Message;
 use App\Models\Notification;
 use App\Models\Subscriber;
+use App\Models\Newsletter;
 use App\Models\Users;
 use App\Models\Workspace;
 use Illuminate\Http\Request;
@@ -23,7 +24,7 @@ class WebsiteController extends Controller
             'thumb' => ""
         ];
 
-        return view('landing.welcome', $meta);
+        return view('landing.welcome', $meta); 
     }
 
     public function campaign_details($uid)
@@ -56,6 +57,23 @@ class WebsiteController extends Controller
         ];
 
         return view('landing.campaign', compact('camps', 'receivers','mail_contact', 'mail_sent', 'mail_bounced', 'mail_attente', 'mail_clicks_links', 'mail_clicks'), $meta);
+    }
+
+    public function docs()
+    {
+        $meta = [
+            "title" => "SendGuru - Portail",
+            "description" => "Solution d'envoi de mail de masse",
+            'thumb' => ""
+        ];
+
+        return view('landing.docs', $meta); 
+    }
+
+    public function newsletter(Request $request){
+        $request->validate(["email"=>"required|unique:newsletters"]);
+        Newsletter::insert(["email"=>$request->email, "created_at"=>now()]);
+        return redirect("/#newsletter")->with("success","Inscription réussie !");
     }
 
 }

@@ -14,12 +14,17 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\SendMail::class,
+        Commands\SendCampaignMail::class,
     ];
 
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->command('subscribers:sendmail')->cron('* * * * *');
-        $schedule->command('app:send-campaign-mail')->cron('* * * * *')->everyFiveMinutes();
+        // Planification des commandes
+        $schedule->command('subscribers:sendmail')->everyFiveMinutes();
+        $schedule->command('app:send-campaign-mail')->everyFiveMinutes();
+
+        // Exécution de queue:work en tâche de fond
+        $schedule->command('queue:work')->everyMinute(); // Vous pouvez ajuster la fréquence selon vos besoins
     }
 
     /**

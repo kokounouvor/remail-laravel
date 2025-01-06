@@ -36,6 +36,8 @@ use App\Http\Controllers\WorkspaceController;
 
 Route::controller(WebsiteController::class)->group(function () {
    Route::get("/", "welcome")->name("welcome");
+   Route::get("/docs", "docs")->name("docs");
+   Route::post("/docs", "newsletter")->name("newsletter-add");
    Route::get("/visitor/campaign/details/{id}", "campaign_details")->name("visitor.campaign-details");
 });
 
