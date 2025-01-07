@@ -4,7 +4,7 @@
 <div>
     @include('layouts.alert')
 
-    <div class="border-b border-gray-300 bg-gray-200 sticky top-0 dark:border-neutral-700">
+    <div class="border-b border-gray-300 bg-gray-200 dark:bg-neutral-900 sticky top-0 dark:border-neutral-700">
         <nav class="-mb-0.5 flex justify-center gap-x-6" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
             <button type="button" class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500 active" id="horizontal-alignment-item-1" aria-selected="true" data-hs-tab="#horizontal-alignment-1" aria-controls="horizontal-alignment-1" role="tab">
                 Tous les contacts
@@ -20,9 +20,9 @@
 
     <div class="mt-3">
         <div id="horizontal-alignment-1" role="tabpanel" aria-labelledby="horizontal-alignment-item-1">
-            <div class="p-4 bg-white shadow-sm rounded-xl">
-                <div class="md:flex justify-between items-center border-b pb-3 mb-3">
-                    <div class="inline-flex items-center gap-x-2">
+            <div class="p-4 bg-white dark:bg-neutral-800 border dark:border-neutral-700 shadow-sm rounded-xl">
+                <div class="md:flex justify-between items-center border-b dark:border-neutral-700 pb-3 mb-3">
+                    <div class="inline-flex items-center gap-x-2 dark:text-neutral-100">
                         <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-lg text-xs font-bold bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500"> {{$all_contacts}} </span>
                         Contacts
                     </div>
@@ -75,7 +75,9 @@
                                                 {{$list->last_name}}
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+                                                @if(DB::table('tags')->where('id', $list->tag)->exists())
                                                 {{DB::table('tags')->where('id', '=', $list->tag)->first()->name}}
+                                                @endif
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
                                                 {{$list->created_at}}
@@ -107,9 +109,9 @@
             </div>
         </div>
         <div id="horizontal-alignment-2" class="hidden" role="tabpanel" aria-labelledby="horizontal-alignment-item-2">
-            <div class="p-4 bg-white rounded-xl">
-                <div class="max-w-3xl mx-auto flex justify-between items-center border-b pb-3 mb-3">
-                    <div class="inline-flex items-center gap-x-2">
+            <div class="p-4 bg-white dark:bg-neutral-800 border dark:border-neutral-700 rounded-xl">
+                <div class="max-w-3xl mx-auto flex justify-between items-center border-b dark:border-neutral-700 pb-3 mb-3">
+                    <div class="inline-flex items-center gap-x-2 dark:text-neutral-100">
                         <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-lg text-xs font-bold bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500"> {{$group->count()}} </span>
                         Segments
                     </div>
@@ -170,7 +172,7 @@
                                                                     Confirmer la suppression
                                                                 </h3>
                                                                 <p class="text-gray-500 dark:text-neutral-500">
-                                                                   En supprimant ce segment, tous les contacts y affiliés seront définitivement supprimé aussi.
+                                                                    En supprimant ce segment, tous les contacts y affiliés seront définitivement supprimé aussi.
                                                                 </p>
 
                                                                 <form action="{{Route('group-delete')}}" method="POST">
@@ -201,7 +203,7 @@
             </div>
         </div>
         <div id="horizontal-alignment-3" class="hidden" role="tabpanel" aria-labelledby="horizontal-alignment-item-3">
-            <div class="p-4 bg-white shadow-sm rounded-xl">
+            <div class="p-4 bg-white dark:bg-neutral-800 border dark:border-neutral-700 shadow-sm rounded-xl">
                 <div class="max-w-3xl mx-auto">
                     <div class="flex flex-col">
                         <div class="-m-1.5 overflow-x-auto">

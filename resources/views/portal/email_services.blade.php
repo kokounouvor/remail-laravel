@@ -102,7 +102,7 @@
                                                         <path d="M9.5 12.5H10.33" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                                     </svg>
                                                 </a>
-                                                <button type="button" data-hs-overlay="#hs-server-test-{{$sv->id}}" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-none focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:text-blue-400">Tester</button>
+                                                <button type="button" data-hs-overlay="#hs-server-test-{{$sv->id}}" class="inline-flex items-center hidden gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-none focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:text-blue-400">Tester</button>
                                             </td>
                                         </tr>
                                         <!-- Modal Update -->
@@ -279,7 +279,7 @@
                             <option value="smtp">SMTP</option>
                         </select>
                     </div>
-                    <div class="mb-2 bg-yellow-300 rounded-lg p-2">
+                    <div class="mb-2 bg-red-100 rounded-lg p-2">
                         <label for="host" class="font-medium text-sm text-slate-600 dark:text-slate-400">Email d'expédition</label>
                         <input type="email" name="email" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
                         <span class="text-xs text-red-600">Ce sera l'email d'expédition qui sera affiché</span>

@@ -20,11 +20,12 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // Planification des commandes
-        $schedule->command('subscribers:sendmail')->everyFiveMinutes();
+        $schedule->command('app:send-campaign-mail-schedule')->everyFiveMinutes();
         $schedule->command('app:send-campaign-mail')->everyFiveMinutes();
 
         // Exécution de queue:work en tâche de fond
-        $schedule->command('queue:work')->everyMinute(); // Vous pouvez ajuster la fréquence selon vos besoins
+        $schedule->command('queue:work --queue=delete_contacts')->everyMinute(); // Vous pouvez ajuster la fréquence selon vos besoins
+        $schedule->command('queue:work --queue=import_contacts')->everyMinute(); // Vous pouvez ajuster la fréquence selon vos besoins
     }
 
     /**

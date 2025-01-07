@@ -34,7 +34,7 @@ class ImportContactsJob implements ShouldQueue
 
     public function handle(): void
     {
-        (new Notification())->add("Démarrage de l'import", "L'import de vos contacts sont en cours. Vous serez avertis des que c'est terminé.");
+        (new Notification())->addS($this->user,"Démarrage de l'import", "L'import de vos contacts sont en cours. Vous serez avertis des que c'est terminé.");
         Log::info('Starting ImportContactsJob for file: ' . $this->filePath);
 
         try {
@@ -93,10 +93,10 @@ class ImportContactsJob implements ShouldQueue
             DB::table('imports')->where('id', $importId)->update(['status' => 'completed']);
 
             // Suppression du fichier après traitement
-            Storage::disk('public')->delete($this->filePath);
+            //Storage::disk('public')->delete($this->filePath);
 
-            (new Notification())->add("Import terminé", "L'import de vos contacts sont terminé.");
-            Log::info('Successfully completed ImportContactsJob');
+            (new Notification())->addS($this->user,"Import terminé", "L'import de vos contacts sont terminé.");
+            //Log::info('Successfully completed ImportContactsJob');
         } catch (\Exception $e) {
             Log::error('ImportContactsJob failed: ' . $e->getMessage());
             throw $e; // Rejette l'erreur pour marquer le job comme échoué

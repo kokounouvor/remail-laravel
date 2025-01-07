@@ -8,9 +8,11 @@ use App\Mail\SendmailCampaignTEST;
 use App\Models\Campaign;
 use App\Models\Campaign_link_click;
 use App\Models\Message;
+use App\Models\Notification;
 use App\Models\Payment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class SendEmailController extends Controller
@@ -26,7 +28,7 @@ class SendEmailController extends Controller
         $campaig = Campaign::where("id", "=", $request->campaign)->first();
 
         // envoie du code otp 
-        $info = ["subject" => "TEST -" . $campaig->subject, "content" => $campaig->contents];
+        $info = ["subject" => "TEST -" . $campaig->subject, "content" => $campaig->contents, "id" => $campaig->id];
 
         Mail::to($request->email)->send(new SendmailCampaignTEST($info));
         //return (new SendmailCampaignTEST($info));
@@ -65,6 +67,8 @@ class SendEmailController extends Controller
 
     public function trackOpen($id)
     {
+        (new Notification())->add("Track Email start", "Démarrage du track");
+
         // Trouver l'email correspondant par ID (utilisez first() pour obtenir l'email)
         $email = Message::where("token", $id)->first();
 
@@ -75,18 +79,10 @@ class SendEmailController extends Controller
             ]);
         }
 
-        // Créer une image 1x1 transparent pour le suivi
-        $image = imagecreatetruecolor(1, 1);
-        imagesavealpha($image, true);
-        $transparency = imagecolorallocatealpha($image, 0, 0, 0, 127);
-        imagefill($image, 0, 0, $transparency);
-
-        // Définir les bons headers pour l'image PNG transparente
-        header('Content-Type: image/png');
-        imagepng($image);
-
-        // Libérer la mémoire
-        imagedestroy($image);
+        // Retourner une réponse d'image transparente de 1x1 pour que l'email soit suivi
+        return response()->file(public_path('images/pixel.png'), [
+            'Content-Type' => 'image/png',
+        ]);
     }
 
     public function trackClick($campaign_id, $url)

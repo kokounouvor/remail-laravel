@@ -48,7 +48,7 @@
 
 <body class="bg-gray-100">
     <!-- ========== HEADER ========== -->
-    <header class="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full before:absolute before:inset-0 before:lg:mx-auto before:rounded-[26px] before:bg-neutral-800/30 before:backdrop-blur-md">
+    <header class="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full before:absolute bg-gray-100 before:inset-0 before:lg:mx-auto before:rounded-[26px] before:bg-neutral-800/30 before:backdrop-blur-md">
         <nav class="relative max-w-[85rem] w-full py-3.5 ps-5 pe-2 md:flex md:items-center md:justify-between md:py-2 lg:mx-auto bg-gray-100" style="background-image: url(/assets/svg/component/hero-gradient.svg);">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
@@ -75,12 +75,12 @@
             <!-- Collapse -->
             <div id="hs-navbar-floating-dark" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-floating-dark-collapse">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
-                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#features">Fonctionnalités</a>
-                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#pricing">Tarifs</a>
-                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="#contact">Contact</a>
+                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-gray-600 focus:outline-none focus:text-neutral-300" href="#features">Fonctionnalités</a>
+                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-gray-600 focus:outline-none focus:text-neutral-300" href="#pricing">Tarifs</a>
+                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-gray-600 focus:outline-none focus:text-neutral-300" href="#contact">Contact</a>
 
                     <div class="md:ms-5">
-                        <a class="p-3 ps-px sm:px-3 md:py-4 text-sm font-bold text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-500" href="{{Route('docs')}}">Docs</a>
+                        <a class="p-3 ps-px sm:px-3 md:py-4 text-sm font-bold text-gray-800 hover:text-gray-600 focus:outline-none focus:text-neutral-500" href="{{Route('docs')}}">Docs</a>
                         <a class="group inline-flex items-center gap-x-2 py-2 px-3 text-blue-600 hover:text-blue-700 border border-2 border-blue-600 font-medium text-sm rounded-full focus:outline-none" href="{{Route('auth.login')}}">
                             Voir la démo
                         </a>
@@ -417,7 +417,7 @@
         <!-- End Hero -->
 
         <!-- Features -->
-        <div class="bg-blue-600 overflow-hidden scroll-mt-24" id="pricing">
+        <div class="bg-gray-900 overflow-hidden scroll-mt-24 py-8" id="pricing">
             <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
                 <!-- Title -->
                 <div class="mx-auto max-w-4xl mb-8 lg:mb-14 text-center">

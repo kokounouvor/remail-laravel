@@ -75,12 +75,12 @@
             <!-- Collapse -->
             <div id="hs-navbar-floating-dark" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block" aria-labelledby="hs-navbar-floating-dark-collapse">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
-                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="/#features">Fonctionnalités</a>
-                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="/#pricing">Tarifs</a>
-                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-300" href="/#contact">Contact</a>
+                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-gray-600 focus:outline-none focus:text-neutral-300" href="/#features">Fonctionnalités</a>
+                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-gray-600 focus:outline-none focus:text-neutral-300" href="/#pricing">Tarifs</a>
+                    <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-gray-800 hover:text-gray-600 focus:outline-none focus:text-neutral-300" href="/#contact">Contact</a>
 
                     <div class="md:ms-5">
-                        <a class="p-3 ps-px sm:px-3 md:py-4 text-sm font-bold text-gray-800 hover:text-neutral-300 focus:outline-none focus:text-neutral-500" href="{{Route('docs')}}">Docs</a>
+                        <a class="p-3 ps-px sm:px-3 md:py-4 text-sm font-bold text-gray-800 hover:text-gray-600 focus:outline-none focus:text-neutral-500" href="{{Route('docs')}}">Docs</a>
                         <a class="group inline-flex items-center gap-x-2 py-2 px-3 text-blue-600 hover:text-blue-700 border border-2 border-blue-600 font-medium text-sm rounded-full focus:outline-none" href="{{Route('auth.login')}}">
                             Voir la démo
                         </a>

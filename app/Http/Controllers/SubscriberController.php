@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Jobs\ContactsImportJob;
+use App\Jobs\DeleteContactsJob;
 use App\Jobs\ImportContactsJob;
 use App\Jobs\ImportsSubscriberJob;
 use App\Models\Import;
@@ -78,6 +79,8 @@ class SubscriberController extends Controller
         // Insertion de l'utilisateur dans la base de donnée
         $tg = Subscriber::where("tag", $request->id)->first();
         $ins = Tag::where("id", $request->id)->delete();
+
+        DeleteContactsJob::dispatch($request->id)->onQueue("delete_contacts");
 
         // NOTIFIER L' UTILISATEUR
         if ($ins) {

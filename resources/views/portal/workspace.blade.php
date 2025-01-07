@@ -22,10 +22,9 @@
         </div>
     </div>
     @else
-
     <div class="max-w-5xl mx-auto">
         <!-- Grid -->
-        <div class="mb-5 pb-5 flex justify-between items-center border-b border-gray-200 dark:border-neutral-700">
+        <div class="mb-5 pb-5 flex justify-between items-center">
             <div>
                 <h2 class="text-2xl font-semibold text-gray-800 dark:text-neutral-200">Workspaces</h2>
             </div>
@@ -48,7 +47,7 @@
         <!-- End Grid -->
 
         <div class="max-w-2xl mx-auto flex flex-col">
-            <div class="-m-1.5 overflow-x-auto bg-white shadow-sm rounded-xl">
+            <div class="-m-1.5 overflow-x-auto bg-white dark:bg-neutral-800 border dark:border-neutral-700 shadow-sm rounded-xl">
                 <div class="p-1.5 min-w-full inline-block align-middle">
                     <div class="border rounded-xl overflow-hidden dark:border-neutral-700">
                         <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
@@ -72,9 +71,9 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
                                         {{$list->created_at}}
                                     </td>
-                                    <td class="flex gap-x-2 items-center px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                                    <td class="flex gap-x-2 items-center justify-center px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
                                         <a href="#" data-hs-overlay="#hs-edit-{{$list->id}}">
-                                            <svg class="size-6" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="size-6 dark:text-neutral-100" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path opacity="0.4" d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                                 <path d="M16.0399 3.01976L8.15988 10.8998C7.85988 11.1998 7.55988 11.7898 7.49988 12.2198L7.06988 15.2298C6.90988 16.3198 7.67988 17.0798 8.76988 16.9298L11.7799 16.4998C12.1999 16.4398 12.7899 16.1398 13.0999 15.8398L20.9799 7.95976C22.3399 6.59976 22.9799 5.01976 20.9799 3.01976C18.9799 1.01976 17.3999 1.65976 16.0399 3.01976Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                                 <path opacity="0.4" d="M14.9102 4.1499C15.5802 6.5399 17.4502 8.4099 19.8502 9.0899" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -136,11 +135,11 @@
                                             </div>
 
                                             <!-- Footer -->
-                                            <div class="flex justify-end items-center gap-x-2 p-4 sm:px-7 border-t dark:border-neutral-800">
-                                                <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" data-hs-overlay="#hs-edit-{{$list->id}}">
+                                            <div class="flex justify-end items-center dark:bg-neutral-800 rounded-b-xl gap-x-2 p-4 sm:px-7 border-t dark:border-neutral-800">
+                                                <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" data-hs-overlay="#hs-edit-{{$list->id}}">
                                                     Quitter
                                                 </button>
-                                                <button type="button" onclick="$('#sb_btn2').click();" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-500 text-white hover:bg-blue-500 focus:outline-none focus:bg-blue-500 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                                <button type="button" onclick="$('#sb_btn2').click();" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-500 focus:outline-none focus:bg-blue-500 disabled:opacity-50 disabled:pointer-events-none" href="#">
                                                     Enregistré
                                                 </button>
                                             </div>
@@ -158,7 +157,7 @@
 
                                                 <div class="p-4 sm:p-10 text-center overflow-y-auto">
                                                     <!-- Icon -->
-                                                    <span class="mb-4 inline-flex justify-center items-center size-[62px] rounded-full border-4 border-blue-50 bg-blue-100 text-blue-500 dark:bg-blue-700 dark:border-blue-600 dark:text-blue-100">
+                                                    <span class="mb-4 inline-flex justify-center items-center size-[62px] rounded-full border-4 border-red-50 bg-red-100 text-red-500 dark:bg-red-700 dark:border-red-600 dark:text-red-100">
                                                         <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                                             <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                                                         </svg>
@@ -178,10 +177,10 @@
                                                             <input type="hidden" name="id" value="{{$list->id}}">
                                                         </div>
                                                         <div class="mt-6 grid gap-y-2">
-                                                            <div type="button" class="py-2.5 px-4 mb-5 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-100 bg-gray-100 text-gray-800 shadow-sm disabled:opacity-50 disabled:pointer-events-none ">
+                                                            <div type="button" class="py-2.5 px-4 mb-5 w-full inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-100 bg-gray-100 dark:bg-neutral-700 dark:border-neutral-700 text-gray-800 dark:text-neutral-100 shadow-sm disabled:opacity-50 disabled:pointer-events-none ">
                                                                 {{$list->name}}
                                                             </div>
-                                                            <button type="submit" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:bg-blue-600 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-sign-out-alert-small-window">
+                                                            <button type="submit" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-red-500 text-white hover:bg-red-600 focus:outline-none focus:bg-red-600 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-sign-out-alert-small-window">
                                                                 Supprimer
                                                             </button>
                                                             <button type="button" class="py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full text-center border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" data-hs-overlay="#hs-delete-{{$list->id}}">
@@ -239,11 +238,11 @@
             </div>
 
             <!-- Footer -->
-            <div class="flex justify-end items-center bg-gray-100 rounded-b-xl gap-x-2 p-4 sm:px-7 border-t dark:border-neutral-800">
+            <div class="flex justify-end items-center bg-gray-100 dark:bg-neutral-800 rounded-b-xl gap-x-2 p-4 sm:px-7 border-t dark:border-neutral-800">
                 <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" data-hs-overlay="#hs-workspace-add">
                     Quitter
                 </button>
-                <button type="button" onclick="$('#sb_btn').click();" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-500 text-white hover:bg-blue-500 focus:outline-none focus:bg-blue-500 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                <button type="button" onclick="$('#sb_btn').click();" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-500 focus:outline-none focus:bg-blue-500 disabled:opacity-50 disabled:pointer-events-none" href="#">
                     Ajouter maintenant
                 </button>
             </div>
