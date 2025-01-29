@@ -39,6 +39,9 @@ class EmailTemplateController extends Controller
 
     public function template_add(Request $request)
     {
+        ini_set('upload_max_filesize', '10M');
+        ini_set('post_max_size', '10M');
+        
         $user = Users::where('token', Session::get('user'))->first();
 
         $request->validate([
