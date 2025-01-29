@@ -128,6 +128,7 @@ Route::get("/command", function () {
 
 Route::get("/link", function(){
    Artisan::call('storage:link');
+   return response('The storage link has been created.', 200);
 });
 
 Route::controller(MailTracker::class)->group(function () {
