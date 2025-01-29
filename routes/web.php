@@ -126,6 +126,10 @@ Route::get("/command", function () {
    Artisan::call('queue:work --queue=import_contacts');
 });
 
+Route::get("/link", function(){
+   Artisan::call('storage:link');
+});
+
 Route::controller(MailTracker::class)->group(function () {
    Route::get('/mail/tracker/open/{id}', 'track_open')->name('track_open');
 });
