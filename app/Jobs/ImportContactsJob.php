@@ -34,7 +34,7 @@ class ImportContactsJob implements ShouldQueue
 
     public function handle(): void
     {
-        (new Notification())->addS($this->user,"Démarrage de l'import", "L'import de vos contacts sont en cours. Vous serez avertis des que c'est terminé.");
+        (new Notification())->addS($this->user, "Démarrage de l'import", "L'import de vos contacts sont en cours. Vous serez avertis des que c'est terminé.");
         Log::info('Starting ImportContactsJob for file: ' . $this->filePath);
 
         try {
@@ -46,7 +46,7 @@ class ImportContactsJob implements ShouldQueue
             }
 
             // Crée un enregistrement dans la table des imports
-            $importId =Import::insertGetId([
+            $importId = Import::insertGetId([
                 "workspace_id" => $user_data->workspace_id,
                 'file_path' => $this->filePath,
                 'status' => 'in progress',
@@ -63,24 +63,63 @@ class ImportContactsJob implements ShouldQueue
                 throw new \Exception('File not found');
             }
 
-            //dd($csvData);
             // Traitement du fichier CSV
-            $lines = array_map("str_getcsv", explode("\n", $csvData));
+            $lines = array_map("str_getcsv", explode("\n", trim($csvData))); // Supprime les lignes vides
+
+            // Vérifiez que le fichier contient des lignes
+            if (count($lines) <= 1) {
+                Log::error('CSV file is empty or contains only headers');
+                throw new \Exception('CSV file is empty or contains only headers');
+            }
+
+            // Récupération de l'en-tête du fichier CSV
+            $header = array_map('trim', $lines[0]); // Première ligne comme en-tête
+            unset($lines[0]); // Supprime l'en-tête des données
+
             $total = count($lines);
 
+            // Indices des colonnes nécessaires
+            $emailIndex = array_search('email', $header);
+            $firstnameIndex = array_search('firstname', $header);
+            $surnameIndex = array_search('lastname', $header);
+
+            if ($emailIndex === false) {
+                Log::error('Email column not found in CSV');
+                throw new \Exception('Email column is required');
+            }
+
+            // Boucle sur les lignes
             foreach ($lines as $index => $line) {
-                // Validation des emails dans chaque colonne
-                for ($i = 0; $i < 3; $i++) {
-                    if (!empty($line[$i]) && filter_var($line[$i], FILTER_VALIDATE_EMAIL)) {
+                // Ignorer les lignes vides ou incorrectes
+                if (empty($line) || !is_array($line) || count($line) < count($header)) {
+                    Log::warning("Skipped invalid line at index $index", $line);
+                    continue;
+                }
+
+                // Récupérer les valeurs des colonnes
+                $email = isset($line[$emailIndex]) ? trim($line[$emailIndex]) : null;
+                $firstname = isset($line[$firstnameIndex]) ? trim($line[$firstnameIndex]) : null;
+                $surname = isset($line[$surnameIndex]) ? trim($line[$surnameIndex]) : null;
+
+                // Validation de l'email
+                if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    try {
                         DB::table("subscribers")->insert([
                             "workspace_id" => $user_data->workspace_id,
-                            "email" => $line[$i],
+                            "email" => $email,
+                            "first_name" => $firstname,
+                            "last_name" => $surname,
                             "tag" => $this->tag,
                             "user" => $this->user,
                             "created_at" => NOW()
                         ]);
-                        break; // Sortir dès qu'un email valide est trouvé
+                        Log::info("Inserted subscriber with email: $email");
+                    } catch (\Exception $e) {
+                        Log::error("Error inserting line $index: " . $e->getMessage());
                     }
+                } else {
+                    Log::warning("Invalid email on line $index: $email");
+                    continue;
                 }
 
                 // Mettre à jour la progression de l'importation
@@ -91,11 +130,13 @@ class ImportContactsJob implements ShouldQueue
 
             // Mise à jour de l'état de l'import
             DB::table('imports')->where('id', $importId)->update(['status' => 'completed']);
+            Log::info("Import completed successfully.");
+
 
             // Suppression du fichier après traitement
             //Storage::disk('public')->delete($this->filePath);
 
-            (new Notification())->addS($this->user,"Import terminé", "L'import de vos contacts sont terminé.");
+            (new Notification())->addS($this->user, "Import terminé", "L'import de vos contacts sont terminé.");
             //Log::info('Successfully completed ImportContactsJob');
         } catch (\Exception $e) {
             Log::error('ImportContactsJob failed: ' . $e->getMessage());
