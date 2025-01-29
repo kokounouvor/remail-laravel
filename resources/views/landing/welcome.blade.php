@@ -316,103 +316,105 @@
         </div>
 
         <!-- Hero -->
-        <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8" style="background-image: url(/assets/svg/component/hero-gradient.svg);">
-            <!-- Grid -->
-            <div class="grid md:grid-cols-12 gap-4 md:gap-8 xl:gap-20 items-center py-10">
-                <div class="relative md:col-span-8">
-                    <!-- Slider -->
-                    <div data-hs-carousel='{"loadingClasses": "opacity-0"}' class="relative">
-                        <div class="hs-carousel relative overflow-hidden w-full h-[30rem] md:h-[calc(100vh-106px)]  bg-gray-100 rounded-2xl dark:bg-neutral-800">
-                            <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
-                                <!-- Item -->
-                                <div class="hs-carousel-slide">
-                                    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
-                                        <img src="/assets/img/mockups/MacBook-Pro-1735635658277.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+        <div style="background-image: url(/assets/svg/component/hero-gradient.svg);">
+            <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Grid -->
+                <div class="grid md:grid-cols-12 gap-4 md:gap-8 xl:gap-20 items-center py-10">
+                    <div class="relative md:col-span-8">
+                        <!-- Slider -->
+                        <div data-hs-carousel='{"loadingClasses": "opacity-0","isAutoPlay": true}' class="relative">
+                            <div class="hs-carousel relative overflow-hidden w-full h-[30rem] md:h-[calc(100vh-106px)]  bg-gray-100 rounded-2xl dark:bg-neutral-800">
+                                <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+                                    <!-- Item -->
+                                    <div class="hs-carousel-slide">
+                                        <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                            <img src="/assets/img/mockups/MacBook-Pro-1735635658277.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- End Item -->
+                                    <!-- End Item -->
 
-                                <!-- Item -->
-                                <div class="hs-carousel-slide">
-                                    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
-                                        <img src="/assets/img/mockups/MacBook-Pro-1735635274820.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                    <!-- Item -->
+                                    <div class="hs-carousel-slide">
+                                        <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                            <img src="/assets/img/mockups/MacBook-Pro-1735635274820.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- End Item -->
+                                    <!-- End Item -->
 
-                                <!-- Item -->
-                                <div class="hs-carousel-slide">
-                                    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
-                                        <img src="/assets/img/mockups/MacBook-Pro-1735631511452.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                    <!-- Item -->
+                                    <div class="hs-carousel-slide">
+                                        <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                            <img src="/assets/img/mockups/MacBook-Pro-1735631511452.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- End Item -->
-                                <!-- Item -->
-                                <div class="hs-carousel-slide">
-                                    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
-                                        <img src="/assets/img/mockups/MacBook-Pro-1735631613623.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                    <!-- End Item -->
+                                    <!-- Item -->
+                                    <div class="hs-carousel-slide">
+                                        <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                            <img src="/assets/img/mockups/MacBook-Pro-1735631613623.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- Item -->
-                                <div class="hs-carousel-slide">
-                                    <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
-                                        <img src="/assets/img/mockups/MacBook-Pro-1735635438607.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                    <!-- Item -->
+                                    <div class="hs-carousel-slide">
+                                        <div class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col ">
+                                            <img src="/assets/img/mockups/MacBook-Pro-1735635438607.jpeg" class="h-[30rem] md:h-[calc(100vh-106px)]" alt="">
+                                        </div>
                                     </div>
+                                    <!-- End Item -->
                                 </div>
-                                <!-- End Item -->
                             </div>
+
+                            <!-- Arrows -->
+                            <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-s-2xl focus:outline-none focus:bg-white/20">
+                                <span class="text-2xl" aria-hidden="true">
+                                    <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Previous</span>
+                            </button>
+
+                            <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-e-2xl focus:outline-none focus:bg-white/20">
+                                <span class="sr-only">Next</span>
+                                <span class="text-2xl" aria-hidden="true">
+                                    <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <!-- End Arrows -->
                         </div>
-
-                        <!-- Arrows -->
-                        <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-s-2xl focus:outline-none focus:bg-white/20">
-                            <span class="text-2xl" aria-hidden="true">
-                                <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
-                                </svg>
-                            </span>
-                            <span class="sr-only">Previous</span>
-                        </button>
-
-                        <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-e-2xl focus:outline-none focus:bg-white/20">
-                            <span class="sr-only">Next</span>
-                            <span class="text-2xl" aria-hidden="true">
-                                <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
-                                </svg>
-                            </span>
-                        </button>
-                        <!-- End Arrows -->
+                        <!-- End Slider -->
                     </div>
-                    <!-- End Slider -->
-                </div>
-                <!-- End Col -->
+                    <!-- End Col -->
 
-                <div class="md:col-span-4">
-                    <h1 class="block text-4xl font-bold text-gray-800 sm:text-4xl lg:text-5xl lg:leading-tight dark:text-white">
-                        Interface intuitive
-                    </h1>
-                    <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">
-                        Que ce soit sur mobile, tablette ou bureau, REMAIL s'adapte à 100% à votre écran.
-                    </p>
+                    <div class="md:col-span-4">
+                        <h1 class="block text-4xl font-bold text-gray-800 sm:text-4xl lg:text-5xl lg:leading-tight dark:text-white">
+                            Interface intuitive
+                        </h1>
+                        <p class="mt-3 text-lg text-gray-800 dark:text-neutral-400">
+                            Que ce soit sur mobile, tablette ou bureau, REMAIL s'adapte à 100% à votre écran.
+                        </p>
 
-                    <!-- Buttons -->
-                    <div class="mt-7 grid gap-3 w-full sm:inline-flex">
-                        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#features">
-                            Télécharger maintenant
-                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
-                        </a>
-                        <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#contact">
-                            Contactez-nous
-                        </a>
+                        <!-- Buttons -->
+                        <div class="mt-7 grid gap-3 w-full sm:inline-flex">
+                            <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#features">
+                                Télécharger maintenant
+                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </a>
+                            <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#contact">
+                                Contactez-nous
+                            </a>
+                        </div>
+                        <!-- End Buttons -->
                     </div>
-                    <!-- End Buttons -->
-                </div>
-                <!-- End Col -->
+                    <!-- End Col -->
 
+                </div>
+                <!-- End Grid -->
             </div>
-            <!-- End Grid -->
         </div>
         <!-- End Hero -->
 

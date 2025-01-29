@@ -11,6 +11,7 @@ use App\Models\Workspace;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class EmailTemplateController extends Controller
 {
@@ -45,12 +46,16 @@ class EmailTemplateController extends Controller
             "content" => "required"
         ]);
 
+        $filepath="templates/".uniqid().".html";
+
+        Storage::disk("public")->put($filepath, $request->content);
+
         // Insertion de l'utilisateur dans la base de donnée
         $ins = Template::insert([
             "uuid" => uuid_create(),
             "workspace_id" => $user->workspace_id,
             "name" => htmlspecialchars($request->name),
-            "content" => $request->content,
+            "content" => $filepath,
             "user" => Session::get("user"),
             "created_at" => NOW()
         ]);
@@ -72,10 +77,15 @@ class EmailTemplateController extends Controller
             "content" => "required"
         ]);
 
+        // Récuperer les informations
+        $data=Template::where("id",$request->id)->first();
+        $filepath=$data->content;
+
+        Storage::disk()->put($filepath, $request->content);
+
         // Insertion de l'utilisateur dans la base de donnée
         $ins = Template::where("id", $request->id)->update([
             "name" => htmlspecialchars($request->name),
-            "content" => $request->content,
             "updated_at" => NOW()
         ]);
 

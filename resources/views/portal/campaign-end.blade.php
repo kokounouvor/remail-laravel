@@ -69,7 +69,8 @@
                             <span>
                                 {{$camp->from_name}}
                                 <strong class="text-blue-600">
-                                    <>{{$camp->from_email}}<>
+                                    <>{{$camp->from_email}}
+                                        <>
                                 </strong>
                             </span>
                         </div>
@@ -83,9 +84,7 @@
                 </ul>
                 <!-- End List Group -->
                 <div>
-                    <textarea name="htmlInput" id="htmlInput" cols="30" rows="10" style="display: none;">{{$camp->contents}}</textarea>
-                    <div class="border rounded-2xl p-2 mt-3 h-96 max-h-full overflow-y-auto" id="preview"></div>
-                    <div id="" class="form-input w-full rounded-md mt-1 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700"></div>
+                    <iframe data-src="/storage/{{$camp->contents}}" class="template-iframe rounded-xl" frameborder="0" width="100%" height="350px" scrolling="yes"></iframe>
                 </div>
             </div>
         </div>
@@ -180,16 +179,7 @@
     </div>
 </div>
 
-
-<script src="/assets/libs/quill/quill.min.js"></script>
-
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var htmlInput = document.getElementById("htmlInput").value;
-        document.getElementById("preview").innerHTML = htmlInput;
-        document.getElementById("snow-editor-html").value = htmlInput;
-    })
-
     function defineCalendar() {
         var type_send = document.getElementById("type_send").value;
         if (type_send === "shedule") {
@@ -198,56 +188,39 @@
             $("#pick_t").hide();
         }
     }
-    
-    window.onload = function() {
-    // Fonction qui charge l'iframe en ajoutant son src ou srcdoc
-    const loadIframe = (iframe) => {
-        const src = iframe.getAttribute('src');
-        const srcdoc = iframe.getAttribute('srcdoc');
 
-        // Si l'iframe a un src et n'a pas encore été chargé
-        if (src && !iframe.hasAttribute('data-loaded')) {
-            iframe.setAttribute('data-loaded', 'true');  // Marque comme chargé
-        } else if (srcdoc && !iframe.hasAttribute('data-loaded')) {
-            iframe.setAttribute('data-loaded', 'true');  // Marque comme chargé
+    document.addEventListener("DOMContentLoaded", function() {
+        // Fonction pour charger l'iframe lorsque celle-ci devient visible dans la fenêtre de visualisation
+        function loadIframeLazy() {
+            const iframes = document.querySelectorAll('.template-iframe');
+            const options = {
+                root: null, // Observer l'ensemble du viewport
+                rootMargin: '0px',
+                threshold: 0.25 // Charge l'iframe lorsque 25% est visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        const src = iframe.getAttribute('data-src'); // On récupère l'URL à charger dans l'iframe
+
+                        if (src) {
+                            iframe.src = src; // On charge l'URL dans l'iframe
+                            iframe.removeAttribute('data-src'); // Retirer l'attribut data-src après avoir chargé l'URL
+                        }
+                        observer.unobserve(iframe); // Cesse d'observer cette iframe une fois chargée
+                    }
+                });
+            }, options);
+
+            iframes.forEach(iframe => {
+                observer.observe(iframe);
+            });
         }
-    };
 
-    // Fonction pour vérifier la visibilité des iframes
-    const onScroll = () => {
-        const iframes = document.querySelectorAll('iframe');
-
-        iframes.forEach(iframe => {
-            const rect = iframe.getBoundingClientRect();
-            
-            // Si l'iframe est visible dans la fenêtre de l'utilisateur
-            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                loadIframe(iframe);
-            }
-        });
-    };
-
-    // Appliquer le lazy loading pour les iframes après que la page soit complètement chargée
-    const iframes = document.querySelectorAll('iframe');
-
-    // Charger les iframes visibles dès le chargement de la page
-    iframes.forEach(iframe => {
-        const src = iframe.getAttribute('src');
-        const srcdoc = iframe.getAttribute('srcdoc');
-
-        // Si l'iframe a un src ou srcdoc, on commence à les charger
-        if (src || srcdoc) {
-            loadIframe(iframe);
-        }
+        // Appeler la fonction de lazy loading
+        loadIframeLazy();
     });
-
-    // Écouter l'événement de défilement pour charger les iframes visibles
-    window.addEventListener('scroll', onScroll);
-
-    // Charger immédiatement les iframes visibles après le chargement de la page
-    onScroll();
-};
-
 </script>
-
 @endsection

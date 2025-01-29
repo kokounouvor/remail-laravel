@@ -108,9 +108,9 @@ Route::controller(SendEmailController::class)->group(function () {
 
 Route::controller(EmailTemplateController::class)->middleware("IsInWorkspace", "IsAuthenticate")->group(function () {
    Route::get('/templates', 'index')->name('templates');
-   Route::post('/templates/add', 'template_add')->name('template-add');
-   Route::post('/templates/edit', 'template_edit')->name('template-edit');
-   Route::post('/templates/delete', 'template_delete')->name('template-delete');
+   Route::post('/template/add', 'template_add')->name('template-add');
+   Route::post('/template/edit', 'template_edit')->name('template-edit');
+   Route::post('/template/delete', 'template_delete')->name('template-delete');
 });
 
 Route::get("/cron/sendmail", function () {
@@ -118,8 +118,12 @@ Route::get("/cron/sendmail", function () {
    Artisan::call('app:send-campaign-mail-schedule'); //Envoyer et renvoyer les campagnes planifiés
 });
 
-Route::get("/migration/fresh", function () {
-   Artisan::call('migrate:fresh');
+Route::get("/command", function () {
+   //Artisan::call('migrate:refresh');
+   Artisan::call('app:send-campaign-mail-schedule');
+   Artisan::call('app:send-campaign-mail');
+   Artisan::call('queue:work --queue=delete_contacts');
+   Artisan::call('queue:work --queue=import_contacts');
 });
 
 Route::controller(MailTracker::class)->group(function () {

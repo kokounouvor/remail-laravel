@@ -149,7 +149,7 @@
                                 <div class="">
                                     <label for="input-label" class="block text-sm font-medium mb-2 dark:text-white">Email de l'expéditeur</label>
                                     @if($emails->isEmpty())
-                                    <div class="bg-red-50 border border-red-200 text-sm text-red-500 rounded-lg p-3 dark:bg-white/10 dark:border-white/10 dark:text-neutral-400" role="alert" tabindex="-1" aria-labelledby="hs-link-on-right-label">
+                                    <div class="bg-red-50 border border-red-200 text-xs text-red-500 rounded-lg py-1.5 px-2 dark:bg-white/10 dark:border-white/10 dark:text-neutral-400" role="alert" tabindex="-1" aria-labelledby="hs-link-on-right-label">
                                         <div class="flex">
                                             <div class="shrink-0">
                                                 <svg class="shrink-0 size-4 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -198,9 +198,9 @@
                         </div>
                         <div class="p-4 md:p-5">
 
-                            <div class="bg-gray-100 rounded-2xl p-2">
+                            <div class="">
                                 <div class="flex items-center justify-center">
-                                    <div class="flex bg-gray-100 hover:bg-gray-200 rounded-2xl transition p-1 dark:bg-neutral-700 dark:hover:bg-neutral-600">
+                                    <div class="flex bg-blue-200 hover:bg-gray-200 rounded-2xl transition p-1 dark:bg-neutral-700 dark:hover:bg-neutral-600">
                                         <nav class="flex gap-x-1" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                             <button type="button" class="hs-tab-active:bg-white hs-tab-active:text-gray-700 hs-tab-active:dark:bg-neutral-800 hs-tab-active:dark:text-neutral-400 dark:hs-tab-active:bg-gray-800 py-3 px-4 inline-flex items-center gap-x-2 bg-transparent text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-medium rounded-2xl hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-white dark:focus:text-white active" id="segment-item-1" aria-selected="true" data-hs-tab="#segment-1" aria-controls="segment-1" role="tab">
                                                 Editeur de texte
@@ -231,14 +231,14 @@
                                     <div id="segment-3" class="hidden" role="tabpanel" aria-labelledby="segment-item-3">
                                         <div class="grid md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-4 mb-4 mt-5">
                                             @foreach($templ as $dat)
-                                            <input type="hidden" name="" id="pd-{{$dat->id}}" value="{{$dat->content}}">
+                                            <textarea class="hidden" name="" id="pd-{{$dat->id}}">{!! Storage::disk('public')->get($dat->content) !!}</textarea>
                                             <label for="" onclick="gfx('{{$dat->id}}');" class="p-2 w-full border border-gray-200 bg-white shadow-sm -mt-px -ms-px rounded-2xl text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
                                                 <div class="flex ">
                                                     <input type="radio" name="af-account-gender-checkbox" class="shrink-0 mt-0.5 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="af-account-gender-checkbox">
                                                     <span class="text-sm text-gray-500 ms-3 dark:text-neutral-400">{!!$dat->name!!}</span>
                                                 </div>
                                                 <div class="relative p-1 rounded-xl">
-                                                    <iframe data-srcdoc="{{$dat->content}}" class="template-iframe rounded-xl" frameborder="0" width="100%" height="180px" scrolling="yes" loading="lazy"></iframe>
+                                                    <iframe data-src="/storage/{{$dat->content}}" class="template-iframe rounded-xl" frameborder="0" width="100%" height="180px" scrolling="yes" loading="lazy"></iframe>
                                                 </div>
                                             </label>
                                             @endforeach
@@ -311,7 +311,7 @@
                 <div class="flex gap-x-2 items-center">
                     <div class="flex items-end justify-end bg-gray-100 hover:bg-gray-200 rounded-lg transition p-1 dark:bg-neutral-700 dark:hover:bg-neutral-600">
                         <nav class="flex items-end  justify-end gap-x-1" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
-                            <button type="button" class="hs-tab-active:bg-white hs-tab-active:text-gray-700 hs-tab-active:dark:bg-neutral-800 hs-tab-active:dark:text-neutral-400 dark:hs-tab-active:bg-gray-800 py-1 px-1 inline-flex items-center gap-x-2 bg-transparent text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-medium rounded-lg hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-white dark:focus:text-white active" id="segment-item-1" aria-selected="true" data-hs-tab="#segment-1" aria-controls="segment-1" role="tab">
+                            <button type="button" class="hs-tab-active:bg-white hs-tab-active:text-gray-700 hs-tab-active:dark:bg-neutral-800 hs-tab-active:dark:text-neutral-400 dark:hs-tab-active:bg-gray-800 py-1 px-1 inline-flex items-center gap-x-2 bg-transparent text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-medium rounded-lg hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-white dark:focus:text-white active" id="prevo-item-1" aria-selected="true" data-hs-tab="#prevo-1" aria-controls="prevo-1" role="tab">
                                 <svg class="size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.44 2H17.55C21.11 2 22 2.89 22 6.44V12.77C22 16.33 21.11 17.21 17.56 17.21H6.44C2.89 17.22 2 16.33 2 12.78V6.44C2 2.89 2.89 2 6.44 2Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     <path opacity="0.4" d="M12 17.2188V21.9988" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -319,7 +319,7 @@
                                     <path d="M7.5 22H16.5" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <button type="button" class="hs-tab-active:bg-white hs-tab-active:text-gray-700 hs-tab-active:dark:bg-neutral-800 hs-tab-active:dark:text-neutral-400 dark:hs-tab-active:bg-gray-800 py-1 px-1 inline-flex items-center gap-x-2 bg-transparent text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-medium rounded-lg hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-white dark:focus:text-white" id="segment-item-2" aria-selected="false" data-hs-tab="#segment-2" aria-controls="segment-2" role="tab">
+                            <button type="button" class="hs-tab-active:bg-white hs-tab-active:text-gray-700 hs-tab-active:dark:bg-neutral-800 hs-tab-active:dark:text-neutral-400 dark:hs-tab-active:bg-gray-800 py-1 px-1 inline-flex items-center gap-x-2 bg-transparent text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-medium rounded-lg hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-white dark:focus:text-white" id="prevo-item-2" aria-selected="false" data-hs-tab="#prevo-2" aria-controls="prevo-2" role="tab">
                                 <svg class="size-4" width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17 6V16C17 20 16 21 12 21H6C2 21 1 20 1 16V6C1 2 2 1 6 1H12C16 1 17 2 17 6Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     <path opacity="0.4" d="M11 4.5H7" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -342,7 +342,7 @@
                 <!-- Device preview -->
                 <div>
                     <div class="mt-3">
-                        <div id="segment-1" role="tabpanel" aria-labelledby="segment-item-1">
+                        <div id="prevo-1" role="tabpanel" aria-labelledby="prevo-item-1">
                             <figure class="relative z-[1] max-w-full mx-auto w-[50rem] h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] dark:shadow-[0_2.75rem_3.5rem_-2rem_rgb(0_0_0_/_20%),_0_0_5rem_-2rem_rgb(0_0_0_/_15%)] rounded-b-lg">
                                 <div class="relative flex items-center max-w-[50rem] bg-gray-800 rounded-t-lg py-2 px-24 dark:bg-neutral-700">
                                     <div class="flex gap-x-1 absolute top-2/4 start-4 -translate-y-1">
@@ -358,7 +358,7 @@
                                 </div>
                             </figure>
                         </div>
-                        <div id="segment-2" class="hidden" role="tabpanel" aria-labelledby="segment-item-2">
+                        <div id="prevo-2" class="hidden" role="tabpanel" aria-labelledby="prevo-item-2">
                             <figure class="mx-auto max-w-full w-80 h-auto">
                                 <div class="p-1.5 bg-gray-800 shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-neutral-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)] rounded-3xl">
                                     <iframe srcdoc="" class="w-full rounded-[1.25rem] h-screen bg-white" id="preview2"></iframe>
@@ -488,11 +488,11 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const iframe = entry.target;
-                        const srcdoc = iframe.getAttribute('data-srcdoc'); // On récupère le contenu HTML à afficher
+                        const src = iframe.getAttribute('data-src'); // On récupère l'URL à charger dans l'iframe
 
-                        if (srcdoc) {
-                            iframe.srcdoc = srcdoc;  // On charge le contenu HTML dans l'iframe
-                            iframe.removeAttribute('data-srcdoc'); // Retirer l'attribut data-srcdoc après avoir chargé le contenu
+                        if (src) {
+                            iframe.src = src; // On charge l'URL dans l'iframe
+                            iframe.removeAttribute('data-src'); // Retirer l'attribut data-src après avoir chargé l'URL
                         }
                         observer.unobserve(iframe); // Cesse d'observer cette iframe une fois chargée
                     }

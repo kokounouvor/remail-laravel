@@ -33,4 +33,4 @@ User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
 
-Sitemap: https://fintou.com/sitemap.xml
+Sitemap: https://remail.gurvio.com/sitemap.xml
