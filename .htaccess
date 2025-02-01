@@ -45,7 +45,3 @@
 # Increase PHP upload and post size limits
 php_value upload_max_filesize 10M
 php_value post_max_size 10M
-
-# Serve files from storage/app/public if symlink is not possible
-RewriteCond %{REQUEST_URI} ^/storage/
-RewriteRule ^storage/(.*)$ /domains/gurvio.com/public_html/remail/storage/app/public/$1 [L]
