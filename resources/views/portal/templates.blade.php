@@ -333,7 +333,7 @@
 @section('script')
 <script>
     $(document).ready(function(e) {
-        $("#temp_add_form").on("submit", (function(e) {
+        $("#temp_add_forms").on("submit", (function(e) {
 
             // Modification du boutton
             $("#temp_add_btn").attr("disabled", true);
