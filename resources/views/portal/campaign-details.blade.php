@@ -27,10 +27,66 @@
             </div>
         </div>
 
-        <div>
+        <div class="inline-flex items-center gap-x-2">
+            <!-- Purger les emails bouncé -->
+            <button type="button" class="py-2 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-2xl border border-transparent bg-red-500 text-white hover:bg-red-600 focus:outline-none focus:bg-red-600 disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-custom-backdrop-modal" data-hs-overlay="#hs-custom-backdrop-modal">
+                Purger les email bouncés
+                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-skull lucide-icon customizable" data-v-14c8c335="">
+                    <path d="m12.5 17-.5-1-.5 1h1z"></path>
+                    <path d="M15 22a1 1 0 0 0 1-1v-1a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20v1a1 1 0 0 0 1 1z"></path>
+                    <circle cx="15" cy="12" r="1"></circle>
+                    <circle cx="9" cy="12" r="1"></circle>
+                </svg>
+            </button>
+
+            <div id="hs-custom-backdrop-modal" class="hs-overlay hs-overlay-backdrop-open:bg-blue-950/90 hidden size-full fixed top-0 start-0 z-[81] overflow-x-hidden overflow-y-auto pointer-events-none dark:hs-overlay-backdrop-open:bg-blue-950/90" role="dialog" tabindex="-1" aria-labelledby="hs-custom-backdrop-label">
+                <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+                    <div class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-neutral-800 dark:border-neutral-700 dark:shadow-neutral-700/70">
+                        <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700">
+                            <h3 id="hs-custom-backdrop-label" class="font-bold text-gray-800 dark:text-white">
+                                Purger
+                            </h3>
+                            <button type="button" class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600" aria-label="Close" data-hs-overlay="#hs-custom-backdrop-modal">
+                                <span class="sr-only">Close</span>
+                                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 6 6 18"></path>
+                                    <path d="m6 6 12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="p-4 overflow-y-auto space-y-5">
+                            <h3>
+                                <span class="text-6xl font-bold text-red-500"> {{$mail_bounced}} </span>
+                                <span class="text-sm font-medium">Email Bouncés</span>
+                            </h3>
+                            <p class="mt-1 text-gray-800 dark:text-neutral-400">
+                                Les Emails bouncés sont les emails dont le serveur de reception de message est temporairement ou définitivement indisponible.
+                            </p>
+                            <p class="text-red-500">NB: Ces emails seront défintivement supprimé de vos contacts. Cet action est irréversible.</p>
+                        </div>
+
+                        <form id="purge_form" action="{{Route('contact-purge')}}" method="POST">
+                            @csrf
+                            <input class="hidden" type="text" name="user" value="{{$camps->user}}">
+                            <input class="hidden" type="text" name="campaign" value="{{$camps->id}}">
+                            <input class="hidden" type="text" name="tag" value="{{$camps->subscriber_tag}}">
+                            <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-neutral-700">
+                                <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-overlay="#hs-custom-backdrop-modal">
+                                    Quitter
+                                </button>
+                                <button type="submit" id="purge_form_btn" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                                    Purger maintenant
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
             <!-- Modal Button -->
-            <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-modal-example" data-hs-overlay="#hs-modal-example">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button type="button" class="py-2 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-modal-example" data-hs-overlay="#hs-modal-example">
+                <svg class="size-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14.9902 17.5H16.5002C19.5202 17.5 22.0002 15.03 22.0002 12C22.0002 8.98 19.5302 6.5 16.5002 6.5H14.9902" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M2.37 10.01C2.13 10.63 2 11.3 2 12C2 15.02 4.47 17.5 7.5 17.5H9" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M8.99969 6.5H7.49969C6.66969 6.5 5.88969 6.68 5.17969 7.01" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -40,7 +96,7 @@
             <!-- End Modal Button -->
 
             <!-- Modal Content -->
-            <div id="hs-modal-example" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="hs-modal-example-label">
+            <div id="hs-modal-example" class="hs-overlay hs-overlay-backdrop-open:bg-blue-950/90 hidden size-full fixed top-0 start-0 z-[81] overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="hs-modal-example-label">
                 <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
                     <div class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-neutral-800 dark:border-neutral-700 dark:shadow-neutral-700/70">
                         <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700">
@@ -69,7 +125,6 @@
                 </div>
             </div>
             <!-- End Modal Content -->
-
 
         </div>
     </div>
@@ -329,6 +384,46 @@
 
         // Appeler la fonction de lazy loading
         loadIframeLazy();
+    });
+</script>
+@endsection
+
+@section('script')
+<script>
+    $(document).ready(function(e) {
+        $("#purge_form").on("submit", (function(e) {
+            // Modification du boutton
+            $("#purge_form_btn").attr("disabled", true);
+            $("#purge_form_btn").html("Purge <svg class='size-4 animate-spin' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-loader lucide-icon customizable' data-v-14c8c335=''><path d='M12 2v4'></path><path d='m16.2 7.8 2.9-2.9'></path><path d='M18 12h4'></path><path d='m16.2 16.2 2.9 2.9'></path><path d='M12 18v4'></path><path d='m4.9 19.1 2.9-2.9'></path><path d='M2 12h4'></path><path d='m4.9 4.9 2.9 2.9'></path></svg>");
+
+            e.preventDefault();
+            $.ajax({
+                url: "{{Route('contact-purge')}}",
+                type: "POST",
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function(data) {
+                    if (data.status == "ok") {
+                        $("#purge_form_btn").html("Purge Terminé !");
+                        setTimeout(() => {
+                            location.reload();
+                        }, 1000);
+                    } else {
+                        $("#purge_form_btn").html("Enregistré");
+                        alert("Le statut du purge est inconnu")
+                    }
+                    $("#purge_form_btn").attr("disabled", false);
+                },
+
+                error: function(xhr) {
+                    $("#purge_form_btn").attr("disabled", false);
+                    $("#purge_form_btn").html("Enregistré");
+                    alert("Un problème inattendue est survenue");
+                },
+            });
+        }));
     });
 </script>
 @endsection

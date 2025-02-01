@@ -97,6 +97,8 @@ Route::controller(SubscriberController::class)->middleware("IsInWorkspace", "IsA
    Route::post('/contact/import/csv', 'import')->name('import-csv')->middleware("IsInTag");
    Route::post('/contact/add', 'add_contact')->name('contact-add')->middleware("IsInTag");
    Route::post('/contact/delete', 'delete_contact')->name('contact-delete');
+   Route::post('/contact/purge', 'purge_emails_bounced')->name('contact-purge');
+
 });
 
 Route::controller(SendEmailController::class)->group(function () {

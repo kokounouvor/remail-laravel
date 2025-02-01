@@ -16,6 +16,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 
 class SendCampaignMailJob implements ShouldQueue
 {
@@ -109,7 +110,7 @@ class SendCampaignMailJob implements ShouldQueue
                     $unikid=uniqid();
 
                     //code... Entete de l'email
-                    $info = ["subject" => $camp_data->subject, "content" => $camp_data->contents,"id"=>$unikid];
+                    $info = ["subject" => $camp_data->subject, "content" => Storage::disk('public')->get($camp_data->contents),"id"=>$unikid];
 
                     Mail::to($k->email)->send(new SendmailCampaign($info));
 

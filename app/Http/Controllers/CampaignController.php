@@ -14,6 +14,7 @@ use App\Models\Users;
 use App\Models\Workspace;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class CampaignController extends Controller
 {
@@ -79,7 +80,8 @@ class CampaignController extends Controller
         // Ajouter le suivi des liens dans l'email
         $contents = (new Campaign_link_click())->addTrackingToLinks($request->content, $uid);
 
-        //dd($contents);
+        $filepath = "campaigns/" . uniqid() . ".html";
+        Storage::disk("public")->put($filepath, $contents);
 
         // Insertion de l'utilisateur dans la base de donnée
         $ins = Campaign::insert([
@@ -90,7 +92,7 @@ class CampaignController extends Controller
             "subject" => htmlspecialchars($request->subject),
             "from_name" => htmlspecialchars($request->from_name),
             "from_email" => htmlspecialchars($request->from_email),
-            "contents" => $contents,
+            "contents" => $filepath,
             "status" => "draft",
             "created_at" => NOW(),
             "updated_at" => null

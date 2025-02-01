@@ -55,12 +55,12 @@
     <div class="grid sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 gap-4">
         <!--Test Email Envoi -->
         <div class="sm:col-span-12 md:col-span-6 lg:col-span-8 bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
-            <div class="bg-gray-100 border-b rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
+            <div class="border-b rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
                 <p class="mt-1 text-md font-bold text-gray-500 dark:text-neutral-500">
                     Rendu du Email
                 </p>
             </div>
-            <div class="p-4 md:p-5">
+            <div class="p-4 md:p-5 space-y-5">
                 <!-- List Group -->
                 <ul class="mt-3 flex flex-col">
                     <li class="inline-flex items-center gap-x-2 py-3 px-4 border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:border-neutral-700 dark:text-neutral-200">
@@ -84,14 +84,14 @@
                 </ul>
                 <!-- End List Group -->
                 <div>
-                    <iframe data-src="/storage/{{$camp->contents}}" class="template-iframe rounded-xl" frameborder="0" width="100%" height="350px" scrolling="yes"></iframe>
+                    <iframe data-src="{{ asset('storage/'.$camp->contents) }}" class="template-iframe rounded-xl" frameborder="0" width="100%" height="400px" scrolling="yes" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
         <!-- End Test Email -->
         <!--Test Email Envoi -->
         <div class="sm:col-span-12 md:col-span-6 lg:col-span-4 space-y-5 bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
-            <div class="bg-gray-100 border-b rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
+            <div class="border-b rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
                 <p class="mt-1 text-md font-bold text-gray-500 dark:text-neutral-500">
                     Email de Test
                 </p>
@@ -111,7 +111,7 @@
                     </button>
                 </form>
             </div>
-            <div class="bg-gray-100 mt-5 border-b py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
+            <div class="bg-gray-50 mt-5 border-b py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
                 <p class="mt-1 text-md font-bold text-gray-500 dark:text-neutral-500">
                     Options d'envoi
                 </p>
@@ -178,9 +178,11 @@
         <!-- End Test Email -->
     </div>
 </div>
+@endsection
 
+@section('script')
 <script>
-    function defineCalendar() {
+      function defineCalendar() {
         var type_send = document.getElementById("type_send").value;
         if (type_send === "shedule") {
             $("#pick_t").show();
@@ -190,7 +192,6 @@
     }
 
     document.addEventListener("DOMContentLoaded", function() {
-        // Fonction pour charger l'iframe lorsque celle-ci devient visible dans la fenêtre de visualisation
         function loadIframeLazy() {
             const iframes = document.querySelectorAll('.template-iframe');
             const options = {

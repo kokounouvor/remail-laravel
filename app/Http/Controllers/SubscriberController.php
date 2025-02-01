@@ -7,6 +7,7 @@ use App\Jobs\DeleteContactsJob;
 use App\Jobs\ImportContactsJob;
 use App\Jobs\ImportsSubscriberJob;
 use App\Models\Import;
+use App\Models\Message;
 use App\Models\Notification;
 use App\Models\Payment;
 use App\Models\Subscriber;
@@ -137,5 +138,23 @@ class SubscriberController extends Controller
         Subscriber::where("id", $request->id)->delete();
 
         return redirect()->back()->with('success', 'Contacts supprimé avec succès.');
+    }
+
+    public function purge_emails_bounced(Request $request)
+    {
+        $request->validate([
+            "tag" => "required",
+            "campaign" => "required",
+            "user" => "required",
+        ]);
+
+        // Récupérer la liste des emails concerné
+        // Récupérer les emails avec un statut false dans la table messages
+        $emails = Message::where('sent', false)->pluck('recipient_email');
+
+        // Supprimer les abonnés correspondants dans la table subscribers
+        Subscriber::whereIn('email', $emails)->where('user', Session::get("user"))->delete();
+
+        return response()->json(["status"=>"ok"]);
     }
 }

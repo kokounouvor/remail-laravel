@@ -22,18 +22,17 @@
     @else
     <div class="max-w-5xl mx-auto">
         <!-- Grid -->
-        <div class="mb-5 pb-5 flex justify-between items-center border-b border-gray-200 dark:border-neutral-700">
+        <div class="mb-5 pb-5 flex justify-between items-center">
             <div>
-                <h2 class="text-2xl font-semibold text-gray-800 dark:text-neutral-200">Email Template</h2>
+                <h2 class="text-2xl font-semibold text-gray-800 dark:text-neutral-200">Email Templates</h2>
             </div>
             <!-- Col -->
 
             <div class="inline-flex gap-x-2">
-                <button type="button" data-hs-overlay="#hs-modal-email-template-new" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-gray-700 text-white hover:bg-gray-800 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
-                    <svg class="shrink-0 size-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22 8C22 4 20 2 16 2H8C4 2 2 4 2 8V21C2 21.55 2.45 22 3 22H16C20 22 22 20 22 16V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M15.5088 11.7404L16.1588 11.0904C16.1988 11.0504 16.2388 11.0104 16.2788 10.9604C17.0888 10.1004 17.4088 9.09036 16.1588 7.84036C14.8388 6.52036 13.7988 6.95036 12.9088 7.84036L7.71881 13.0304C7.51881 13.2304 7.32882 13.6204 7.28882 13.9004L7.00882 15.8804C6.90882 16.6004 7.40882 17.1004 8.12882 17.0004L10.1088 16.7204C10.3888 16.6804 10.7788 16.4904 10.9788 16.2904L12.9188 14.3504" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.168 8.58203C12.608 10.152 13.838 11.392 15.418 11.832" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <button type="button" data-hs-overlay="#hs-modal-email-template-new" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-gray-50 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus lucide-icon customizable" data-v-14c8c335="">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5v14"></path>
                     </svg>
 
                     Nouveau template
@@ -48,26 +47,35 @@
             <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
                 <div class="bg-white border-b rounded-t-xl py-2 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
                     <div class="flex items-center justify-between">
-                        <p class="mt-1 text-sm text-gray-500 dark:text-neutral-500">
+                        <p class="mt-1 text-sm text-gray-600 dark:text-neutral-500">
                             {{$dat->name}}
                         </p>
                         <div class="flex gap-x-2">
-                            <button type="button" data-hs-overlay="#hs-modal-email-template-update-{{$dat->id}}" class="py-1.5 px-3 inline-flex items-center gap-x-2 text-xs font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-                                Modifier
+                            <button type="button" data-hs-overlay="#hs-modal-email-template-update-{{$dat->id}}" class="size-7 flex items-center justify-center gap-x-2 text-xs font-medium rounded-full border border-transparent bg-gray-200 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:outline-none disabled:opacity-50 disabled:pointer-events-none">
+                                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil lucide-icon customizable">
+                                    <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path>
+                                    <path d="m15 5 4 4"></path>
+                                </svg>
                             </button>
-                            <button type="button" data-hs-overlay="#hs-modal-email-template-delete-{{$dat->id}}" class="py-1.5 px-3 inline-flex items-center gap-x-2 text-xs font-medium rounded-full border border-transparent bg-red-500 text-white hover:bg-red-600 focus:outline-none focus:bg-red-600 disabled:opacity-50 disabled:pointer-events-none">
-                                Supprimer
+                            <button type="button" data-hs-overlay="#hs-modal-email-template-delete-{{$dat->id}}" class="size-7 flex items-center justify-center gap-x-2 text-xs font-medium rounded-full border border-transparent bg-red-500 text-white hover:bg-red-600 focus:outline-none focus:bg-red-600 disabled:opacity-50 disabled:pointer-events-none">
+                                <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 lucide-icon customizable">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                    <line x1="10" x2="10" y1="11" y2="17"></line>
+                                    <line x1="14" x2="14" y1="11" y2="17"></line>
+                                </svg>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="p-1">
-                    <iframe data-src="/storage/{{$dat->content}}" class="template-iframe rounded-xl" frameborder="0" width="100%" height="350px" scrolling="yes" loading="lazy"></iframe>
+                    <iframe data-src="/storage/{{$dat->content}}" class="template-iframe rounded-xl" frameborder="0" width="100%" height="300px" scrolling="yes" loading="lazy"></iframe>
                 </div>
             </div>
 
             <!-- Modifier le Template -->
-            <div id="hs-modal-email-template-update-{{$dat->id}}" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="hs-modal-email-template-new-label">
+            <div id="hs-modal-email-template-update-{{$dat->id}}" class="hs-overlay hs-overlay-backdrop-open:bg-blue-950/90 hidden size-full fixed top-0 start-0 z-[81] overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="hs-modal-email-template-new-label">
                 <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-xl sm:w-full m-3 h-[calc(100%-3.5rem)] sm:mx-auto">
                     <div class="max-h-full overflow-hidden flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-neutral-800 dark:border-neutral-700 dark:shadow-neutral-700/70">
                         <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700">
@@ -83,48 +91,81 @@
                             </button>
                         </div>
                         <div class="p-4 overflow-y-auto">
-                            <form action="{{Route('template-edit')}}" method="post">
+                            <form id="temp_form_data_up_{{$dat->id}}" action="{{Route('template-edit')}}" method="post">
                                 @csrf
-                                <div class="mb-5">
+                                <div class="mb-2">
                                     <label for="name" class="font-medium text-sm text-slate-600 dark:text-slate-400">Nom du template</label>
-                                    <input type="text" id="name" name="name" value="{{$dat->name}}" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-600 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="">
+                                    <input class="hidden" type="text" name="id" value="{{$dat->id}}">
+                                    <input type="text" id="name" name="name" value="{{$dat->name}}" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-600 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="">
                                 </div>
-                                <div class="mb-5">
+                                <div class="mb-2">
                                     <label for="content" class="font-medium text-sm text-slate-600 dark:text-slate-400">Contenu</label>
                                     <div class="relative">
                                         <textarea id="content-{{$dat->id}}" name="content" cols="10" rows="15" class="p-4 block w-full border-gray-200 bg-gray-800 text-white rounded-lg text-sm focus:border-blue-600 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Entrer ou copier le code du Template Email ici"> {!! Storage::disk('public')->get($dat->content) !!}</textarea>
                                     </div>
                                 </div>
-                                <div class="hidden">
-                                    <button type="submit" id="up-temp-btn-{{$dat->id}}" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-600 focus:outline-none focus:bg-blue-600 disabled:opacity-50 disabled:pointer-events-none">
+
+                                <div class="mt-5 flex justify-end items-center gap-x-2 py-3 px-4">
+                                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-overlay="#hs-modal-email-template-new">
+                                        Quitter
+                                    </button>
+                                    <button type="button" data-hs-overlay="#hs-bg-preview" onclick="showPreview(document.getElementById('content-{{$dat->id}}').value);" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-gray-100 text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" data-hs-overlay="#hs-notifications">
+                                        Voir le rendu
+                                    </button>
+                                    <button type="submit" id="btn_update_{{$dat->id}}" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-600 focus:outline-none focus:bg-blue-600 disabled:opacity-50 disabled:pointer-events-none">
                                         Enregistré
                                     </button>
                                 </div>
                             </form>
-                        </div>
-                        <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-neutral-700">
-                            <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-overlay="#hs-modal-email-template-new">
-                                Quitter
-                            </button>
-                            <button type="button" data-hs-overlay="#hs-bg-preview" onclick="showPreview(document.getElementById('content-{{$dat->id}}').value);" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-gray-100 text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" data-hs-overlay="#hs-notifications">
-                                Voir le rendu
-                            </button>
-                            <button type="button" onclick="$('#up-temp-btn-{{$dat->id}}').click();" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-600 focus:outline-none focus:bg-blue-600 disabled:opacity-50 disabled:pointer-events-none">
-                                Enregistré
-                            </button>
+
+                            <script>
+                                $(document).ready(function(e) {
+                                    $("#temp_form_data_up_{{$dat->id}}").on("submit", (function(e) {
+
+                                        // Modification du boutton
+                                        $("#btn_update_{{$dat->id}}").attr("disabled", true);
+                                        $("#btn_update_{{$dat->id}}").html("Enregistrement <svg class='size-4 animate-spin' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-loader lucide-icon customizable' data-v-14c8c335=''><path d='M12 2v4'></path><path d='m16.2 7.8 2.9-2.9'></path><path d='M18 12h4'></path><path d='m16.2 16.2 2.9 2.9'></path><path d='M12 18v4'></path><path d='m4.9 19.1 2.9-2.9'></path><path d='M2 12h4'></path><path d='m4.9 4.9 2.9 2.9'></path></svg>");
+
+                                        e.preventDefault();
+                                        $.ajax({
+                                            url: "{{Route('template-edit')}}",
+                                            type: "POST",
+                                            data: new FormData(this),
+                                            contentType: false,
+                                            cache: false,
+                                            processData: false,
+                                            success: function(data) {
+                                                if (data.status == "ok") {
+                                                    $("#btn_update_{{$dat->id}}").html("Modification enregistré !");
+                                                    setTimeout(() => {
+                                                        $("#btn_update_{{$dat->id}}").html("Enregistré");
+                                                    }, 2000);
+                                                } else {
+                                                    $("#btn_update_{{$dat->id}}").html("Enregistré");
+                                                    alert("Le status de l'enregistrement est inconnus")
+                                                }
+                                                $("#btn_update_{{$dat->id}}").attr("disabled", false);
+                                            },
+
+                                            error: function(xhr) {
+                                                $("#btn_update_{{$dat->id}}").attr("disabled", false);
+                                                $("#btn_update_{{$dat->id}}").html("Enregistré");
+                                                alert("Un problème inattendue est survenue");
+                                            },
+                                        });
+                                    }));
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Supprimer le Template -->
-            <div id="hs-modal-email-template-delete-{{$dat->id}}" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="hs-modal-email-template-new-label">
-                <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-xl sm:w-full m-3 h-[calc(100%-3.5rem)] sm:mx-auto">
+            <div id="hs-modal-email-template-delete-{{$dat->id}}" class="hs-overlay hs-overlay-backdrop-open:bg-blue-950/90 hidden size-full fixed top-0 start-0 z-[81] overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="hs-modal-email-template-new-label">
+                <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-sm sm:w-full m-3 h-[calc(100%-3.5rem)] sm:mx-auto">
                     <div class="max-h-full overflow-hidden flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-neutral-800 dark:border-neutral-700 dark:shadow-neutral-700/70">
-                        <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700">
-                            <h3 id="hs-modal-email-template-new-label" class="font-bold text-gray-800 dark:text-white">
-                                Supprimer le Template Email
-                            </h3>
+                        <div class="flex justify-end items-center py-3 px-4">
                             <button type="button" class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600" aria-label="Close" data-hs-overlay="#hs-modal-email-template-delete-{{$dat->id}}">
                                 <span class="sr-only">Close</span>
                                 <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -142,7 +183,7 @@
                             </span>
                             <!-- End Icon -->
 
-                            <h3 id="hs-sign-out-alert-small-window-label" class="mb-2 text-2xl font-bold text-gray-800 dark:text-neutral-200">
+                            <h3 id="hs-sign-out-alert-small-window-label" class="mb-2 text-2xl font-bold text-red-500 dark:text-neutral-200">
                                 Suppression
                             </h3>
                             <p class="text-gray-500 font-light dark:text-neutral-500 mb-7">
@@ -165,13 +206,12 @@
             </div>
             @endforeach
         </div>
-
     </div>
     @endif
 </div>
 
 <!-- Add new Email Template Modal -->
-<div id="hs-modal-email-template-new" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="hs-modal-email-template-new-label">
+<div id="hs-modal-email-template-new" class="hs-overlay hs-overlay-backdrop-open:bg-blue-950/90 hidden size-full fixed top-0 start-0 z-[81] overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="hs-modal-email-template-new-label">
     <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-xl sm:w-full m-3 h-[calc(100%-3.5rem)] sm:mx-auto">
         <div class="max-h-full overflow-hidden flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-neutral-800 dark:border-neutral-700 dark:shadow-neutral-700/70">
             <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700">
@@ -187,40 +227,37 @@
                 </button>
             </div>
             <div class="p-4 overflow-y-auto">
-                <form action="{{Route('template-add')}}" method="post">
+                <form id="temp_add_form" action="{{Route('template-add')}}" method="POST">
                     @csrf
-                    <div class="mb-5">
+                    <div class="mb-3">
                         <label for="name" class="font-medium text-sm text-slate-600 dark:text-slate-400">Nom du template</label>
-                        <input type="text" id="name" name="name" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-600 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="">
+                        <input type="text" id="name" name="name" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-600 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="">
                     </div>
-                    <div class="mb-5">
+                    <div class="mb-3">
                         <label for="content" class="font-medium text-sm text-slate-600 dark:text-slate-400">Contenu</label>
                         <div class="relative">
                             <textarea id="content" name="content" cols="10" rows="15" class="p-4 block w-full border-gray-200 bg-gray-800 text-white font-normal rounded-lg text-sm focus:border-blue-600 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Entrer ou copier le code du Template Email ici"></textarea>
                         </div>
                     </div>
-                    <button type="submit" id="nw-temp-btns" class="py-2 px-3 hidden text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-600 focus:outline-none focus:bg-blue-600 disabled:opacity-50 disabled:pointer-events-none">
-                        Enregistré
-                    </button>
+                    <div class="mt-3 flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-neutral-700">
+                        <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-overlay="#hs-modal-email-template-new">
+                            Quitter
+                        </button>
+                        <button type="button" data-hs-overlay="#hs-bg-preview" onclick="showPreview(document.getElementById('content').value);" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-gray-100 text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" data-hs-overlay="#hs-notifications">
+                            Voir le rendu
+                        </button>
+                        <button type="submit" id="temp_add_btn" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-600 focus:outline-none focus:bg-blue-600 disabled:opacity-50 disabled:pointer-events-none">
+                            Enregistré
+                        </button>
+                    </div>
                 </form>
-            </div>
-            <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-neutral-700">
-                <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-overlay="#hs-modal-email-template-new">
-                    Quitter
-                </button>
-                <button type="button" data-hs-overlay="#hs-bg-preview" onclick="showPreview(document.getElementById('content').value);" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-gray-100 text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" data-hs-overlay="#hs-notifications">
-                    Voir le rendu
-                </button>
-                <button type="button" onclick="$('#nw-temp-btns').click();" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-600 focus:outline-none focus:bg-blue-600 disabled:opacity-50 disabled:pointer-events-none">
-                    Enregistré
-                </button>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Preview Email Template Modal -->
-<div id="hs-bg-preview" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="hs-bg-preview-label">
+<div id="hs-bg-preview" class="hs-overlay hs-overlay-backdrop-open:bg-blue-950/90v hidden size-full fixed top-0 start-0 z-[81] overflow-x-hidden overflow-y-auto pointer-events-none" role="dialog" tabindex="-1" aria-labelledby="hs-bg-preview-label">
     <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full m-3 h-[calc(100%-3.5rem)] sm:mx-auto">
         <div class="max-h-full overflow-hidden flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto dark:bg-neutral-900 dark:border-neutral-800 dark:shadow-neutral-700/70">
             <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-800">
@@ -291,45 +328,81 @@
         </div>
     </div>
 </div>
+@endsection
 
+@section('script')
 <script>
+    $(document).ready(function(e) {
+        $("#temp_add_form").on("submit", (function(e) {
+
+            // Modification du boutton
+            $("#temp_add_btn").attr("disabled", true);
+            $("#temp_add_btn").html("Enregistrement <svg class='size-4 animate-spin' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-loader lucide-icon customizable' data-v-14c8c335=''><path d='M12 2v4'></path><path d='m16.2 7.8 2.9-2.9'></path><path d='M18 12h4'></path><path d='m16.2 16.2 2.9 2.9'></path><path d='M12 18v4'></path><path d='m4.9 19.1 2.9-2.9'></path><path d='M2 12h4'></path><path d='m4.9 4.9 2.9 2.9'></path></svg>");
+
+            e.preventDefault();
+            $.ajax({
+                url: "{{Route('template-add')}}",
+                type: "POST",
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function(data) {
+                    if (data.status == "ok") {
+                        $("#temp_add_btn").html("Template enregistré !");
+                        setTimeout(() => {
+                            window.location.replace("{{Route('templates')}}");
+                        }, 1000);
+                    } else {
+                        $("#temp_add_btn").html("Enregistré");
+                        alert("Le status de l'enregistrement est inconnus")
+                    }
+                    $("#temp_add_btn").attr("disabled", false);
+                },
+
+                error: function(xhr) {
+                    $("#temp_add_btn").attr("disabled", false);
+                    $("#temp_add_btn").html("Enregistré");
+                    alert("Un problème inattendue est survenue");
+                },
+            });
+        }));
+    });
+
     function showPreview(content) {
         $("#smop").attr("srcdoc", content);
         $("#smo").attr("srcdoc", content);
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
-        // Fonction pour charger l'iframe lorsque celle-ci devient visible dans la fenêtre de visualisation
-        function loadIframeLazy() {
-            const iframes = document.querySelectorAll('.template-iframe');
-            const options = {
-                root: null, // Observer l'ensemble du viewport
-                rootMargin: '0px',
-                threshold: 0.25 // Charge l'iframe lorsque 25% est visible
-            };
+    function loadIframeLazy() {
+        const iframes = document.querySelectorAll('.template-iframe');
+        const options = {
+            root: null, // Observer l'ensemble du viewport
+            rootMargin: '0px',
+            threshold: 0.25 // Charge l'iframe lorsque 25% est visible
+        };
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const iframe = entry.target;
-                        const src = iframe.getAttribute('data-src'); // On récupère l'URL à charger dans l'iframe
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const iframe = entry.target;
+                    const src = iframe.getAttribute('data-src'); // On récupère l'URL à charger dans l'iframe
 
-                        if (src) {
-                            iframe.src = src; // On charge l'URL dans l'iframe
-                            iframe.removeAttribute('data-src'); // Retirer l'attribut data-src après avoir chargé l'URL
-                        }
-                        observer.unobserve(iframe); // Cesse d'observer cette iframe une fois chargée
+                    if (src) {
+                        iframe.src = src; // On charge l'URL dans l'iframe
+                        iframe.removeAttribute('data-src'); // Retirer l'attribut data-src après avoir chargé l'URL
                     }
-                });
-            }, options);
-
-            iframes.forEach(iframe => {
-                observer.observe(iframe);
+                    observer.unobserve(iframe); // Cesse d'observer cette iframe une fois chargée
+                }
             });
-        }
+        }, options);
 
-        // Appeler la fonction de lazy loading
-        loadIframeLazy();
-    });
+        iframes.forEach(iframe => {
+            observer.observe(iframe);
+        });
+    }
+
+    // Appeler la fonction de lazy loading
+    loadIframeLazy();
 </script>
 @endsection

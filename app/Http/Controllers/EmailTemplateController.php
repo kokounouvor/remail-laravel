@@ -39,9 +39,6 @@ class EmailTemplateController extends Controller
 
     public function template_add(Request $request)
     {
-        ini_set('upload_max_filesize', '10M');
-        ini_set('post_max_size', '10M');
-        
         $user = Users::where('token', Session::get('user'))->first();
 
         $request->validate([
@@ -49,12 +46,12 @@ class EmailTemplateController extends Controller
             "content" => "required"
         ]);
 
-        $filepath="templates/".uniqid().".html";
+        $filepath = "templates/" . uniqid() . ".html";
 
         Storage::disk("public")->put($filepath, $request->content);
 
         // Insertion de l'utilisateur dans la base de donnée
-        $ins = Template::insert([
+        Template::insert([
             "uuid" => uuid_create(),
             "workspace_id" => $user->workspace_id,
             "name" => htmlspecialchars($request->name),
@@ -63,13 +60,7 @@ class EmailTemplateController extends Controller
             "created_at" => NOW()
         ]);
 
-        // NOTIFIER L' UTILISATEUR
-        if ($ins) {
-            return redirect()->back()->with('success', "Template ajouté !");
-        } else {
-            // Notification que le compte n'existe pas
-            return redirect()->back()->with('danger', "erreur");
-        }
+        return response()->json(["status" => "ok"]);
     }
 
     public function template_edit(Request $request)
@@ -81,24 +72,18 @@ class EmailTemplateController extends Controller
         ]);
 
         // Récuperer les informations
-        $data=Template::where("id",$request->id)->first();
-        $filepath=$data->content;
+        $data = Template::where("id", $request->id)->first();
+        $filepath = $data->content;
 
-        Storage::disk()->put($filepath, $request->content);
+        Storage::disk("public")->put($filepath, $request->content);
 
         // Insertion de l'utilisateur dans la base de donnée
-        $ins = Template::where("id", $request->id)->update([
+        Template::where("id", $request->id)->update([
             "name" => htmlspecialchars($request->name),
             "updated_at" => NOW()
         ]);
 
-        // NOTIFIER L' UTILISATEUR
-        if ($ins) {
-            return redirect()->back()->with('success', "Template modifié !");
-        } else {
-            // Notification que le compte n'existe pas
-            return redirect()->back()->with('danger', "erreur");
-        }
+        return response()->json(["status" => "ok"]);
     }
 
     public function template_delete(Request $request)

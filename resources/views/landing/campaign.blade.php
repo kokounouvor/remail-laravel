@@ -82,7 +82,7 @@
                             </li>
                         </ul>
                         <!-- End List Group -->
-                        <iframe data-src="/storage/{{$camps->contents}}" class="rounded-xl" frameborder="0" width="100%" height="350px" scrolling="yes"></iframe>
+                        <iframe srcdoc="{{Storage::disk('public')->get($camps->contents)}}" class="rounded-xl" frameborder="0" width="100%" height="350px" scrolling="yes"></iframe>
                     </div>
                     <div>
                         <!-- Card Section -->
@@ -304,41 +304,7 @@
     </div>
 
     <script src="/assets/vendor/preline/dist/index-3.js?v=2.5.0"></script>
-    <script>
-         document.addEventListener("DOMContentLoaded", function() {
-        // Fonction pour charger l'iframe lorsque celle-ci devient visible dans la fenêtre de visualisation
-        function loadIframeLazy() {
-            const iframes = document.querySelectorAll('.template-iframe');
-            const options = {
-                root: null, // Observer l'ensemble du viewport
-                rootMargin: '0px',
-                threshold: 0.25 // Charge l'iframe lorsque 25% est visible
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const iframe = entry.target;
-                        const src = iframe.getAttribute('data-src'); // On récupère l'URL à charger dans l'iframe
-
-                        if (src) {
-                            iframe.src = src; // On charge l'URL dans l'iframe
-                            iframe.removeAttribute('data-src'); // Retirer l'attribut data-src après avoir chargé l'URL
-                        }
-                        observer.unobserve(iframe); // Cesse d'observer cette iframe une fois chargée
-                    }
-                });
-            }, options);
-
-            iframes.forEach(iframe => {
-                observer.observe(iframe);
-            });
-        }
-
-        // Appeler la fonction de lazy loading
-        loadIframeLazy();
-    });
-    </script>
+    <script src="/assets/js/jquery.min.js"></script>
 </body>
 
 </html>

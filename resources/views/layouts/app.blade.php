@@ -45,6 +45,7 @@
     <!-- CSS HS -->
     <link rel="stylesheet" href="/assets/css/main.min-2.css?v=2.5.0">
     <link rel="stylesheet" href="/assets/css/main.css?v=2.5.0">
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
 
 </head>
 
@@ -68,8 +69,8 @@
 
     <!-- JS PLUGINS -->
     <script src="/assets/vendor/preline/dist/index-3.js?v=2.5.0"></script>
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+
+    @yield('script')
 
     <script>
         const HSClipboard = {

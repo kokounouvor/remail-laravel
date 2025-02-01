@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 
 class SendEmailController extends Controller
 {
@@ -28,7 +29,7 @@ class SendEmailController extends Controller
         $campaig = Campaign::where("id", "=", $request->campaign)->first();
 
         // envoie du code otp 
-        $info = ["subject" => "TEST -" . $campaig->subject, "content" => $campaig->contents, "id" => $campaig->id];
+        $info = ["subject" => "TEST -" . $campaig->subject, "content" => Storage::disk('public')->get($campaig->contents), "id" => $campaig->id];
 
         Mail::to($request->email)->send(new SendmailCampaignTEST($info));
         //return (new SendmailCampaignTEST($info));
