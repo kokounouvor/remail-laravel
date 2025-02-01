@@ -6,15 +6,11 @@
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # Rediriger le sous-domaine sans www vers www
-    RewriteCond %{HTTP_HOST} ^ramil\.gurvio\.com [NC]
-    RewriteRule ^(.*)$ https://www.ramil.gurvio.com/$1 [L,R=301]
+    RewriteCond %{HTTP_HOST} ^remail\.gurvio\.com [NC]
+    RewriteRule ^(.*)$ https://www.remail.gurvio.com/$1 [L,R=301]
 
     # Rediriger toutes les requêtes vers le dossier public
     RewriteRule ^(.*)$ public/$1 [L]
-
-    # Rediriger robots.txt pour les sous-domaines
-    RewriteCond %{HTTP_HOST} !^(www\.)?ramil\.gurvio\.com$ [NC]
-    RewriteRule ^robots\.txt$ robots-disallow.txt [L]
 </IfModule>
 
 # Security Headers
@@ -52,4 +48,4 @@ php_value post_max_size 10M
 
 # Serve files from storage/app/public if symlink is not possible
 RewriteCond %{REQUEST_URI} ^/storage/
-RewriteRule ^storage/(.*)$ /home/username/domains/gurvio.com/public_html/remail/storage/app/public/$1 [L]
+RewriteRule ^storage/(.*)$ /domains/gurvio.com/public_html/remail/storage/app/public/$1 [L]
