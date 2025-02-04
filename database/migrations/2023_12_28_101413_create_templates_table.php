@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text("user")->nullable();
             $table->text("workspace_id")->nullable();
             $table->text("name")->nullable();
+            $table->text("content_type")->nullable();
             $table->longText("content")->nullable();
             $table->timestamps();
         });

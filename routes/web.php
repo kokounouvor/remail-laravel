@@ -109,10 +109,13 @@ Route::controller(SendEmailController::class)->group(function () {
 });
 
 Route::controller(EmailTemplateController::class)->middleware("IsInWorkspace", "IsAuthenticate")->group(function () {
-   Route::get('/templates', 'index')->name('templates');
-   Route::post('/template/add', 'template_add')->name('template-add');
-   Route::post('/template/edit', 'template_edit')->name('template-edit');
-   Route::post('/template/delete', 'template_delete')->name('template-delete');
+   Route::get('/templates', 'index')->name('portal.templates');
+   Route::get('/template/publisher', 'publisher')->name('portal.template.publisher');
+   Route::get('/template/editor/{id}', 'editor')->name('portal.template.editor');
+
+   Route::post('/template/add', 'store')->name('portal.template.store');
+   Route::post('/template/edit', 'updater')->name('portal.template.updater');
+   Route::post('/template/delete', 'remove')->name('portal.template.remove');
 });
 
 Route::get("/cron/sendmail", function () {

@@ -20,7 +20,7 @@ class EmailTemplateController extends Controller
     {
         $user = Users::where('token', Session::get('user'))->first();
         $group = Tag::where('user', Session::get('user'))->get();
-        $templ = Template::where('user', Session::get('user'))->get();
+        $templ = Template::where('user', Session::get('user'))->paginate(6);
 
         $contacts = Subscriber::where('user', Session::get('user'))->get();
         $workspaces = Workspace::where('user', Session::get('user'))->get();
@@ -34,21 +34,69 @@ class EmailTemplateController extends Controller
             'thumb' => ""
         ];
 
-        return view('portal.templates', compact('user', 'group', 'contacts', 'workspaces', 'templ', 'swipers', 'notifications', 'notifications_unread'), $meta);
+        return view('portal.template.index', compact('user', 'group', 'contacts', 'workspaces', 'templ', 'swipers', 'notifications', 'notifications_unread'), $meta);
     }
 
-    public function template_add(Request $request)
+    public function publisher()
+    {
+        $user = Users::where('token', Session::get('user'))->first();
+        $workspaces = Workspace::where('user', Session::get('user'))->get();
+        $notifications = Notification::where("user", Session::get('user'))->limit(5)->get();
+        $notifications_unread = Notification::where([['user', Session::get("user")], ["status", null]])->count();
+        $swipers = Workspace::where("user", Session::get('user'))->get();
+
+        $meta = [
+            "title" => "REMAIL - Portal",
+            "description" => "Solution d'envoi de mail de masse",
+            'thumb' => ""
+        ];
+
+        return view('portal.template.publisher', compact('user', 'swipers', 'workspaces', 'notifications', 'notifications_unread'), $meta);
+    }
+
+    public function editor($id)
+    {
+        $user = Users::where('token', Session::get('user'))->first();
+        $workspaces = Workspace::where('user', Session::get('user'))->get();
+        $notifications = Notification::where("user", Session::get('user'))->limit(5)->get();
+        $notifications_unread = Notification::where([['user', Session::get("user")], ["status", null]])->count();
+        $swipers = Workspace::where("user", Session::get('user'))->get();
+
+        $meta = [
+            "title" => "REMAIL - Portal",
+            "description" => "Solution d'envoi de mail de masse",
+            'thumb' => ""
+        ];
+
+        // Récuperer les informations
+        $templ = Template::where("id", $id)->first();
+
+        return view('portal.template.editor', compact('user', 'swipers', 'workspaces', 'templ',  'notifications', 'notifications_unread'), $meta);
+    }
+
+    public function store(Request $request)
     {
         $user = Users::where('token', Session::get('user'))->first();
 
         $request->validate([
             "name" => "required",
-            "content" => "required"
+            "content_type" => "required"
         ]);
 
+        if ($request->content_type == "texte") {
+            $request->validate([
+                "content" => "required",
+            ]);
+        } else {
+            $request->validate([
+                "code_content" => "required",
+            ]);
+        }
+
+        $cnt = $request->content_type == "texte" ? $request->content : $request->code_content;
         $filepath = "templates/" . uniqid() . ".html";
 
-        Storage::disk("public")->put($filepath, $request->content);
+        Storage::disk("public")->put($filepath, $cnt);
 
         // Insertion de l'utilisateur dans la base de donnée
         Template::insert([
@@ -56,6 +104,7 @@ class EmailTemplateController extends Controller
             "workspace_id" => $user->workspace_id,
             "name" => htmlspecialchars($request->name),
             "content" => $filepath,
+            "content_type" => $request->content_type,
             "user" => Session::get("user"),
             "created_at" => NOW()
         ]);
@@ -63,7 +112,7 @@ class EmailTemplateController extends Controller
         return response()->json(["status" => "ok"]);
     }
 
-    public function template_edit(Request $request)
+    public function updater(Request $request)
     {
         $request->validate([
             "name" => "required",
@@ -86,7 +135,7 @@ class EmailTemplateController extends Controller
         return response()->json(["status" => "ok"]);
     }
 
-    public function template_delete(Request $request)
+    public function remove(Request $request)
     {
         $request->validate([
             "id" => "required"

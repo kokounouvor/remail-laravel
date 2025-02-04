@@ -1,6 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="/assets/vendor/ckeditor5/ckeditor5.css">
+<script src="/assets/vendor/ckeditor5/ckeditor5.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+
+
+
+<div id="editora" class="w-full h-96"></div>
+
+<textarea name="" id="topo"></textarea>
+<script>
+    require.config({ paths: { vs: "https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs" }});
+    require(["vs/editor/editor.main"], function () {
+        var editor = monaco.editor.create(document.getElementById("editora"), {
+            value: "<!-- Commencez à écrire votre code HTML ici -->",
+            language: "html",
+            theme: "vs-light"
+        });
+
+        // Mettre à jour le contenu du textarea en temps réel
+        editor.onDidChangeModelContent(function () {
+            document.getElementById("topo").value = editor.getValue();
+        });
+    });
+</script>
+
+
 <div>
     @if($templ->isEmpty())
     <div class="max-w-2xl mx-auto py-10 flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
@@ -51,12 +78,12 @@
                             {{$dat->name}}
                         </p>
                         <div class="flex gap-x-2">
-                            <button type="button" data-hs-overlay="#hs-modal-email-template-update-{{$dat->id}}" class="size-7 flex items-center justify-center gap-x-2 text-xs font-medium rounded-full border border-transparent bg-gray-200 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:outline-none disabled:opacity-50 disabled:pointer-events-none">
+                            <a href="{{Route('template-editor', $dat->id)}}" class="size-7 flex items-center justify-center gap-x-2 text-xs font-medium rounded-full border border-transparent bg-gray-200 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:outline-none disabled:opacity-50 disabled:pointer-events-none">
                                 <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil lucide-icon customizable">
                                     <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path>
                                     <path d="m15 5 4 4"></path>
                                 </svg>
-                            </button>
+                            </a>
                             <button type="button" data-hs-overlay="#hs-modal-email-template-delete-{{$dat->id}}" class="size-7 flex items-center justify-center gap-x-2 text-xs font-medium rounded-full border border-transparent bg-red-500 text-white hover:bg-red-600 focus:outline-none focus:bg-red-600 disabled:opacity-50 disabled:pointer-events-none">
                                 <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 lucide-icon customizable">
                                     <path d="M3 6h18"></path>
@@ -233,6 +260,7 @@
                         <label for="name" class="font-medium text-sm text-slate-600 dark:text-slate-400">Nom du template</label>
                         <input type="text" id="name" name="name" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-600 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="">
                     </div>
+
                     <div class="mb-3">
                         <label for="content" class="font-medium text-sm text-slate-600 dark:text-slate-400">Contenu</label>
                         <div class="relative">
@@ -331,9 +359,84 @@
 @endsection
 
 @section('script')
-<script>
+<script type="importmap">
+    {
+                "imports": {
+                    "ckeditor5": "/assets/vendor/ckeditor5/ckeditor5.js",
+                    "ckeditor5/": "/assets/vendor/ckeditor5/"
+                }
+            }
+        </script>
+
+<script type="module">
+    import {
+        ClassicEditor,
+        Essentials,
+        Paragraph,
+        Bold,
+        Italic,
+        Font,
+        Code,
+        CodeBlock,
+        Link,
+        BlockQuote,
+    } from 'ckeditor5';
+
+    ClassicEditor
+        .create(document.querySelector('#content'), {
+            licenseKey: 'GPL', // Or 'GPL'.
+            plugins: [Essentials, Paragraph, Bold, Italic, Font, Link, BlockQuote, Code, CodeBlock],
+            toolbar: {
+                items: [
+                    'undo', 'redo',
+                    '|',
+                    'heading',
+                    '|',
+                    'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
+                    '|',
+                    'bold', 'italic', 'strikethrough', 'subscript', 'superscript', 'code',
+                    '|',
+                    'link', 'uploadImage', 'blockQuote', 'codeBlock',
+                    '|',
+                    'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent'
+                ],
+                codeBlock: {
+                    languages: [{
+                            language: 'plaintext',
+                            label: 'Plain Text'
+                        },
+                        {
+                            language: 'javascript',
+                            label: 'JavaScript'
+                        },
+                        {
+                            language: 'html',
+                            label: 'HTML'
+                        },
+                        {
+                            language: 'css',
+                            label: 'CSS'
+                        },
+                        {
+                            language: 'php',
+                            label: 'PHP'
+                        }
+                    ]
+                },
+                shouldNotGroupWhenFull: true
+            },
+            placeholder: 'Écrivez votre texte ici...'
+        })
+        .then(editor => {
+            window.editor = editor;
+            $("#john").val(editor.getData())
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
     $(document).ready(function(e) {
-        $("#temp_add_forms").on("submit", (function(e) {
+        $("#temp_add_form").on("submit", (function(e) {
 
             // Modification du boutton
             $("#temp_add_btn").attr("disabled", true);

@@ -71,14 +71,14 @@ class CampaignController extends Controller
             "subject" => "required",
             "from_name" => "required",
             "from_email" => "required",
-            "content" => "required"
+            "mail_body" => "required"
         ]);
 
         $uid = uuid_create();
         $user_data = Users::where("token", Session::get("user"))->first();
 
         // Ajouter le suivi des liens dans l'email
-        $contents = (new Campaign_link_click())->addTrackingToLinks($request->content, $uid);
+        $contents = (new Campaign_link_click())->addTrackingToLinks($request->mail_body, $uid);
 
         $filepath = "campaigns/" . uniqid() . ".html";
         Storage::disk("public")->put($filepath, $contents);

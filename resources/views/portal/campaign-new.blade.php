@@ -1,131 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-<style>
-    .code-editor {
-        position: relative;
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    .textarea-sec {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 300px;
-        font-family: "Courier New", Courier, monospace;
-        font-size: 14px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background: transparent;
-        color: transparent;
-        caret-color: white;
-        z-index: 1;
-        resize: none;
-    }
-
-    textarea:focus {
-        outline: none;
-    }
-
-    .code-output {
-        width: 100%;
-        height: 300px;
-        white-space: pre-wrap;
-        font-family: "Courier New", Courier, monospace;
-        font-size: 14px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #2e3440;
-        color: #d8dee9;
-        overflow-x: auto;
-        pointer-events: none;
-    }
-
-    .code-output .tag {
-        color: #81a1c1;
-    }
-
-    .code-output .attribute {
-        color: #a3be8c;
-    }
-
-    .code-output .value {
-        color: #ebcb8b;
-    }
-
-    .code-output .text {
-        color: #d8dee9;
-    }
-</style>
-<!-- quill css -->
-<link href="/assets/vendor/quill/quill.core.css" rel="stylesheet" type="text/css">
-<link href="/assets/vendor/quill/quill.bubble.css" rel="stylesheet" type="text/css">
-<link href="/assets/vendor/quill/quill.snow.css" rel="stylesheet" type="text/css">
+<!-- -->
+<link rel="stylesheet" href="/assets/vendor/ckeditor5/ckeditor5.css">
+<script src="/assets/vendor/ckeditor5/ckeditor5.js"></script>
+<script src="https://remail.io/assets/vendor/monaco/dev/vs/loader.js"></script>
+<!-- -->
 
 <!-- Stepper -->
-<div data-hs-stepper="" class="max-w-4xl mx-auto">
-    <!-- Stepper Nav -->
-    <ul class="relative flex flex-row gap-x-2">
-        <li class="flex items-center gap-x-2 shrink basis-0 flex-1 group" data-hs-stepper-nav-item='{"index": 1}'>
-            <span class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle">
-                <span class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-normal text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600 dark:bg-neutral-700 dark:text-white dark:group-focus:bg-gray-600 dark:hs-stepper-active:bg-blue-500 dark:hs-stepper-success:bg-blue-500 dark:hs-stepper-completed:bg-teal-500 dark:hs-stepper-completed:group-focus:bg-teal-600">
-                    <span class="hs-stepper-success:hidden hs-stepper-completed:hidden">1</span>
-                    <svg class="hidden shrink-0 size-3 hs-stepper-success:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                </span>
-                <span class="ms-2 text-sm font-normal text-gray-800 dark:text-neutral-200">
-                    Entete
-                </span>
-            </span>
-            <div class="w-full h-px flex-1 bg-gray-300 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600 dark:bg-neutral-700 dark:hs-stepper-success:bg-blue-600 dark:hs-stepper-completed:bg-teal-600"></div>
-        </li>
-
-        <li class="flex items-center gap-x-2 shrink basis-0 flex-1 group" data-hs-stepper-nav-item='{"index": 2}'>
-            <span class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle">
-                <span class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-normal text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600 dark:bg-neutral-700 dark:text-white dark:group-focus:bg-gray-600 dark:hs-stepper-active:bg-blue-500 dark:hs-stepper-success:bg-blue-500 dark:hs-stepper-completed:bg-teal-500 dark:hs-stepper-completed:group-focus:bg-teal-600">
-                    <span class="hs-stepper-success:hidden hs-stepper-completed:hidden">2</span>
-                    <svg class="hidden shrink-0 size-3 hs-stepper-success:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                </span>
-                <span class="ms-2 text-sm font-normal text-gray-800 dark:text-neutral-200">
-                    Contenu
-                </span>
-            </span>
-            <div class="w-full h-px flex-1 bg-gray-300 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600 dark:bg-neutral-700 dark:hs-stepper-success:bg-blue-600 dark:hs-stepper-completed:bg-teal-600"></div>
-        </li>
-
-        <li class="flex items-center gap-x-2 shrink basis-0 flex-1 group" data-hs-stepper-nav-item='{"index": 3}'>
-            <span class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle">
-                <span class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-normal text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600 dark:bg-neutral-700 dark:text-white dark:group-focus:bg-gray-600 dark:hs-stepper-active:bg-blue-500 dark:hs-stepper-success:bg-blue-500 dark:hs-stepper-completed:bg-teal-500 dark:hs-stepper-completed:group-focus:bg-teal-600">
-                    <span class="hs-stepper-success:hidden hs-stepper-completed:hidden">3</span>
-                    <svg class="hidden shrink-0 size-3 hs-stepper-success:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                </span>
-                <span class="ms-2 text-sm font-normal text-gray-800 dark:text-neutral-200">
-                    Finaliser
-                </span>
-            </span>
-            <div class="w-full h-px flex-1 bg-gray-300 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600 dark:bg-neutral-700 dark:hs-stepper-success:bg-blue-600 dark:hs-stepper-completed:bg-teal-600"></div>
-        </li>
-        <!-- End Item -->
-    </ul>
-    <!-- End Stepper Nav -->
-
+<div class="max-w-4xl mx-auto">
     <!-- Stepper Content -->
     <div class="mt-5 sm:mt-8">
         <form action="{{Route('campaign-new-add')}}" method="POST">
             @csrf
             <div>
                 <!-- First Content -->
-                <div data-hs-stepper-content-item='{"index": 1}'>
+                <div>
                     <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
                         <div class=" border-b rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
                             <p class="mt-1 text-md text-gray-600 font-bold dark:text-neutral-500">
@@ -179,56 +69,37 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!-- End First Content -->
-
-                <!-- First Content -->
-                <div data-hs-stepper-content-item='{"index": 2}' style="display: none;">
-                    <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
-                        <div class="border-b rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
-                            <div class="flex items-center justify-between">
-                                <p class="mt-1 text-md text-gray-600 font-bold dark:text-neutral-500">
-                                    Apparence de l'Email
-                                </p>
-                                <button type="button" data-hs-overlay="#hs-bg-preview" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-normal rounded-full bg-gray-100 border border-gray-200 text-gray-800 hover:border-gray-500 hover:bg-gray-200 focus:outline-none focus:border-gray-500 focus:text-gray-500 disabled:opacity-50 disabled:pointer-events-none dark:border-white dark:text-white dark:hover:text-neutral-300 dark:hover:border-neutral-300">
-                                    Voir un Aperçu
-                                </button>
+                        <div class="p-4 border-t border-red-500 border-dashed">
+                            <div class="border-b border-gray-200 dark:border-neutral-700">
+                                <div class="-mb-0.5 flex justify-center gap-x-6">
+                                    <button type="button" onclick="$('#horizontal-alignment-1').show(); $('#horizontal-alignment-2').hide();$('#horizontal-alignment-3').hide();$('#content_type').val('code');" class="py-2 px-3 bg-gray-100 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500 active">
+                                        Editeur HTML
+                                    </button>
+                                    <button type="button" onclick="$('#horizontal-alignment-2').show(); $('#horizontal-alignment-1').hide();$('#horizontal-alignment-3').hide();$('#content_type').val('texte');" class="py-2 px-3 bg-gray-100 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500">
+                                        Editeur de texte
+                                    </button>
+                                    <button type="button" onclick="$('#horizontal-alignment-3').show(); $('#horizontal-alignment-2').hide();$('#horizontal-alignment-1').hide();$('#content_type').val('template');" class="py-2 px-3 bg-gray-100 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500">
+                                        Templates Email
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:p-5">
 
-                            <div class="">
-                                <div class="flex items-center justify-center">
-                                    <div class="flex bg-blue-200 hover:bg-gray-200 rounded-2xl transition p-1 dark:bg-neutral-700 dark:hover:bg-neutral-600">
-                                        <nav class="flex gap-x-1" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
-                                            <button type="button" class="hs-tab-active:bg-white hs-tab-active:text-gray-700 hs-tab-active:dark:bg-neutral-800 hs-tab-active:dark:text-neutral-400 dark:hs-tab-active:bg-gray-800 py-3 px-4 inline-flex items-center gap-x-2 bg-transparent text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-normal rounded-2xl hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-white dark:focus:text-white active" id="segment-item-1" aria-selected="true" data-hs-tab="#segment-1" aria-controls="segment-1" role="tab">
-                                                Editeur de texte
-                                            </button>
-                                            <button type="button" class="hs-tab-active:bg-white hs-tab-active:text-gray-700 hs-tab-active:dark:bg-neutral-800 hs-tab-active:dark:text-neutral-400 dark:hs-tab-active:bg-gray-800 py-3 px-4 inline-flex items-center gap-x-2 bg-transparent text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-normal rounded-2xl hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-white dark:focus:text-white" id="segment-item-2" aria-selected="false" data-hs-tab="#segment-2" aria-controls="segment-2" role="tab">
-                                                Editeur HTML
-                                            </button>
-                                            <button type="button" class="hs-tab-active:bg-white hs-tab-active:text-gray-700 hs-tab-active:dark:bg-neutral-800 hs-tab-active:dark:text-neutral-400 dark:hs-tab-active:bg-gray-800 py-3 px-4 inline-flex items-center gap-x-2 bg-transparent text-sm text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700 font-normal rounded-2xl hover:hover:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-white dark:focus:text-white" id="segment-item-3" aria-selected="false" data-hs-tab="#segment-3" aria-controls="segment-3" role="tab">
-                                                Templates
-                                            </button>
-                                        </nav>
+                            <div class="mt-3">
+                                <input type="text" name="content_type" id="content_type" class="hidden">
+                                <textarea class="hidden" name="mail_body" id="mail_body"></textarea>
+                                <div id="horizontal-alignment-1">
+                                    <div class="relative border p-1 bg-white">
+                                        <div id="code_editor" class="w-full h-96"></div>
+                                        <textarea name="code_content" id="code_content" class="hidden"></textarea>
                                     </div>
                                 </div>
-
-                                <div class="mt-3">
-                                    <div id="segment-1" role="tabpanel" aria-labelledby="segment-item-1">
-                                        <div class="mt-4">
-                                            <div class="w-full" rows="4" placeholder="" id="snow-editor"></div>
-                                            <textarea id="snow-editor-html" class="hidden" rows="10" name="content"></textarea>
-                                        </div>
+                                <div id="horizontal-alignment-2" class="hidden">
+                                    <div class="relative">
+                                        <textarea id="text_editor" name="content" cols="10" rows="15" class="p-4 block w-full border-gray-200 font-normal rounded-lg text-sm focus:border-blue-600 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Entrer ou copier le code du Template Email ici"></textarea>
                                     </div>
-                                    <div id="segment-2" class="hidden" role="tabpanel" aria-labelledby="segment-item-2">
-                                        <div class="code-editor">
-                                            <pre id="highlightedCode" class="code-output"></pre>
-                                            <textarea class="textarea-sec" id="htmlInput" name="htmlInput" spellcheck="false" oninput="updatePreview();" placeholder="Paste or edit your HTML code here"></textarea>
-                                        </div>
-                                    </div>
-                                    <div id="segment-3" class="hidden" role="tabpanel" aria-labelledby="segment-item-3">
+                                </div>
+                                <div id="horizontal-alignment-3" class="hidden">
+                                    <div class="relative">
                                         <div class="grid md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-4 mb-4 mt-5">
                                             @foreach($templ as $dat)
                                             <textarea class="hidden" name="" id="pd-{{$dat->id}}">{!! Storage::disk('public')->get($dat->content) !!}</textarea>
@@ -251,45 +122,12 @@
                 </div>
                 <!-- End First Content -->
 
-                <!-- First Content -->
-                <div data-hs-stepper-content-item='{"index": 3}' style="display: none;">
-                    <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
-                        <div class="bg-gray-100 border-b rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
-                            <p class="mt-1 text-md text-gray-600 font-bold dark:text-neutral-500">
-                                Prochaine étape
-                            </p>
-                        </div>
-                        <div class="p-4 md:p-5">
-                            <div class="text-center mb-8 mt-6">
-                                <svg class="mb-8 size-32 inline-flex items-center justify-center" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.89 5.87988H5.10999C3.39999 5.87988 2 7.27987 2 8.98987V20.3499C2 21.7999 3.04 22.4199 4.31 21.7099L8.23999 19.5199C8.65999 19.2899 9.34 19.2899 9.75 19.5199L13.68 21.7099C14.95 22.4199 15.99 21.7999 15.99 20.3499V8.98987C16 7.27987 14.6 5.87988 12.89 5.87988Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M16 8.98987V20.3499C16 21.7999 14.96 22.4099 13.69 21.7099L9.76001 19.5199C9.34001 19.2899 8.65999 19.2899 8.23999 19.5199L4.31 21.7099C3.04 22.4099 2 21.7999 2 20.3499V8.98987C2 7.27987 3.39999 5.87988 5.10999 5.87988H12.89C14.6 5.87988 16 7.27987 16 8.98987Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path opacity="0.4" d="M22 5.10999V16.47C22 17.92 20.96 18.53 19.69 17.83L16 15.77V8.98999C16 7.27999 14.6 5.88 12.89 5.88H8V5.10999C8 3.39999 9.39999 2 11.11 2H18.89C20.6 2 22 3.39999 22 5.10999Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-
-                                <h1 class="font-bold text-xl text-gray-800 dark:text-slate-200">Terminé!</h1>
-                                <h5 class="font-normal text-gray-500">Passer à la prochaine étape</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End First Content -->
-
                 <!-- Button Group -->
                 <div class="max-w-sm mx-auto mt-5 flex justify-between items-center gap-x-2">
-                    <button type="button" class="w-full py-3 px-5 inline-flex items-center justify-center gap-x-1 text-sm font-normal rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-stepper-back-btn="">
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m15 18-6-6 6-6"></path>
-                        </svg>
-                        Précédent
-                    </button>
-                    <button type="button" class="w-full py-3 px-5 inline-flex items-center justify-center gap-x-1 text-sm font-normal rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-stepper-next-btn="">
-                        Continuer
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6"></path>
-                        </svg>
-                    </button>
-                    <button type="submit" class="w-full py-3 px-5 inline-flex items-center justify-center gap-x-1 text-sm font-normal rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-stepper-finish-btn="" style="display: none;">
+                    <a href="{{Route('campaigns')}}" class="w-full py-3 px-5 inline-flex items-center justify-center gap-x-1 text-sm font-normal rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                        Quitter
+                    </a>
+                    <button type="submit" class="w-full py-3 px-5 inline-flex items-center justify-center gap-x-1 text-sm font-normal rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
                         Enregistré
                     </button>
                 </div>
@@ -376,102 +214,11 @@
 <script src="/assets/vendor/quill/quill.min.js"></script>
 
 <script>
-    var quill = new Quill('#snow-editor', {
-        theme: 'snow',
-        placeholder: 'Rédiger la description du projet et dites à quoi servira la collecte ....',
-        modules: {
-            'toolbar': [
-                [{
-                    'font': []
-                }, {
-                    'size': []
-                }],
-                ['bold', 'italic', 'underline', 'strike'],
-                [{
-                    'color': []
-                }, {
-                    'background': []
-                }],
-                [{
-                    'script': 'super'
-                }, {
-                    'script': 'sub'
-                }],
-                [{
-                    'header': [false, 1, 2, 3, 4, 5, 6]
-                }, 'blockquote'],
-                [{
-                    'list': 'ordered'
-                }, {
-                    'list': 'bullet'
-                }, {
-                    'indent': '-1'
-                }, {
-                    'indent': '+1'
-                }],
-                ['direction', {
-                    'align': []
-                }],
-                ['link', 'image', 'video'],
-                ['clean']
-            ]
-        },
-    });
-    quill.on('text-change', function(delta, oldDelta, source) {
-        $("#snow-editor-html").text($('#snow-editor').html());
-        $("#preview1").attr("srcdoc", $('#snow-editor').html());
-        $("#preview2").attr("srcdoc", $('#snow-editor').html());
-    });
-
-    function updatePreview() {
-        var htmlInput = document.getElementById("htmlInput").value;
-        $("#preview1").attr("srcdoc", htmlInput);
-        $("#preview2").attr("srcdoc", htmlInput);
-        document.getElementById("snow-editor-html").value = htmlInput;
-    }
-
     function gfx(temps) {
         var tem = document.getElementById("pd-" + temps).value;
         $("#preview1").attr("srcdoc", tem);
         $("#preview2").attr("srcdoc", tem);
-        document.getElementById("snow-editor-html").value = tem;
-    }
-
-    const textarea = document.getElementById('htmlInput');
-    const highlightedCode = document.getElementById('highlightedCode');
-
-    // Synchronize scrolling
-    textarea.addEventListener('scroll', () => {
-        highlightedCode.scrollTop = textarea.scrollTop;
-        highlightedCode.scrollLeft = textarea.scrollLeft;
-    });
-
-    // Highlight the code
-    textarea.addEventListener('input', () => {
-        const code = textarea.value;
-        highlightedCode.innerHTML = highlightHTML(code);
-    });
-
-    function highlightHTML(html) {
-        // Escape HTML entities
-        const escapeHtml = html
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;');
-
-        // Highlight tags, attributes, and values
-        return escapeHtml.replace(
-            /(&lt;\/?)(\w+)([^&]*?)(&gt;)/g,
-            (match, p1, p2, p3, p4) => {
-                const tag = `<span class="tag">${p1}${p2}</span>`;
-                const attrs = p3.replace(
-                    /(\w+)=("[^"]*")/g,
-                    `<span class="attribute">$1</span>=<span class="value">$2</span>`
-                );
-                const end = `<span class="tag">${p4}</span>`;
-                return tag + attrs + end;
-            }
-        );
+        $("#mail_body").val(tem);
     }
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -509,4 +256,84 @@
     });
 </script>
 
+@endsection
+
+
+@section('script')
+<!-- Code editor manager -->
+<script>
+    require.config({
+        paths: {
+            vs: "https://remail.io/assets/vendor/monaco/dev/vs"
+        }
+    });
+    require(["vs/editor/editor.main"], function() {
+        var editor = monaco.editor.create(document.getElementById("code_editor"), {
+            value: "<!-- Commencez à écrire votre code HTML ici -->",
+            language: "html",
+            theme: "vs-light"
+        });
+
+        // Mettre à jour le contenu du textarea en temps réel
+        editor.onDidChangeModelContent(function() {
+            document.getElementById("mail_body").value = editor.getValue();
+        });
+    });
+</script>
+<!-- End code editor manager -->
+
+<!-- Rich text editor -->
+<script type="importmap">
+    {
+       "imports": {
+         "ckeditor5": "/assets/vendor/ckeditor5/ckeditor5.js",
+         "ckeditor5/": "/assets/vendor/ckeditor5/"
+        }
+    }
+</script>
+<script type="module">
+    import {
+        ClassicEditor,
+        Essentials,
+        Paragraph,
+        Bold,
+        Italic,
+        Font,
+        Link,
+        BlockQuote,
+    } from 'ckeditor5';
+
+    ClassicEditor
+        .create(document.querySelector('#text_editor'), {
+            licenseKey: 'GPL', // Or 'GPL'.
+            plugins: [Essentials, Paragraph, Bold, Italic, Font, Link, BlockQuote, Code, CodeBlock],
+            toolbar: {
+                items: [
+                    'undo', 'redo',
+                    '|',
+                    'heading',
+                    '|',
+                    'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
+                    '|',
+                    'bold', 'italic', 'strikethrough', 'subscript', 'superscript', 'code',
+                    '|',
+                    'link', 'uploadImage', 'blockQuote', 'codeBlock',
+                    '|',
+                    'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent'
+                ],
+                shouldNotGroupWhenFull: true
+            },
+            placeholder: 'Écrivez votre texte ici...'
+        })
+        .then(editor => {
+            window.editor = editor;
+            editor.model.document.on('change:data', () => {
+                $("#mail_body").val(editor.getData());
+            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+<!-- End Rich text editor -->
 @endsection
