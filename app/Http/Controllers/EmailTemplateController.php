@@ -93,7 +93,7 @@ class EmailTemplateController extends Controller
             ]);
         }
 
-        $cnt = $request->content_type == "texte" ? $request->content : $request->code_content;
+        $cnt = $request->content_type == "texte" ? $request->content : urldecode($request->code_content);
         $filepath = "templates/" . uniqid() . ".html";
 
         Storage::disk("public")->put($filepath, $cnt);
