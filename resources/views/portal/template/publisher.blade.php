@@ -291,8 +291,10 @@
 
                 error: function(xhr) {
                     $("#temp_add_btn").attr("disabled", false);
-                    $("#temp_add_btn").html("Enregistré");
-                    alert("Un problème inattendue est survenue");
+                    $("#temp_add_btn").html("Echec de l'enregistrement");
+                    setTimeout(() => {
+                        $("#temp_add_btn").html("Enregistré");
+                    }, 2000);
                 },
             });
         }));
