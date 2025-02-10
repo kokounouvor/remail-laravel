@@ -260,7 +260,7 @@
 
 <script>
     $(document).ready(function(e) {
-        $("#temp_add_form").on("submit", (function(e) {
+        $("#temp_add_forms").on("submit", (function(e) {
 
             $("#code_content").val(encodeURIComponent($("#code_content").val()));
 
