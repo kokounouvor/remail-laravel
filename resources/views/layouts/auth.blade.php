@@ -15,13 +15,13 @@
 
 </head>
 
-<body class="bg-gray-200 dark:bg-neutral-900">
+<body class="bg-blue-800 dark:bg-neutral-900">
 
     <!-- ========== HEADER ========== -->
-    <header class="flex py-3 shadow-sm flex items-center justify-center bg-white dark:bg-neutral-900 dark:border-neutral-700">
+    <header class="flex py-3 pt-5 flex items-center justify-center bg-blue-800 dark:bg-neutral-900 dark:border-neutral-700">
         <!-- Logo -->
         <a class="" href="/" aria-label="REMAIL">
-            <img src="/assets/img/logo/blue.png" class="size-10 w-full" alt="">
+            <img src="/assets/img/logo/white.png" class="size-10 w-full" alt="">
         </a>
         <!-- End Logo -->
     </header>

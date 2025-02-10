@@ -77,7 +77,7 @@ class EmailTemplateController extends Controller
     public function store(Request $request)
     {
         $user = Users::where('token', Session::get('user'))->first();
-
+        
         $request->validate([
             "name" => "required",
             "content_type" => "required"

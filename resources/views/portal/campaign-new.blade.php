@@ -4,11 +4,41 @@
 <!-- -->
 <link rel="stylesheet" href="/assets/vendor/ckeditor5/ckeditor5.css">
 <script src="/assets/vendor/ckeditor5/ckeditor5.js"></script>
-<script src="https://remail.io/assets/vendor/monaco/dev/vs/loader.js"></script>
 <!-- -->
 
 <!-- Stepper -->
-<div class="max-w-4xl mx-auto">
+<div class="max-w-3xl mx-auto">
+
+    <ol class="flex items-center whitespace-nowrap">
+        <li class="inline-flex items-center">
+            <a class="flex items-center text-sm text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 dark:text-neutral-500 dark:hover:text-blue-500 dark:focus:text-blue-500" href="{{Route('dashboard')}}">
+                <svg class="shrink-0 me-3 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                Accueil
+            </a>
+            <svg class="shrink-0 mx-2 size-4 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"></path>
+            </svg>
+        </li>
+        <li class="inline-flex items-center">
+            <a class="flex items-center text-sm text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 dark:text-neutral-500 dark:hover:text-blue-500 dark:focus:text-blue-500" href="{{Route('campaigns')}}">
+                <svg class="shrink-0 me-3 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+                    <path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"></path>
+                </svg>
+                Mes campagnes
+                <svg class="shrink-0 mx-2 size-4 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"></path>
+                </svg>
+            </a>
+        </li>
+        <li class="inline-flex items-center text-sm font-semibold text-gray-800 truncate dark:text-neutral-200" aria-current="page">
+            Publicateur
+        </li>
+    </ol>
+
     <!-- Stepper Content -->
     <div class="mt-5 sm:mt-8">
         <form action="{{Route('campaign-new-add')}}" method="POST">
@@ -69,47 +99,46 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="p-4 border-t border-red-500 border-dashed">
+
+                        <div class="bg-gray-800 rounded-b-xl">
                             <div class="border-b border-gray-200 dark:border-neutral-700">
-                                <div class="-mb-0.5 flex justify-center gap-x-6">
-                                    <button type="button" onclick="$('#horizontal-alignment-1').show(); $('#horizontal-alignment-2').hide();$('#horizontal-alignment-3').hide();$('#content_type').val('code');" class="py-2 px-3 bg-gray-100 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500 active">
+                                <nav class="-mb-0.5 flex justify-center gap-x-6" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                                    <button type="button" onclick="$('#content_type').val('code');" class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500 active" id="horizontal-alignment-item-1" aria-selected="true" data-hs-tab="#horizontal-alignment-1" aria-controls="horizontal-alignment-1" role="tab">
                                         Editeur HTML
                                     </button>
-                                    <button type="button" onclick="$('#horizontal-alignment-2').show(); $('#horizontal-alignment-1').hide();$('#horizontal-alignment-3').hide();$('#content_type').val('texte');" class="py-2 px-3 bg-gray-100 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500">
+                                    <button type="button" onclick="$('#content_type').val('texte');" class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500" id="horizontal-alignment-item-2" aria-selected="false" data-hs-tab="#horizontal-alignment-2" aria-controls="horizontal-alignment-2" role="tab">
                                         Editeur de texte
                                     </button>
-                                    <button type="button" onclick="$('#horizontal-alignment-3').show(); $('#horizontal-alignment-2').hide();$('#horizontal-alignment-1').hide();$('#content_type').val('template');" class="py-2 px-3 bg-gray-100 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500">
-                                        Templates Email
+                                    <button type="button" onclick="$('#content_type').val('template');" class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500" id="horizontal-alignment-item-3" aria-selected="false" data-hs-tab="#horizontal-alignment-3" aria-controls="horizontal-alignment-3" role="tab">
+                                        Templates
                                     </button>
-                                </div>
+                                </nav>
                             </div>
 
-                            <div class="mt-3">
+                            <div class="mt-3 p-4">
                                 <input type="text" name="content_type" id="content_type" class="hidden">
                                 <textarea class="hidden" name="mail_body" id="mail_body"></textarea>
-                                <div id="horizontal-alignment-1">
-                                    <div class="relative border p-1 bg-white">
-                                        <div id="code_editor" class="w-full h-96"></div>
-                                        <textarea name="code_content" id="code_content" class="hidden"></textarea>
-                                    </div>
+
+                                <div id="horizontal-alignment-1" role="tabpanel" aria-labelledby="horizontal-alignment-item-1">
+                                    <textarea name="code_content" id="code_content" class="hidden"></textarea>
                                 </div>
-                                <div id="horizontal-alignment-2" class="hidden">
+                                <div id="horizontal-alignment-2" class="hidden" role="tabpanel" aria-labelledby="horizontal-alignment-item-2">
                                     <div class="relative">
                                         <textarea id="text_editor" name="content" cols="10" rows="15" class="p-4 block w-full border-gray-200 font-normal rounded-lg text-sm focus:border-blue-600 focus:ring-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Entrer ou copier le code du Template Email ici"></textarea>
                                     </div>
                                 </div>
-                                <div id="horizontal-alignment-3" class="hidden">
+                                <div id="horizontal-alignment-3" class="hidden" role="tabpanel" aria-labelledby="horizontal-alignment-item-3">
                                     <div class="relative">
-                                        <div class="grid md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-4 mb-4 mt-5">
+                                        <div class="grid md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-2 mb-4 mt-5">
                                             @foreach($templ as $dat)
                                             <textarea class="hidden" name="" id="pd-{{$dat->id}}">{!! Storage::disk('public')->get($dat->content) !!}</textarea>
-                                            <label for="" onclick="gfx('{{$dat->id}}');" class="p-2 w-full border border-gray-200 bg-white shadow-sm -mt-px -ms-px rounded-2xl text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
+                                            <label for="{{$dat->id}}" onclick="gfx('{{$dat->id}}');" class="p-2 w-full border border-gray-200 bg-white shadow-sm -mt-px -ms-px rounded-2xl text-xs relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
                                                 <div class="flex ">
-                                                    <input type="radio" name="af-account-gender-checkbox" class="shrink-0 mt-0.5 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="af-account-gender-checkbox">
-                                                    <span class="text-sm text-gray-500 ms-3 dark:text-neutral-400">{!!$dat->name!!}</span>
+                                                    <input type="radio" name="af-account-gender-checkbox" class="shrink-0 mt-0.5 border-gray-300 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="{{$dat->id}}">
+                                                    <span class="text-xs text-gray-600 ms-3 dark:text-neutral-400">{!!$dat->name!!}</span>
                                                 </div>
                                                 <div class="relative p-1 rounded-xl">
-                                                    <iframe data-src="/storage/{{$dat->content}}" class="template-iframe rounded-xl" frameborder="0" width="100%" height="180px" scrolling="yes" loading="lazy"></iframe>
+                                                    <iframe data-src="/storage/{{$dat->content}}" class="template-iframe rounded-xl" frameborder="0" width="100%" height="100px" scrolling="yes" loading="lazy"></iframe>
                                                 </div>
                                             </label>
                                             @endforeach
@@ -118,16 +147,17 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <!-- End First Content -->
 
                 <!-- Button Group -->
-                <div class="max-w-sm mx-auto mt-5 flex justify-between items-center gap-x-2">
+                <div class="sticky bottom-5 bg-gray-200 shadow-sm rounded-lg p-2 max-w-sm mx-auto mt-5 flex justify-between items-center gap-x-2">
                     <a href="{{Route('campaigns')}}" class="w-full py-3 px-5 inline-flex items-center justify-center gap-x-1 text-sm font-normal rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
                         Quitter
                     </a>
-                    <button type="submit" class="w-full py-3 px-5 inline-flex items-center justify-center gap-x-1 text-sm font-normal rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                    <button type="submit" class="w-full py-3 px-5 inline-flex items-center justify-center gap-x-1 text-sm font-normal rounded-full border border-transparent bg-blue-800 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
                         Enregistré
                     </button>
                 </div>
@@ -210,73 +240,38 @@
         </div>
     </div>
 </div>
-
-<script src="/assets/vendor/quill/quill.min.js"></script>
-
-<script>
-    function gfx(temps) {
-        var tem = document.getElementById("pd-" + temps).value;
-        $("#preview1").attr("srcdoc", tem);
-        $("#preview2").attr("srcdoc", tem);
-        $("#mail_body").val(tem);
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        // Fonction pour charger l'iframe lorsque celle-ci devient visible dans la fenêtre de visualisation
-        function loadIframeLazy() {
-            const iframes = document.querySelectorAll('.template-iframe');
-            const options = {
-                root: null, // Observer l'ensemble du viewport
-                rootMargin: '0px',
-                threshold: 0.25 // Charge l'iframe lorsque 25% est visible
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const iframe = entry.target;
-                        const src = iframe.getAttribute('data-src'); // On récupère l'URL à charger dans l'iframe
-
-                        if (src) {
-                            iframe.src = src; // On charge l'URL dans l'iframe
-                            iframe.removeAttribute('data-src'); // Retirer l'attribut data-src après avoir chargé l'URL
-                        }
-                        observer.unobserve(iframe); // Cesse d'observer cette iframe une fois chargée
-                    }
-                });
-            }, options);
-
-            iframes.forEach(iframe => {
-                observer.observe(iframe);
-            });
-        }
-
-        // Appeler la fonction de lazy loading
-        loadIframeLazy();
-    });
-</script>
-
 @endsection
 
 
 @section('script')
 <!-- Code editor manager -->
-<script>
-    require.config({
-        paths: {
-            vs: "https://remail.io/assets/vendor/monaco/dev/vs"
-        }
-    });
-    require(["vs/editor/editor.main"], function() {
-        var editor = monaco.editor.create(document.getElementById("code_editor"), {
-            value: "<!-- Commencez à écrire votre code HTML ici -->",
-            language: "html",
-            theme: "vs-light"
-        });
+<!-- Inclure ACE Editor depuis un CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
 
-        // Mettre à jour le contenu du textarea en temps réel
-        editor.onDidChangeModelContent(function() {
-            document.getElementById("mail_body").value = editor.getValue();
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Récupérer le textarea existant
+        var textarea = document.getElementById('code_content');
+
+        // Créer un conteneur pour ACE Editor et l'insérer dans le DOM
+        var editorDiv = document.createElement('div');
+        editorDiv.id = 'ace_editor_container';
+        editorDiv.style.width = '100%';
+        editorDiv.style.height = '400px'; // Ajustez la hauteur selon vos besoins
+        textarea.parentNode.insertBefore(editorDiv, textarea);
+
+        // Initialiser ACE Editor sur le conteneur créé
+        var editor = ace.edit("ace_editor_container");
+        editor.setTheme("ace/theme/chrome"); // Thème light pour l'éditeur
+        editor.session.setMode("ace/mode/html"); // Limiter l'éditeur au langage HTML
+
+        // Charger le contenu initial du textarea dans l'éditeur
+        editor.session.setValue(textarea.value);
+
+        // Synchroniser en temps réel : mise à jour du textarea à chaque modification
+        editor.session.on('change', function() {
+            textarea.value = editor.session.getValue();
+            document.getElementById("mail_body").value = editor.session.getValue();
         });
     });
 </script>
@@ -336,4 +331,47 @@
         });
 </script>
 <!-- End Rich text editor -->
+
+<script>
+    function gfx(temps) {
+        var tem = document.getElementById("pd-" + temps).value;
+        $("#preview1").attr("srcdoc", tem);
+        $("#preview2").attr("srcdoc", tem);
+        $("#mail_body").val(tem);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Fonction pour charger l'iframe lorsque celle-ci devient visible dans la fenêtre de visualisation
+        function loadIframeLazy() {
+            const iframes = document.querySelectorAll('.template-iframe');
+            const options = {
+                root: null, // Observer l'ensemble du viewport
+                rootMargin: '0px',
+                threshold: 0.25 // Charge l'iframe lorsque 25% est visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        const src = iframe.getAttribute('data-src'); // On récupère l'URL à charger dans l'iframe
+
+                        if (src) {
+                            iframe.src = src; // On charge l'URL dans l'iframe
+                            iframe.removeAttribute('data-src'); // Retirer l'attribut data-src après avoir chargé l'URL
+                        }
+                        observer.unobserve(iframe); // Cesse d'observer cette iframe une fois chargée
+                    }
+                });
+            }, options);
+
+            iframes.forEach(iframe => {
+                observer.observe(iframe);
+            });
+        }
+
+        // Appeler la fonction de lazy loading
+        loadIframeLazy();
+    });
+</script>
 @endsection

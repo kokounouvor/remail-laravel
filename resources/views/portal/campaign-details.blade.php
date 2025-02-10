@@ -183,7 +183,7 @@
 
                             <!-- Card -->
                             <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-800 dark:border-neutral-700">
-                                <div class="p-4 md:p-5">
+                                <div class="p-4">
                                     <div class="flex items-center gap-x-2">
                                         <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-neutral-500">
                                             Envoyés
@@ -201,7 +201,7 @@
 
                             <!-- Card -->
                             <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-800 dark:border-neutral-700">
-                                <div class="p-4 md:p-5">
+                                <div class="p-4">
                                     <div class="flex items-center gap-x-2">
                                         <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-neutral-500">
                                             File d'attente
@@ -219,7 +219,7 @@
 
                             <!-- Card -->
                             <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-800 dark:border-neutral-700">
-                                <div class="p-4 md:p-5">
+                                <div class="p-4">
                                     <div class="flex items-center gap-x-2">
                                         <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-neutral-500">
                                             Bounce
@@ -237,7 +237,7 @@
 
                             <!-- Card -->
                             <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-800 dark:border-neutral-700">
-                                <div class="p-4 md:p-5">
+                                <div class="p-4">
                                     <div class="flex items-center gap-x-2">
                                         <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-neutral-500">
                                             Ouverts
@@ -271,32 +271,33 @@
                             </div>
                             <!-- End Card -->
                         </div>
-                        <!-- End Grid -->
-                        <button type="button" class="hs-collapse-toggle w-full py-3 px-4 inline-flex items-center justify-between gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" id="hs-basic-collapse" aria-expanded="false" aria-controls="hs-basic-collapse-heading" data-hs-collapse="#hs-basic-collapse-heading">
-                            Voir les clics sur les liens
-                            <svg class="hs-collapse-open:rotate-180 shrink-0 size-4 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m6 9 6 6 6-6"></path>
-                            </svg>
-                        </button>
-                        <div id="hs-basic-collapse-heading" class="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-collapse">
-                            <div class="">
-
-                                <!-- List Group -->
-                                <ul class="flex flex-col justify-end text-start -space-y-px">
-                                    @foreach($mail_clicks_links as $lk)
-                                    <li class="flex items-center gap-x-2 p-3 text-sm bg-white border text-gray-800 first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200">
-                                        <div class="w-full flex justify-between truncate">
-                                            <span class="me-3 flex-1 w-0 truncate">
-                                                {{$lk->url}}
-                                            </span>
-                                            <button type="button" class="bg-red-600 rounded-full py-1 px-1 text-white hover:text-blue-600 focus:outline-none focus:text-blue-600 whitespace-nowrap dark:text-neutral-500 dark:hover:text-blue-500 dark:focus:text-blue-500">
-                                                {{ App\Models\Campaign_link_click::where([["campaign_id",$camps->id], ["url",$lk->url]])->count() }}
-                                            </button>
-                                        </div>
-                                    </li>
-                                    @endforeach
-                                </ul>
-                                <!-- End List Group -->
+                        <div class="p-2 rounded-2xl bg-blue-100">
+                            <!-- End Grid -->
+                            <button type="button" class="hs-collapse-toggle w-full py-3 px-4 inline-flex items-center justify-between gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-800 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" id="hs-basic-collapse" aria-expanded="false" aria-controls="hs-basic-collapse-heading" data-hs-collapse="#hs-basic-collapse-heading">
+                                Voir les clics sur les liens
+                                <svg class="hs-collapse-open:rotate-180 shrink-0 size-4 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg>
+                            </button>
+                            <div id="hs-basic-collapse-heading" class="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-collapse">
+                                <div class="">
+                                    <!-- List Group -->
+                                    <ul class="flex flex-col justify-end text-start -space-y-px divide-y divide-gray-300">
+                                        @foreach($mail_clicks_links as $lk)
+                                        <li class="flex items-center gap-x-2 p-3 text-xs text-gray-800 dark:text-neutral-200">
+                                            <div class="w-full flex justify-between truncate">
+                                                <span class="me-3 flex-1 w-0 truncate">
+                                                    {{$lk->url}}
+                                                </span>
+                                                <button type="button" class="font-extrabold text-red-500">
+                                                    {{ App\Models\Campaign_link_click::where([["campaign_id",$camps->id], ["url",$lk->url]])->count() }}
+                                                </button>
+                                            </div>
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                    <!-- End List Group -->
+                                </div>
                             </div>
                         </div>
                     </div>

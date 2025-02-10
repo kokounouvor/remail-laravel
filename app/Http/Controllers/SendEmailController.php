@@ -68,22 +68,25 @@ class SendEmailController extends Controller
 
     public function trackOpen($id)
     {
-        (new Notification())->add("Track Email start", "Démarrage du track");
-
+        //(new Notification())->add("Track Email start", "Démarrage du track");
         // Trouver l'email correspondant par ID (utilisez first() pour obtenir l'email)
         $email = Message::where("token", $id)->first();
 
         if ($email) {
-            $email->update([
+            Message::where("token", $id)->update([
                 "open" => true,
                 "open_at" => now()  // Met à jour 'open_at' avec l'heure actuelle
             ]);
+        }else{
+            return response()->json(["status","Inexistant"]);
         }
 
-        // Retourner une réponse d'image transparente de 1x1 pour que l'email soit suivi
-        return response()->file(public_path('images/pixel.png'), [
-            'Content-Type' => 'image/png',
-        ]);
+        // Renvoyer un pixel transparent
+        $pixel = base64_decode("R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==");
+        return response($pixel, 200)
+            ->header("Content-Type", "image/gif")
+            ->header("Cache-Control", "no-cache, no-store, must-revalidate");
+
     }
 
     public function trackClick($campaign_id, $url)

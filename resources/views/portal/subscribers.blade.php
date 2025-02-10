@@ -3,7 +3,6 @@
 @section('content')
 <div>
     @include('layouts.alert')
-    
     <div class="border-b border-gray-300 bg-gray-200 dark:bg-neutral-900 sticky top-0 dark:border-neutral-700">
         <nav class="-mb-0.5 flex justify-center gap-x-6" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
             <button type="button" class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500 active" id="horizontal-alignment-item-1" aria-selected="true" data-hs-tab="#horizontal-alignment-1" aria-controls="horizontal-alignment-1" role="tab">
@@ -27,7 +26,7 @@
                         Contacts
                     </div>
                     <div class="inline-flex gap-x-2">
-                        <button type="button" data-hs-overlay="#hs-task-contact-add" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                        <button type="button" data-hs-overlay="#hs-task-contact-add" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-blue-800 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
                             Ajouter un contact
                         </button>
                         <button type="button" data-hs-overlay="#hs-task-contact-import" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
@@ -101,7 +100,9 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+
                                 {{$contacts->links('pagination::tailwind')}}
+                                
                             </div>
                         </div>
                     </div>

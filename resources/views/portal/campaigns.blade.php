@@ -22,12 +22,16 @@
     @else
     <div class="max-w-5xl mx-auto space-y-5">
         <div class="flex items-center justify-end">
-            <a href="{{Route('campaign-new')}}" class="px-2 py-2 lg:px-4 bg-gray-700 text-white text-sm rounded-full hover:bg-gray-800 border border-primary-500">
-                Nouvelle campagne
+            <a  href="{{Route('campaign-new')}}" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-gray-50 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus lucide-icon customizable" data-v-14c8c335="">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5v14"></path>
+                </svg>
+                Nouveau campagne
             </a>
         </div>
         <div class="bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
-            <div class="bg-gray-100 border-b rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
+            <div class="border-b rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
                 <p class="mt-1 text-lg font-bold text-gray-600 dark:text-neutral-500">
                     Mes Campagnes
                 </p>
@@ -40,7 +44,7 @@
                                 <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
                                     <thead class="bg-gray-50 dark:bg-neutral-700">
                                         <tr>
-                                            <th scope="col" class="py-3 ps-4">
+                                            <th scope="col" class="py-3 ps-4 hidden">
                                                 <div class="flex items-center h-5">
                                                     <input id="hs-table-checkbox-all" type="checkbox" class="border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-700 dark:border-neutral-500 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
                                                     <label for="hs-table-checkbox-all" class="sr-only">Checkbox</label>
@@ -58,7 +62,7 @@
                                     <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
                                         @foreach($campaigns as $list)
                                         <tr>
-                                            <td class="py-3 ps-4">
+                                            <td class="py-3 ps-4 hidden">
                                                 <div class="flex items-center h-5">
                                                     <input id="hs-table-checkbox-1" type="checkbox" class="border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
                                                     <label for="hs-table-checkbox-1" class="sr-only">Checkbox</label>

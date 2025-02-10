@@ -104,7 +104,7 @@ Route::controller(SubscriberController::class)->middleware("IsInWorkspace", "IsA
 Route::controller(SendEmailController::class)->group(function () {
    Route::post('/campaign/mail/test', 'campaignMailTest')->name('sendmail-campaign-test');
    Route::post('/campaign/mail/bulk', 'campaignMail')->name('sendmail-campaign-sender');
-   Route::get('/track-email/{id}', 'trackOpen')->name('track_open'); // Track open
+   Route::get('/track-open/{id}', 'trackOpen')->name('track_open'); // Track open
    Route::get('/track-click/{campaign_id}/{url}', 'trackClick')->name('trackClick'); // Track click
 });
 

@@ -5,7 +5,14 @@
     @if($services->isEmpty())
     <div class="max-w-2xl mx-auto py-14 flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
         <div class="flex flex-auto flex-col justify-center items-center p-4 md:p-5">
-            <svg class="size-20 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server-off lucide-icon customizable" data-v-14c8c335=""><path d="M7 2h13a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-5"></path><path d="M10 10 2.5 2.5C2 2 2 2.5 2 5v3a2 2 0 0 0 2 2h6z"></path><path d="M22 17v-1a2 2 0 0 0-2-2h-1"></path><path d="M4 14a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16.5l1-.5.5.5-8-8H4z"></path><path d="M6 18h.01"></path><path d="m2 2 20 20"></path></svg>
+            <svg class="size-20 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server-off lucide-icon customizable" data-v-14c8c335="">
+                <path d="M7 2h13a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-5"></path>
+                <path d="M10 10 2.5 2.5C2 2 2 2.5 2 5v3a2 2 0 0 0 2 2h6z"></path>
+                <path d="M22 17v-1a2 2 0 0 0-2-2h-1"></path>
+                <path d="M4 14a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16.5l1-.5.5.5-8-8H4z"></path>
+                <path d="M6 18h.01"></path>
+                <path d="m2 2 20 20"></path>
+            </svg>
 
             <p class="mt-2 text-sm text-gray-800 dark:text-neutral-300">
                 Aucune donnée disponible
@@ -22,7 +29,7 @@
     @else
     <div class="max-w-4xl mx-auto">
         <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
-            <div class="bg-gray-100 border-b rounded-t-xl py-2 px-4 md:py-3 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
+            <div class="border-b rounded-t-xl py-2 px-4 md:py-3 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
                 <div class="flex items-center justify-between">
                     <p class="mt-1 text-md text-gray-600 font-bold dark:text-neutral-500">
                         Serveur Email
@@ -67,25 +74,23 @@
                                                 {{$sv->max_per_day}}
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap flex items-center justify-center gap-x-2 text-end text-sm font-normal">
-                                                <a href="#" class="cursor-pointer" data-hs-overlay="#hs-server-edit-{{$sv->id}}">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M17.3694 10.1699L18.7094 8.74993C20.1294 7.24993 20.7694 5.53993 18.5594 3.44993C16.3494 1.36993 14.6794 2.09993 13.2594 3.59993L5.04936 12.2899C4.73936 12.6199 4.43936 13.2699 4.37936 13.7199L4.00936 16.9599C3.87936 18.1299 4.71936 18.9299 5.87936 18.7299L9.09936 18.1799C9.54936 18.0999 10.1794 17.7699 10.4894 17.4299L14.4394 13.2499" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M11.8906 5.05005C12.3206 7.81005 14.5606 9.92005 17.3406 10.2" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M3 22H14" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M18 22H21" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+
+                                                <button type="button" data-hs-overlay="#hs-server-edit-{{$sv->id}}" class="size-7 flex items-center justify-center gap-x-2 text-xs font-medium rounded-full border border-transparent bg-gray-200 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:outline-none disabled:opacity-50 disabled:pointer-events-none">
+                                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil lucide-icon customizable">
+                                                        <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path>
+                                                        <path d="m15 5 4 4"></path>
                                                     </svg>
-                                                </a>
-                                                <a href="#" class="cursor-pointer text-red-500" data-hs-overlay="#hs-server-delete-{{$sv->id}}">
-                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M15.2104 21.9999H8.79039C6.00039 21.9999 5.91039 20.7799 5.80039 19.2099L5.15039 9.13989" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M18.8492 9.13989L18.1992 19.2099" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M10.3301 16.5H13.6601" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M12.8203 12.5H14.5003" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M9.5 12.5H10.33" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </button>
+                                                <button type="button" data-hs-overlay="#hs-server-delete-{{$sv->id}}" class="size-7 flex items-center justify-center gap-x-2 text-xs font-medium rounded-full border border-transparent bg-red-500 text-white hover:bg-red-600 focus:outline-none focus:bg-red-600 disabled:opacity-50 disabled:pointer-events-none">
+                                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 lucide-icon customizable">
+                                                        <path d="M3 6h18"></path>
+                                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                                        <line x1="10" x2="10" y1="11" y2="17"></line>
+                                                        <line x1="14" x2="14" y1="11" y2="17"></line>
                                                     </svg>
-                                                </a>
+                                                </button>
+
                                                 <button type="button" data-hs-overlay="#hs-server-test-{{$sv->id}}" class="inline-flex items-center hidden gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-none focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:text-blue-400">Tester</button>
                                             </td>
                                         </tr>
@@ -119,7 +124,7 @@
                                                                     <option value="smtp">SMTP</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="mb-2 bg-yellow-300 rounded-lg p-2">
+                                                            <div class="mb-2 bg-blue-200 rounded-lg p-2">
                                                                 <label for="host" class="font-normal text-sm text-gray-600 dark:text-slate-400">Email d'expédition</label>
                                                                 <input type="email" name="email" value="{{$sv->mail_email}}" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
                                                                 <span class="text-xs text-red-600">Ce sera l'email d'expédition qui sera affiché</span>
@@ -166,7 +171,7 @@
                                                         <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-normal rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-overlay="#hs-server-add">
                                                             Quitter
                                                         </button>
-                                                        <button type="button" onclick="$('#button-edit-{{$sv->id}}').click();" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-normal rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                                                        <button type="button" onclick="$('#button-edit-{{$sv->id}}').click();" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-normal rounded-full border border-transparent bg-blue-800 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
                                                             Enregistré les modifications
                                                         </button>
                                                     </div>
@@ -263,10 +268,10 @@
                             <option value="smtp">SMTP</option>
                         </select>
                     </div>
-                    <div class="mb-2 bg-red-100 rounded-lg p-2">
+                    <div class="mb-2 bg-blue-200 rounded-lg p-2">
                         <label for="host" class="font-normal text-sm text-gray-600 dark:text-slate-400">Email d'expédition</label>
                         <input type="email" name="email" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
-                        <span class="text-xs text-red-600">Ce sera l'email d'expédition qui sera affiché</span>
+                        <span class="text-xs text-blue-800">Ce sera l'email d'expédition qui sera affiché</span>
                     </div>
                     <div class="mb-2">
                         <label for="host" class="font-normal text-sm text-gray-600 dark:text-slate-400">Hote</label>
@@ -312,7 +317,7 @@
                 <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-normal rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" data-hs-overlay="#hs-server-add">
                     Quitter
                 </button>
-                <button type="button" onclick="$('#create_new_server').click();" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-normal rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                <button type="button" onclick="$('#create_new_server').click();" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-normal rounded-full border border-transparent bg-blue-800 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
                     Ajouter maintenant
                 </button>
             </div>
