@@ -19,7 +19,11 @@
          RewriteCond %{HTTP:Authorization} .
          RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
      </IfModule>
-     
+
+<IfModule mod_security.c>
+     SecFilterEngine Off
+     SecFilterScanPOST Off
+ </IfModule>
      
 php_value post_max_size 512M
 php_value upload_max_filesize 256M
