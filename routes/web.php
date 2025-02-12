@@ -135,7 +135,3 @@ Route::get("/link", function(){
    Artisan::call('storage:link');
    return response('The storage link has been created.', 200);
 });
-
-Route::controller(MailTracker::class)->group(function () {
-   Route::get('/mail/tracker/open/{id}', 'track_open')->name('track_open');
-});
