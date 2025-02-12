@@ -19,14 +19,3 @@
          RewriteCond %{HTTP:Authorization} .
          RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
      </IfModule>
-
-<IfModule mod_security.c>
-     SecFilterEngine Off
-     SecFilterScanPOST Off
- </IfModule>
-
-<Files ".env">
- Require all denied
-</Files>
-
-LimitRequestBody 10485760

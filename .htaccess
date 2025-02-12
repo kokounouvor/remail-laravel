@@ -3,14 +3,25 @@
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
 
-<IfModule mod_security.c>
-    SecFilterEngine Off
-    SecFilterScanPOST Off
-</IfModule>
-
 <Files ".env">
     Require all denied
 </Files>
    
-LimitRequestBody 10485760
+<IfModule mod_php>
+    php_value upload_max_filesize 512M
+    php_value post_max_size 512M
+    php_value memory_limit 1024M
+    php_value max_input_time 300
+    php_value max_execution_time 300
+    php_value max_input_vars 5000
+</IfModule>
+
+# Augmente la taille des requêtes pour Apache
+LimitRequestBody 524288000
+
+# Désactive temporairement ModSecurity si activé sur le serveur
+<IfModule mod_security.c>
+    SecFilterEngine Off
+    SecFilterScanPOST Off
+</IfModule>
    
