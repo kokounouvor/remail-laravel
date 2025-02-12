@@ -24,7 +24,7 @@
     <div class="flex flex-col bg-white border shadow-sm rounded-xl divide-y dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
         <form id="temp_add_form" action="{{Route('portal.template.store')}}" method="POST" class="divide-y">
             @csrf
-            <div class="p-4 sticky bg-blue-50 top-14 rounded-t-xl">
+            <div class="p-4 sticky bg-white top-14 rounded-t-xl">
                 <div class="md:flex justify-between items-center">
                     <h3 class="text-lg font-bold text-gray-800 dark:text-white">
                         Enregistré un Template Email
@@ -261,8 +261,6 @@
 <script>
     $(document).ready(function(e) {
         $("#temp_add_forms").on("submit", (function(e) {
-
-            $("#code_content").val(encodeURIComponent($("#code_content").val()));
 
             // Modification du boutton
             $("#temp_add_btn").attr("disabled", true);

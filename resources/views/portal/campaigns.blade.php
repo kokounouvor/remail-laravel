@@ -21,20 +21,18 @@
     </div>
     @else
     <div class="max-w-5xl mx-auto space-y-5">
-        <div class="flex items-center justify-end">
-            <a  href="{{Route('campaign-new')}}" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-gray-50 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="#">
+        <div class="bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
+            <div class="border-b md:flex items-center justify-between rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
+                <p class="mt-1 text-lg font-bold text-gray-600 dark:text-neutral-500">
+                    Mes Campagnes
+                </p>
+                <a  href="{{Route('campaign-new')}}" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-transparent bg-gray-200 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="#">
                 <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus lucide-icon customizable" data-v-14c8c335="">
                     <path d="M5 12h14"></path>
                     <path d="M12 5v14"></path>
                 </svg>
                 Nouveau campagne
             </a>
-        </div>
-        <div class="bg-white border shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70">
-            <div class="border-b rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700">
-                <p class="mt-1 text-lg font-bold text-gray-600 dark:text-neutral-500">
-                    Mes Campagnes
-                </p>
             </div>
             <div class="p-4 md:p-5">
                 <div class="flex flex-col">
