@@ -293,11 +293,7 @@
                         <label for="password" class="font-normal text-sm text-gray-600 dark:text-slate-400">Mot de passe</label>
                         <input type="password" name="password" id="password" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
                     </div>
-                    <div class="grid grid-cols-3 gap-2">
-                        <div class="mb-2">
-                            <label for="max_per_hour" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie par seconde</label>
-                            <input type="number" name="max_per_sec" id="max_per_sec" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
-                        </div>
+                    <div class="grid grid-cols-2 gap-2">
                         <div class="mb-2">
                             <label for="port" class="font-normal text-sm text-gray-600 dark:text-slate-400">Port</label>
                             <input type="number" name="port" id="port" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
@@ -310,13 +306,17 @@
                             </select>
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-5">
+                    <div class="grid grid-cols-3 gap-5">
+                    <div class="mb-2">
+                            <label for="max_per_sec" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie par 5 sec</label>
+                            <input type="number" name="max_per_sec" id="max_per_sec" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
+                        </div>
                         <div class="mb-2">
-                            <label for="max_per_hour" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie maximum par Heure</label>
+                            <label for="max_per_hour" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie par Heure</label>
                             <input type="number" name="max_per_hour" id="max_per_hour" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
                         </div>
                         <div class="mb-5">
-                            <label for="max_per_day" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie maximum par jour</label>
+                            <label for="max_per_day" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie par jour</label>
                             <input type="number" name="max_per_day" id="max_per_day" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
                         </div>
                     </div>
