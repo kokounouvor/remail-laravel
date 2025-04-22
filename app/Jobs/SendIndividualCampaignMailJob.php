@@ -99,7 +99,7 @@ class SendIndividualCampaignMailJob implements ShouldQueue
         }
 
         //Envoyer les mails en boucle
-        foreach ($contacts as $k) {
+        foreach ($contacts->take(300) as $k) {
             // Recalculer les limites avant chaque envoi
             $sent_this_hour = Email_send_log::where('email_service_id', $mail_server->id)
                 ->where('sent_at', '>=', now()->subHour())
