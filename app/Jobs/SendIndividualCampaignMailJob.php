@@ -16,6 +16,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
@@ -84,6 +85,19 @@ class SendIndividualCampaignMailJob implements ShouldQueue
         $max_per_hour = $mail_server->max_per_hour;
         $max_per_day = $mail_server->max_per_day;
 
+        // Compter le nombre de contacts totals
+        $total_contacts = $contacts->count();
+
+        // Compter le nombre de contacts déja envoyer
+        $sent_contacts = Email_send_log::where('email_service_id', $mail_server->id)
+            ->count();
+
+        // Vérifier si le nombre de contacts auxquels les emails ont déjà été envoyés correspond à ce nombre
+        if ($sent_contacts >= $total_contacts) {
+            // Si tous les contacts ont déjà été envoyés - Mettre à jour le statut de la campagne
+            Campaign::where("id", $this->campaign)->update(["status" => "sent", "updated_at" => now()]);
+        }
+
         //Envoyer les mails en boucle
         foreach ($contacts as $k) {
             // Recalculer les limites avant chaque envoi
@@ -150,6 +164,7 @@ class SendIndividualCampaignMailJob implements ShouldQueue
                     "created_at" => now(),
                     "updated_at" => null
                 ]);
+                Log::error("Error send email to : " . $k->email);
             }
         }
 

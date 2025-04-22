@@ -24,8 +24,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('app:send-campaign-mail')->everyFiveMinutes();
 
         // Exécution de queue:work en tâche de fond
-        $schedule->command('queue:work --queue=import_contacts')->everyMinute(); // Vous pouvez ajuster la fréquence selon vos besoins
-        $schedule->command('queue:work --queue=delete_contacts')->everyMinute(); // Vous pouvez ajuster la fréquence selon vos besoins
+        //$schedule->command('queue:work --queue=import_contacts')->everyMinute(); // Vous pouvez ajuster la fréquence selon vos besoins
+        //$schedule->command('queue:work --queue=delete_contacts')->everyMinute(); // Vous pouvez ajuster la fréquence selon vos besoins
     }
 
     /**

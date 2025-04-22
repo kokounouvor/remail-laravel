@@ -7,10 +7,12 @@ use App\Jobs\SendIndividualCampaignMailJob;
 use App\Mail\SendmailCampaignTEST;
 use App\Models\Campaign;
 use App\Models\Campaign_link_click;
+use App\Models\Email_service;
 use App\Models\Message;
 use App\Models\Notification;
 use App\Models\Payment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -27,6 +29,27 @@ class SendEmailController extends Controller
         ]);
 
         $campaig = Campaign::where("id", "=", $request->campaign)->first();
+
+        // Récupérer les informations du serveur mail à utiliser
+        $mail_server = Email_service::where("mail_username", $campaig->from_email)->first();
+
+        // Vérifier si le serveur mail existe
+        if (!$mail_server) {
+            // Si aucun serveur n'est trouvé, arrêtez l'exécution
+            (new Notification())->add("Oooooops", "aucun serveur n'est trouvé, arrêtez l'exécution");
+            return;
+        }
+
+        // Modifier temporairement les configurations SMTP
+        config([
+            'mail.mailers.smtp.host' => $mail_server->mail_host,
+            'mail.mailers.smtp.port' => $mail_server->mail_port,
+            'mail.mailers.smtp.username' => $mail_server->mail_username,
+            'mail.mailers.smtp.password' => Crypt::decryptString($mail_server->mail_password),
+            'mail.mailers.smtp.encryption' => $mail_server->smtp_encryption,
+            'mail.from.address' => $mail_server->mail_email,
+            'mail.from.name' => $campaig->from_name,
+        ]);
 
         // envoie du code otp 
         $info = ["subject" => "TEST -" . $campaig->subject, "content" => Storage::disk('public')->get($campaig->contents), "id" => $campaig->id];
