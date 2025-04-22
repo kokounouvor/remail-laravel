@@ -48,6 +48,7 @@ class EmailServiceController extends Controller
             "username" => "required",
             "password" => "required",
             "encryption" => "required",
+            "max_per_sec" => "required",
             "max_per_hour" => "required",
             "max_per_day" => "required",
             "port" => "required"
@@ -63,6 +64,7 @@ class EmailServiceController extends Controller
             "mail_username" => $request->username,
             "mail_password" => Crypt::encryptString($request->password),
             "mail_encryption" => $request->encryption,
+            "max_per_hour" => $request->max_per_sec,
             "max_per_hour" => $request->max_per_hour,
             "max_per_day" => $request->max_per_day,
             "user" => Session::get("user"),
@@ -88,6 +90,7 @@ class EmailServiceController extends Controller
             "password" => "required",
             "encryption" => "required",
             "port" => "required",
+            "max_per_sec" => "required",
             "max_per_hour" => "required",
             "max_per_day" => "required",
             "id" => "required",
@@ -103,6 +106,7 @@ class EmailServiceController extends Controller
             "mail_username" => $request->username,
             "mail_password" => Crypt::encryptString($request->password),
             "mail_encryption" => $request->encryption,
+            "max_per_sec" => $request->max_per_sec,
             "max_per_hour" => $request->max_per_hour,
             "max_per_day" => $request->max_per_day,
             "updated_at" => NOW()

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text("mail_email")->nullable();
             $table->text("mail_password")->nullable();
             $table->text("mail_encryption")->nullable();
+            $table->text("max_per_sec")->nullable();
             $table->text("max_per_hour")->nullable();
             $table->text("max_per_day")->nullable();
             $table->timestamps();

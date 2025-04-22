@@ -50,6 +50,7 @@
                                             <th scope="col" class="px-6 py-3 text-start text-xs font-normal text-gray-500 uppercase dark:text-neutral-500">ID</th>
                                             <th scope="col" class="px-6 py-3 text-start text-xs font-normal text-gray-500 uppercase dark:text-neutral-500">Serveur</th>
                                             <th scope="col" class="px-6 py-3 text-start text-xs font-normal text-gray-500 uppercase dark:text-neutral-500">Email</th>
+                                            <th scope="col" class="px-6 py-3 text-start text-xs font-normal text-gray-500 uppercase dark:text-neutral-500">Envoie/5 Sec</th>
                                             <th scope="col" class="px-6 py-3 text-start text-xs font-normal text-gray-500 uppercase dark:text-neutral-500">Envoie/Heure</th>
                                             <th scope="col" class="px-6 py-3 text-start text-xs font-normal text-gray-500 uppercase dark:text-neutral-500">Envoie/Jour</th>
                                             <th scope="col" class="px-6 py-3 text-center text-xs font-normal text-gray-500 uppercase dark:text-neutral-500">Action</th>
@@ -66,6 +67,9 @@
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
                                                 {{$sv->mail_username}}
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                                                {{$sv->max_per_sec}}
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
                                                 {{$sv->max_per_hour}}
@@ -152,13 +156,17 @@
                                                                     <option value="tls" @if($sv->mail_encryption=='tls') selected @endif>tls</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="grid grid-cols-2 gap-5">
+                                                            <div class="grid grid-cols-3 gap-5">
+                                                            <div class="mb-2">
+                                                                    <label for="max_per_hour" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie par seconde</label>
+                                                                    <input type="number" name="max_per_sec" id="max_per_sec" value="{{$sv->max_per_sec}}" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
+                                                                </div>
                                                                 <div class="mb-2">
-                                                                    <label for="max_per_hour" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie maximum par Heure</label>
+                                                                    <label for="max_per_hour" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie par Heure</label>
                                                                     <input type="number" name="max_per_hour" id="max_per_hour" value="{{$sv->max_per_hour}}" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
                                                                 </div>
                                                                 <div class="mb-5">
-                                                                    <label for="max_per_day" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie maximum par jour</label>
+                                                                    <label for="max_per_day" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie par jour</label>
                                                                     <input type="number" name="max_per_day" id="max_per_day" value="{{$sv->max_per_day}}" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
                                                                 </div>
                                                             </div>

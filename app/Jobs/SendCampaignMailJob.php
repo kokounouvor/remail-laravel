@@ -74,6 +74,10 @@ class SendCampaignMailJob implements ShouldQueue
                 'mail.mailers.smtp.encryption' => $mail_server->smtp_encryption,
                 'mail.from.address' => $mail_server->mail_email,
                 'mail.from.name' => $camp_data->from_name,
+                'mail.headers' => [
+                    'List-Unsubscribe' => '<mailto:gurviolabs@gail.com>',
+                ],
+                'mail.return_path' => $mail_server->mail_email,
             ]);
 
             // Récupérer les informations des contacts
@@ -84,6 +88,7 @@ class SendCampaignMailJob implements ShouldQueue
             // Vérifier les limites d'envoi du serveur mail
             $max_per_hour = $mail_server->max_per_hour;
             $max_per_day = $mail_server->max_per_day;
+            $max_per_sec = $mail_server->max_per_sec;
 
             // Compter le nombre de contacts totals
             $total_contacts = $contacts->count();
@@ -109,6 +114,10 @@ class SendCampaignMailJob implements ShouldQueue
                     ->whereDate('sent_at', now()->toDateString())
                     ->count();
 
+                $sent_last_5_seconds = Email_send_log::where('email_service_id', $mail_server->id)
+                    ->where('sent_at', '>=', now()->subSeconds(5))
+                    ->count();
+
                 // Si les limites sont atteintes, arrêter l'envoi
                 if ($sent_this_hour >= $max_per_hour) {
                     dd('Les limites en heure sont atteint');
@@ -117,6 +126,11 @@ class SendCampaignMailJob implements ShouldQueue
 
                 if ($sent_today >= $max_per_day) {
                     dd("Les limites en jour sont atteint");
+                    break;
+                }
+
+                if ($sent_last_5_seconds >= $max_per_sec) {
+                    dd("Les limites en 5 secondes sont atteint");
                     break;
                 }
 
