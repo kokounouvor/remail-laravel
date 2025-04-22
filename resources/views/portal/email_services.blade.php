@@ -296,7 +296,7 @@
                     <div class="grid grid-cols-3 gap-2">
                         <div class="mb-2">
                             <label for="max_per_hour" class="font-normal text-sm text-gray-600 dark:text-slate-400">Envoie par seconde</label>
-                            <input type="number" name="max_per_sec" id="max_per_sec" value="{{$sv->max_per_sec}}" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
+                            <input type="number" name="max_per_sec" id="max_per_sec" class="py-2 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required>
                         </div>
                         <div class="mb-2">
                             <label for="port" class="font-normal text-sm text-gray-600 dark:text-slate-400">Port</label>
