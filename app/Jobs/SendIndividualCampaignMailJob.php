@@ -349,7 +349,16 @@ class SendIndividualCampaignMailJob implements ShouldQueue
             'mail.from.name' => $original_mail_config['MAIL_FROM_NAME'],
         ]);
 
-        // Mettre à jour le statut de la campagne
-        Campaign::where("id", $this->campaign)->update(["status" => "sent", "updated_at" => now()]);
+        // Vérifier si tous les contacts ont reçu l'email
+        $total_contacts = $contacts->count();
+        $sent_contacts = Email_send_log::where('email_service_id', $mail_server->id)
+            ->whereIn('recipient_email', $contacts->pluck('email'))
+            ->count();
+
+        if ($sent_contacts >= $total_contacts) {
+            // Mettre à jour le statut de la campagne
+            Campaign::where("id", $this->campaign)->update(["status" => "sent", "updated_at" => now()]);
+        }
+        Log::info("Campagne {$this->campaign} traitée avec succès.");
     }
 }

@@ -26,7 +26,10 @@ class SendCampaignMail extends Command
      */
     public function handle(): void
     {
-        //
-        SendCampaignMailJob::dispatch()->onQueue("direct_campaign");
+        //SendCampaignMailJob::dispatch()->onQueue("direct_campaign");
+        $job=new SendCampaignMailJob();
+        $job->handle();
+
+        $this->info("Les campagnes mails ont été bien envoyés");
     }
 }

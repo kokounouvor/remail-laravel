@@ -282,6 +282,7 @@ class SendCampaignMailJob implements ShouldQueue
                         break;
                     }
 
+
                     if ($sent_last_5_seconds >= $max_per_sec) {
                         Log::warning("Limite par seconde atteinte pour le serveur mail : {$mail_server->mail_email}");
                         sleep(1); // Attendre 1 seconde avant de continuer
@@ -348,8 +349,17 @@ class SendCampaignMailJob implements ShouldQueue
                 'mail.from.name' => $original_mail_config['MAIL_FROM_NAME'],
             ]);
 
-            // Mettre à jour le statut de la campagne
-            Campaign::where("id", $campaign->id)->update(["status" => "sent", "updated_at" => now()]);
+            // Vérifier si tous les contacts ont reçu l'email
+            $total_contacts = $contacts->count();
+            $sent_contacts = Email_send_log::where('email_service_id', $mail_server->id)
+                ->whereIn('recipient_email', $contacts->pluck('email'))
+                ->count();
+
+            if ($sent_contacts >= $total_contacts) {
+                // Mettre à jour le statut de la campagne
+                Campaign::where("id", $campaign->id)->update(["status" => "sent", "updated_at" => now()]);
+            }
+            Log::info("Campagne {$campaign->id} traitée avec succès.");
         }
     }
 }

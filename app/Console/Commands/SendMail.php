@@ -174,6 +174,11 @@ class SendMail extends Command
     {
         $campaigns = Campaign::where([["status", "sending"], ["scheduled_at", null]])->get();
 
+        if ($campaigns->isEmpty()) {
+            $this->info("Aucune campagne email planifié disponible");
+            die;
+        }
+
         foreach ($campaigns as $campaign) {
             // Sauvegarder les configurations SMTP actuelles
             $original_mail_config = [
@@ -319,8 +324,18 @@ class SendMail extends Command
                 'mail.from.name' => $original_mail_config['MAIL_FROM_NAME'],
             ]);
 
-            // Mettre à jour le statut de la campagne
-            Campaign::where("id", $campaign->id)->update(["status" => "sent", "updated_at" => now()]);
+            // Vérifier si tous les contacts ont reçu l'email
+            $total_contacts = $contacts->count();
+            $sent_contacts = Email_send_log::where('email_service_id', $mail_server->id)
+                ->whereIn('recipient_email', $contacts->pluck('email'))
+                ->count();
+
+            if ($sent_contacts >= $total_contacts) {
+                // Mettre à jour le statut de la campagne
+                Campaign::where("id", $campaign->id)->update(["status" => "sent", "updated_at" => now()]);
+            }
+            Log::info("Campagne {$campaign->id} traitée avec succès.");
+            $this->info("Campagne {$campaign->id} traitée avec succès.");
         }
     }
 }

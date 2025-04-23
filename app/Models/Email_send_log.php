@@ -9,5 +9,6 @@ class Email_send_log extends Model
 {
     use HasFactory;
 
-    protected $fillable=["email_service_id"];
+    protected $fillable=["email_service_id","recipient_email","sent","sent_at"];
+ 
 }
